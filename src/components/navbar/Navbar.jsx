@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import DownloadIcon from "@mui/icons-material/Download";
 import { useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import vaibhavImg from "../../images/image5.jpg";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -18,11 +20,18 @@ const Navbar = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Close Icon inside sidebar */}
+        {/* Sidebar Header with Profile Image and Name */}
         <div className="flex justify-between items-center p-4 border-b border-[#333]">
-          <h2 className="text-xl font-bold bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text">
-            Navigation
-          </h2>
+          <div className="flex items-center gap-3">
+            <img
+              src={vaibhavImg}
+              alt="Profile"
+              className="w-9 h-9 rounded-full object-cover border-2 border-[#8267E3]"
+            />
+            <span className="text-base font-semibold bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text">
+              Vaibhav Garg
+            </span>
+          </div>
           <button
             onClick={closeSidebar}
             className="text-white text-xl p-1 rounded-full hover:bg-[#2a2a2a] transition-all duration-200 active:scale-90"
@@ -55,6 +64,22 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        {/* Social Icons */}
+        <div className="flex justify-center gap-4 mt-6 px-4">
+          {[FaFacebook, FaInstagram, FaLinkedin, FaGithub].map((Icon, idx) => (
+            <a
+              key={idx}
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white bg-[#282135] p-2 rounded-full transition-all duration-300
+                         hover:bg-[#8267E3] active:scale-95"
+            >
+              <Icon className="text-lg" />
+            </a>
+          ))}
+        </div>
       </div>
 
       {/* Top Navbar */}
