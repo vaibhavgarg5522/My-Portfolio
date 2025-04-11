@@ -1,35 +1,53 @@
-<<<<<<< HEAD
-# React + Vite
+# 🌐 Vaibhav Garg - Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio website!  
+A sleek, modern, and fully responsive site built with **ReactJS**, designed to showcase my projects, skills, and contact info in a clean and engaging way.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [my-portfolio-pdt1.vercel.app](https://my-portfolio-pdt1.vercel.app/contact)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Vaibhav Garg's Portfolio 💼
+- ⚡ Smooth scroll and interactive UI
+- 👤 About Me, Education, Skills, Soft Skills, Languages, Interests, and Contact Sections
+- 💼 Project showcase with filter tabs and glowing card effects
+- 📞 Functional WhatsApp button with unique cursor-based animation
+- 📱 Fully responsive for all devices
+- 🌄 Beautiful background images and custom gradient sections
+- 💬 Contact form and social links
 
-Hi! I'm Vaibhav Garg – a passionate **Frontend Developer** with a love for **UI/UX Design**. This is my personal portfolio showcasing the projects, skills, and journey as a self-taught developer.
+---
 
-## 🚀 Tech Stack
-- HTML, CSS, JavaScript
-- ReactJS, Redux, Context API
-- UI/UX design and responsive web development
+## 🛠️ Tech Stack
 
-## 📂 Projects
-Explore my live projects and source code inside this repo.
+- **Frontend:** ReactJS, HTML5, CSS3, JavaScript
+- **Styling:** TailwindCSS
+- **Animations & Effects:** Custom JS, Framer Motion
+- **Deployment:** Vercel
 
-## 📫 Contact Me
-Happy to connect via:
-- WhatsApp
-- LinkedIn
-- Email
+---
 
-## 🔒 License
-This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. [Read More](http://creativecommons.org/licenses/by-nc/4.0/)
->>>>>>> 1446c85cf8f8c33e4d39bd0f57092281d17e2b42
+- 🏠 Home Section  
+- 🧍‍♂️ About Section  
+- 💻 Projects Section  
+- 📞 Contact Form with WhatsApp Interaction
+
+---
+
+## 🚀 Run Locally
+
+To run this project on your local machine:
+
+```bash
+# Clone the repo
+git clone https://github.com/vaibhavgarg5522/myportfolio.git
+
+# Navigate to the folder
+cd myportfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
