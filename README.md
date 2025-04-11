@@ -3,7 +3,7 @@
 Welcome to my personal developer portfolio website!  
 A sleek, modern, and fully responsive site built with **ReactJS**, designed to showcase my projects, skills, and contact info in a clean and engaging way.
 
-🔗 **Live Demo:** [my-portfolio-pdt1.vercel.app](https://my-portfolio-pdt1.vercel.app/contact)
+🔗 **Live Demo:** [my-portfolio-pdt1.vercel.app](https://my-portfolio-pdt1.vercel.app/)
 
 ---
 
