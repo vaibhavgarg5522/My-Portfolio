@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@keyframes slideIcon {
+  0% {
+    left: -30px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.animate-slideIcon {
+  animation: slideIcon 2.5s linear infinite;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+.animate-bubble {
+  animation-name: bubble;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
