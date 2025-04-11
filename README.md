@@ -6,6 +6,10 @@ A sleek, modern, and fully responsive site built with **ReactJS**, designed to s
 🔗 **Live Demo:** [my-portfolio-pdt1.vercel.app](https://my-portfolio-pdt1.vercel.app/)
 
 ---
+![Screenshot (4)](https://github.com/user-attachments/assets/87496643-a12d-4bc2-9e7c-5efbbb23d56d)
+
+
+
 
 ## ✨ Features
 
