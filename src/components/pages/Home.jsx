@@ -43,24 +43,22 @@ const Home = () => {
 
   return (
     <section
-      className="min-h-screen flex items-center justify-center bg-cover bg-center px-4 md:px-6 py-10 relative"
+      className="min-h-screen flex items-center justify-center bg-cover bg-center px-4 md:px-8 py-12 relative"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         fontFamily: `'Poppins', sans-serif`,
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
 
-      {/* Content Wrapper */}
-      <div className="relative z-10 max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
         {/* Text Section */}
-        <div className="text-white w-full md:w-1/2">
+        <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-start">
           <p className="text-[#8267E3] uppercase tracking-widest font-medium text-sm md:text-base">
             Front-End Developer | ReactJS Enthusiast
           </p>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6 text-start">
             I Build <span className="text-[#8267E3]">Beautiful</span> and{" "}
             <span className="text-[#8267E3]">Functional</span> Web Interfaces.
           </h1>
@@ -73,7 +71,7 @@ const Home = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex gap-4 mb-6">
+          <div className="flex gap-4 mb-6 flex-wrap">
             <button
               onClick={() => navigate("/projects")}
               className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
@@ -94,6 +92,9 @@ const Home = () => {
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
+            onTouchStart={handleMouseDown}
+            onTouchEnd={handleMouseUp}
+            onTouchCancel={handleMouseUp}
             className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#8267E3] overflow-hidden transition-all duration-300 w-full sm:w-fit"
             style={{
               background: "linear-gradient(145deg, #1a112b, #2d165e)",
@@ -145,49 +146,48 @@ const Home = () => {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-8 sm:mt-10 flex-wrap">
-            <a
-              href="https://www.facebook.com/share/168jQRHjqd/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 border border-[#a58dfc] rounded-md hover:text-black transition-all duration-300 cursor-pointer hover:bg-[#8267E3]"
-            >
-              <FaFacebookF className="text-xl sm:text-2xl font-semibold text-white" />
-            </a>
-            <a
-              href="https://www.instagram.com/masoom_____bacha_____/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 border border-[#a58dfc] rounded-md hover:text-black transition-all duration-300 cursor-pointer hover:bg-[#8267E3]"
-            >
-              <FaInstagram className="text-xl sm:text-2xl font-semibold text-white" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/vaibhav-garg5522/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 border border-[#a58dfc] rounded-md hover:text-black transition-all duration-300 cursor-pointer hover:bg-[#8267E3]"
-            >
-              <FaLinkedinIn className="text-xl sm:text-2xl font-semibold text-white" />
-            </a>
-            <a
-              href="https://github.com/vaibhavgarg5522"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 border border-[#a58dfc] rounded-md hover:text-black transition-all duration-300 cursor-pointer hover:bg-[#8267E3]"
-            >
-              <FaGithub className="text-xl sm:text-2xl font-semibold text-white" />
-            </a>
+            {[
+              {
+                icon: <FaFacebookF />,
+                link: "https://www.facebook.com/share/168jQRHjqd/",
+              },
+              {
+                icon: <FaInstagram />,
+                link: "https://www.instagram.com/masoom_____bacha_____/ ",
+              },
+              {
+                icon: <FaLinkedinIn />,
+                link: "https://www.linkedin.com/in/vaibhav-garg5522/",
+              },
+              {
+                icon: <FaGithub />,
+                link: "https://github.com/vaibhavgarg5522",
+              },
+            ].map((social, index) => (
+              <a
+                key={index}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 border border-[#a58dfc] rounded-full hover:scale-110 hover:shadow-md transition-all duration-300 cursor-pointer hover:bg-[#8267E3]"
+              >
+                <span className="text-xl sm:text-2xl font-semibold text-white">
+                  {social.icon}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
 
-        {/* Profile Image */}
-        <div className="w-[240px] sm:w-[280px] md:w-[350px]">
-          <div className="rounded-full overflow-hidden shadow-2xl border-4 border-[#8267E3]">
+        {/* Profile Image Section */}
+        <div className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10 md:mt-0">
+          <div className="relative rounded-full overflow-hidden shadow-2xl border-4 border-[#8267E3] transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
             <img
               src={vaibhavImg}
               alt="Vaibhav Garg"
               className="object-cover w-full h-full hover:grayscale-0 transition duration-500"
             />
+            <div className="absolute inset-0 rounded-full shadow-[0_0_30px_#8267E3] opacity-60"></div>
           </div>
         </div>
       </div>

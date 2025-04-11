@@ -32,7 +32,7 @@ const Skills = () => {
 
       {/* Content */}
       <div className="relative z-10">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#8267E3] mb-12 md:mt-15">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#8267E3] mb-12 mt-15 md:mt-15">
           My Skills
         </h2>
 
