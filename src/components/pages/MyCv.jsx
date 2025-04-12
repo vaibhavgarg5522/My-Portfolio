@@ -9,7 +9,7 @@ const MyCv = () => {
       </h2>
 
       {/* PDF Viewer via Google Drive direct preview */}
-      <div className="w-full max-w-4xl aspect-video sm:h-[80vh] rounded-xl overflow-hidden shadow-lg border border-[#8267E3]">
+      <div className="w-full max-w-4xl h-[60vh] sm:h-[80vh] lg:h-[90vh] xl:h-[95vh] rounded-xl overflow-hidden shadow-lg border border-[#8267E3] mb-6">
         <iframe
           src="https://drive.google.com/file/d/1RRlh_uGXhVnOYfADr3yOUquUgfUou7aj/preview"
           width="100%"
@@ -21,11 +21,11 @@ const MyCv = () => {
       </div>
 
       {/* Download Fallback */}
-      <div className="mt-6">
+      <div className="mt-6 w-full max-w-md">
         <a
           href="https://drive.google.com/uc?export=download&id=1RRlh_uGXhVnOYfADr3yOUquUgfUou7aj"
           download="Vaibhav_Garg_Resume.pdf"
-          className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-white font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
+          className="inline-block px-6 py-3 w-full max-w-xs rounded-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-white font-semibold text-center hover:scale-105 transition-all duration-300 shadow-lg"
         >
           Download Resume PDF
         </a>
