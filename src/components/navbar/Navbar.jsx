@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import DownloadIcon from "@mui/icons-material/Download";
 import { useNavigate } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaBars, FaTimes, FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import vaibhavImg from "../../images/image5.jpg";
 
 const Navbar = () => {
@@ -20,7 +19,7 @@ const Navbar = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Sidebar Header with Profile Image and Name */}
+        {/* Sidebar Header */}
         <div className="flex justify-between items-center p-4 border-b border-[#333]">
           <div className="flex items-center gap-3">
             <img
@@ -67,16 +66,33 @@ const Navbar = () => {
 
         {/* Social Icons */}
         <div className="flex justify-center gap-4 mt-6 px-4">
-          {[FaFacebook, FaInstagram, FaLinkedin, FaGithub].map((Icon, idx) => (
+          {[
+            {
+              icon: <FaFacebookF />,
+              link: "https://www.facebook.com/share/168jQRHjqd/",
+            },
+            {
+              icon: <FaInstagram />,
+              link: "https://www.instagram.com/masoom_____bacha_____/",
+            },
+            {
+              icon: <FaLinkedinIn />,
+              link: "https://www.linkedin.com/in/vaibhav-garg5522/",
+            },
+            {
+              icon: <FaGithub />,
+              link: "https://github.com/vaibhavgarg5522",
+            },
+          ].map((social, idx) => (
             <a
               key={idx}
-              href="#"
+              href={social.link}
               target="_blank"
               rel="noopener noreferrer"
               className="text-white bg-[#282135] p-2 rounded-full transition-all duration-300
                          hover:bg-[#8267E3] active:scale-95"
             >
-              <Icon className="text-lg" />
+              {social.icon}
             </a>
           ))}
         </div>
@@ -85,7 +101,7 @@ const Navbar = () => {
       {/* Top Navbar */}
       <nav className="bg-[#1a1a1a] text-white px-6 md:px-16 py-4 shadow-md flex justify-between items-center h-[70px] w-full z-30 fixed top-0">
         {/* Left Section */}
-        <div className="flex items-center gap-3 z-50">
+        <div className="flex items-center gap-3 z-50 md:gap-6">
           {/* Mobile Menu Icon */}
           {!isOpen && (
             <button
@@ -101,7 +117,8 @@ const Navbar = () => {
           {/* Name */}
           <h1
             onClick={() => navigate("/")}
-            className="text-xl md:text-3xl font-extrabold cursor-pointer bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text transition duration-300 hover:scale-105"
+            className="text-xl md:text-3xl font-extrabold cursor-pointer bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text transition duration-300 hover:scale-105
+            absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0"
           >
             Vaibhav <span className="text-white">Garg</span>
           </h1>

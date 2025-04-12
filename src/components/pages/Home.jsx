@@ -53,17 +53,17 @@ const Home = () => {
 
       <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
         {/* Text Section */}
-        <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-start">
+        <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start">
           <p className="text-[#8267E3] uppercase tracking-widest font-medium text-sm md:text-base">
             Front-End Developer | ReactJS Enthusiast
           </p>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6 text-start">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6">
             I Build <span className="text-[#8267E3]">Beautiful</span> and{" "}
             <span className="text-[#8267E3]">Functional</span> Web Interfaces.
           </h1>
 
-          <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-6">
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-6 max-w-[500px]">
             I'm Vaibhav Garg — a self-taught React developer passionate about
             building responsive, user-friendly, and clean web experiences. I
             turn ideas into digital reality with precision, performance, and
@@ -71,7 +71,7 @@ const Home = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex gap-4 mb-6 flex-wrap">
+          <div className="flex gap-4 mb-6 flex-wrap justify-center md:justify-start">
             <button
               onClick={() => navigate("/projects")}
               className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
@@ -145,7 +145,7 @@ const Home = () => {
           </div>
 
           {/* Social Icons */}
-          <div className="flex gap-4 mt-8 sm:mt-10 flex-wrap">
+          <div className="flex gap-4 mt-8 sm:mt-10 flex-wrap justify-center md:justify-start">
             {[
               {
                 icon: <FaFacebookF />,
@@ -153,7 +153,7 @@ const Home = () => {
               },
               {
                 icon: <FaInstagram />,
-                link: "https://www.instagram.com/masoom_____bacha_____/ ",
+                link: "https://www.instagram.com/masoom_____bacha_____/",
               },
               {
                 icon: <FaLinkedinIn />,
