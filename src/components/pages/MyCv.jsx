@@ -17,6 +17,7 @@ const MyCv = () => {
           allow="autoplay"
           className="w-full h-full"
           title="Vaibhav Garg Resume"
+          loading="lazy" // Added lazy loading for better performance
         ></iframe>
       </div>
 

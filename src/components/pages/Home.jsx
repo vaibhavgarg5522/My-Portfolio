@@ -1,6 +1,11 @@
 import React, { useState, useRef } from "react";
 import vaibhavImg from "../../images/image5.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
+import About from "./About";
+import Skills from "./Skill";
+import Projects from "./Projects";
+import Contact from "./Contact";
+
 import {
   FaWhatsapp,
   FaFacebookF,

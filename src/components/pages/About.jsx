@@ -52,7 +52,7 @@ const About = () => {
               <p className="text-xl sm:text-2xl">Hi 👋</p>
               <p className="text-xl sm:text-2xl font-medium">
                 My name is{" "}
-                <span className="text-2xl sm:text-3xl md:text-[42px] font-semibold uppercase tracking-[0.15em] text-[#8267E3] border-b border-[#8267E3] inline-block pb-2 sm:mb-10 ">
+                <span className="text-2xl sm:text-3xl md:text-[42px] font-semibold uppercase tracking-[0.15em] text-[#8267E3] border-b border-[#8267E3] inline-block pb-2 sm:mb-10 mb-4">
                   Vaibhav Garg
                 </span>
               </p>

@@ -27,8 +27,8 @@ const Navbar = () => {
               alt="Profile"
               className="w-9 h-9 rounded-full object-cover border-2 border-[#8267E3]"
             />
-            <span className="text-base font-semibold bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text">
-              Vaibhav Garg
+            <span className="text-[20px] font-bold bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text">
+              Vaibhav <span className="text-[19px] font-bold bg-[white]  bg-clip-text">Garg</span>
             </span>
           </div>
           <button
