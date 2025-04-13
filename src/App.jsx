@@ -23,6 +23,7 @@ function App() {
       <Route path="/projects" element={<Projects></Projects>}></Route>
       <Route path="/mycv" element={<MyCv></MyCv>}></Route>
     </Routes>
+    
    
       
     </>

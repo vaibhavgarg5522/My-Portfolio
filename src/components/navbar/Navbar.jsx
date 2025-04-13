@@ -117,7 +117,7 @@ const Navbar = () => {
           {/* Name */}
           <h1
             onClick={() => navigate("/")}
-            className="text-xl md:text-3xl font-extrabold cursor-pointer bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text transition duration-300 hover:scale-105
+            className="text-2xl md:text-3xl font-bold cursor-pointer bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text transition duration-300 hover:scale-105
             absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0"
           >
             Vaibhav <span className="text-white">Garg</span>
