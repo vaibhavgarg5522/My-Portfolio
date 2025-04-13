@@ -106,7 +106,7 @@ const Navbar = () => {
           {!isOpen && (
             <button
               onClick={toggleSidebar}
-              className="block md:hidden p-[6px] rounded-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff]
+              className="block md:hidden p-[8px] rounded-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff]
                          text-white text-base shadow-md transition-all duration-300 hover:scale-105 active:scale-95"
               title="Menu"
             >

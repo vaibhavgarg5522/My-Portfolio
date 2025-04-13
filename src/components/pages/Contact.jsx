@@ -13,7 +13,7 @@ const Contact = () => {
       'service_uinyu8d',
       'template_0aflauk',
       form.current,
-      'YOUR_PUBLIC_KEY' // 🔁 Replace this with your actual EmailJS Public Key
+      'bKptcgsLisERMObpO' // ✅ REPLACED with your actual Public Key
     )
     .then((result) => {
       alert('Message sent successfully!');
@@ -48,7 +48,6 @@ const Contact = () => {
               Get in Touch
             </h2>
 
-            {/* Email */}
             <a href="mailto:vaibhavgarg5522@gmail.com" className="flex items-center gap-4 bg-[linear-gradient(145deg,_#1a112b,_#2d165e)] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
               <div className="bg-[#8267E3] text-white rounded-full p-3">
                 <FiSend size={24} />
@@ -59,7 +58,6 @@ const Contact = () => {
               </div>
             </a>
 
-            {/* Call */}
             <a href="tel:+918218390981" className="flex items-center gap-4 bg-[linear-gradient(145deg,_#1a112b,_#2d165e)] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300 mt-10">
               <div className="bg-[#8267E3] text-white rounded-full p-3">
                 <FiPhoneCall size={24} />
@@ -70,7 +68,6 @@ const Contact = () => {
               </div>
             </a>
 
-            {/* Location */}
             <a href="https://www.google.com/maps/place/Uttar+Pradesh" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-[linear-gradient(145deg,_#1a112b,_#2d165e)] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300 mt-10">
               <div className="bg-[#8267E3] text-white rounded-full p-3">
                 <FiMapPin size={24} />
@@ -127,7 +124,6 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* Social Media */}
         <div className="relative w-full mt-20">
           <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-[#c4b4ff] z-0" />
           <div className="flex justify-evenly items-center z-10 relative w-full px-4 flex-wrap gap-3">
@@ -150,7 +146,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Footer */}
         <p className="text-xs text-[#c4b4ff] text-center mt-6">
           © 2025 Vaibhav Garg. All rights reserved.
         </p>

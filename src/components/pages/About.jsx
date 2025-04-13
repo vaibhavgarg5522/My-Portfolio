@@ -31,22 +31,28 @@ const About = () => {
 
       <div className="relative z-10">
         {/* About Me Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-20">
-          <div className="w-full md:w-[60%]">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)]  inline-block text-center px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] mt-18">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10 mb-20">
+          {/* Show heading at top on small screens */}
+          <div className="block lg:hidden w-full">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] md:mt-25 mt-20">
               About Me
             </h2>
-            {/* Profile Image */}
-            <div className="w-full md:w-[35%] flex justify-center md:mt-18">
-              <div className="w-[250px] sm:w-[300px] md:w-[340px] h-[350px] sm:h-[400px] md:h-[460px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl">
-                <img src={profile} alt="Profile" className="object-cover w-full h-full" />
-              </div>
+          </div>
+
+          {/* Text Section */}
+          <div className="w-full lg:w-[60%] order-1 lg:order-none">
+            {/* Hide heading on small, show on large */}
+            <div className="hidden lg:block">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:mt-25">
+                About Me
+              </h2>
             </div>
+
             <div className="backdrop-blur-sm p-6 sm:p-8 rounded-2xl text-left text-gray-200 text-base sm:text-lg leading-relaxed space-y-4 shadow-xl">
-              <p className=" text-xl sm:text-2xl">Hi 👋</p>
+              <p className="text-xl sm:text-2xl">Hi 👋</p>
               <p className="text-xl sm:text-2xl font-medium">
                 My name is{" "}
-                <span className="text-2xl sm:text-3xl md:text-[42px] font-semibold uppercase tracking-[0.15em] text-[#8267E3] border-b border-[#8267E3] inline-block pb-2 mb-3 sm:mb-10 ">
+                <span className="text-2xl sm:text-3xl md:text-[42px] font-semibold uppercase tracking-[0.15em] text-[#8267E3] border-b border-[#8267E3] inline-block pb-2 sm:mb-10 ">
                   Vaibhav Garg
                 </span>
               </p>
@@ -59,16 +65,22 @@ const About = () => {
               </p>
             </div>
           </div>
+
+          {/* Profile Image */}
+          <div className="w-full lg:w-[35%] flex justify-center order-0 lg:order-none -mb-10">
+            <div className="w-[250px] sm:w-[300px] md:w-[340px] h-[350px] sm:h-[400px] md:h-[460px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl md:mt-18 ">
+              <img src={profile} alt="Profile" className="object-cover w-full h-full" />
+            </div>
+          </div>
         </div>
 
         {/* Info Grid Section */}
         <div className="w-full">
-          <div className="bg-[linear-gradient(to_right,#131314_10%,#8267E3_90%)] p-6 sm:p-8 md:p-10 rounded-3xl shadow-2xl text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10  ">
-
+          <div className="bg-[linear-gradient(to_right,#131314_10%,#8267E3_90%)] p-6 sm:p-8 md:p-10 rounded-3xl shadow-2xl text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Column 1: Education + Contact */}
-            <div className="flex flex-col gap-10 ">
+            <div className="flex flex-col gap-10">
               <div>
-                <h4 className="text-xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
+                <h4 className="text-xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 ">
                   <FaGraduationCap /> Education
                 </h4>
                 <p className="mt-2">Self-Taught Developer</p>
@@ -148,8 +160,8 @@ const About = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="mt-16 flex justify-center flex-wrap gap-6 sm:gap-10">
-          {[ 
+        <div className="mt-15 flex justify-center flex-wrap gap-6 sm:gap-10">
+          {[
             {
               icon: <FacebookIcon className="text-2xl sm:text-3xl" />,
               label: "Facebook",
