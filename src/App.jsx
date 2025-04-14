@@ -6,6 +6,7 @@ import Skill from "./components/pages/Skill"
 import Contact from "./components/pages/Contact"
 import Projects from "./components/pages/Projects"
 import MyCv from "./components/pages/MyCv"
+import Footer from "./components/pages/Footer"
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/projects" element={<Projects></Projects>}></Route>
       <Route path="/mycv" element={<MyCv></MyCv>}></Route>
     </Routes>
+    <Footer></Footer>
     
    
       

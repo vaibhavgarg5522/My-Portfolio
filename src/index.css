@@ -28,3 +28,15 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+@keyframes rotateCycle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-icon {
+  animation: rotateCycle 1s linear infinite;
+}

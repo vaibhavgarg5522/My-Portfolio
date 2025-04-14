@@ -145,10 +145,6 @@ const Contact = () => {
             ))}
           </div>
         </div>
-
-        <p className="text-xs text-[#c4b4ff] text-center mt-6">
-          © 2025 Vaibhav Garg. All rights reserved.
-        </p>
       </div>
     </section>
   );
