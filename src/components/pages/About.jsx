@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../../assets/image5.jpg";
+import profile from "../../assets/image4.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -68,7 +68,7 @@ const About = () => {
 
           {/* Profile Image */}
           <div className="w-full lg:w-[35%] flex justify-center order-0 lg:order-none -mb-10">
-            <div className="w-[250px] sm:w-[300px] md:w-[340px] h-[350px] sm:h-[400px] md:h-[460px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl md:mt-18 ">
+            <div className="w-[200px] sm:w-[250px] md:w-[300px] h-[350px] sm:h-[470px] md:h-[500px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl md:mt-18 ">
               <img src={profile} alt="Profile" className="object-cover w-full h-full" />
             </div>
           </div>

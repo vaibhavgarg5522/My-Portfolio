@@ -151,6 +151,42 @@ const Home = () => {
                 <FaWhatsapp className="text-white text-lg sm:text-xl" />
               </div>
             </div>
+
+            {/* Social Media Icons */}
+            <div className="flex gap-6 mt-6 justify-center md:justify-start">
+              <a
+                href="https://www.facebook.com/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[white] hover:text-[#6d56c8] transition duration-300"
+              >
+                <FaFacebookF className="text-2xl" />
+              </a>
+              <a
+                href="https://www.instagram.com/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[white] hover:text-[#6d56c8] transition duration-300"
+              >
+                <FaInstagram className="text-2xl" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[white] hover:text-[#6d56c8] transition duration-300"
+              >
+                <FaLinkedinIn className="text-2xl" />
+              </a>
+              <a
+                href="https://github.com/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[white] hover:text-[#6d56c8] transition duration-300"
+              >
+                <FaGithub className="text-2xl" />
+              </a>
+            </div>
           </div>
 
           {/* Profile Image Section */}
