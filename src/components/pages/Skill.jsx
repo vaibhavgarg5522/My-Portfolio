@@ -32,11 +32,11 @@ const Skills = () => {
 
       {/* Content */}
       <div className="relative z-10">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#8267E3] mb-12 mt-15 md:mt-15">
+        <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] md:mt-15 mt-15  ">
           My Skills
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-[0.4fr_0.6fr] gap-14 md:gap-20 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[0.4fr_0.6fr] gap-14 md:gap-20 items-start mt-9 md:mt-9">
           {/* Technical Skills */}
           <div className="w-full max-w-xl mx-auto">
             <h3 className="text-2xl font-semibold text-[#8267E3] mb-6 text-center">

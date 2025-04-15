@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-scroll";
 import vaibhavImg from "../../images/image5.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
 import About from "./About";
@@ -15,7 +14,6 @@ import {
   FaGithub,
 } from "react-icons/fa";
 
-// Home Component
 const Home = () => {
   const navigate = useNavigate();
   const [progress, setProgress] = useState(0);
@@ -60,7 +58,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/60 z-0"></div>
         <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
           {/* Text Section */}
-          <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start">
+          <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
             <p className="text-[#8267E3] uppercase tracking-widest font-medium text-sm md:text-base">
               Front-End Developer | ReactJS Enthusiast
             </p>
@@ -107,7 +105,6 @@ const Home = () => {
                 WebkitBackdropFilter: "blur(4px)",
               }}
             >
-              {/* Progress Fill */}
               <div
                 className="absolute left-0 top-0 h-full"
                 style={{
@@ -118,8 +115,6 @@ const Home = () => {
                   zIndex: 0,
                 }}
               ></div>
-
-              {/* Button Text */}
               <span
                 className={`${
                   progress > 20
@@ -134,8 +129,6 @@ const Home = () => {
               >
                 Happy to chat on WhatsApp
               </span>
-
-              {/* Floating WhatsApp Icon */}
               <div
                 className={`absolute top-1/2 -translate-y-1/2 z-30 transition-transform duration-100 ${
                   isPressed ? "scale-110" : "scale-100"
@@ -153,36 +146,36 @@ const Home = () => {
             </div>
 
             {/* Social Media Icons */}
-            <div className="flex gap-6 mt-6 justify-center md:justify-start">
+            <div className="flex gap-6 mt-20 justify-center md:justify-start">
               <a
-                href="https://www.facebook.com/yourprofile"
+                href="https://www.facebook.com/share/168jQRHjqd/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[white] hover:text-[#6d56c8] transition duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 border-2 rounded-[20%] border-[#8267E3] flex justify-center items-center hover:bg-purple-500 hover:text-white transition-all duration-500 cursor-pointer"
               >
                 <FaFacebookF className="text-2xl" />
               </a>
               <a
-                href="https://www.instagram.com/yourprofile"
+                href="https://www.instagram.com/masoom_____bacha_____/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[white] hover:text-[#6d56c8] transition duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-[#8267E3] rounded-[20%] flex justify-center items-center hover:bg-purple-500 hover:text-white transition-all duration-500 cursor-pointer"
               >
                 <FaInstagram className="text-2xl" />
               </a>
               <a
-                href="https://www.linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/vaibhav-garg-468a5134a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[white] hover:text-[#6d56c8] transition duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-[#8267E3] rounded-[20%] flex justify-center items-center hover:bg-purple-500 hover:text-white transition-all duration-500 cursor-pointer"
               >
                 <FaLinkedinIn className="text-2xl" />
               </a>
               <a
-                href="https://github.com/yourprofile"
+                href="https://github.com/vaibhavgarg5522"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[white] hover:text-[#6d56c8] transition duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-[#8267E3] rounded-[20%] flex justify-center items-center hover:bg-purple-500 hover:text-white transition-all duration-500 cursor-pointer"
               >
                 <FaGithub className="text-2xl" />
               </a>

@@ -34,7 +34,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-10 mb-20">
           {/* Show heading at top on small screens */}
           <div className="block lg:hidden w-full">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] md:mt-25 mt-20">
+            <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] md:mt-25 mt-20">
               About Me
             </h2>
           </div>
@@ -43,7 +43,7 @@ const About = () => {
           <div className="w-full lg:w-[60%] order-1 lg:order-none">
             {/* Hide heading on small, show on large */}
             <div className="hidden lg:block">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:mt-25">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-right px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:mt-25">
                 About Me
               </h2>
             </div>
