@@ -98,7 +98,7 @@ const Home = () => {
               onTouchStart={handleMouseDown}
               onTouchEnd={handleMouseUp}
               onTouchCancel={handleMouseUp}
-              className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#8267E3] overflow-hidden transition-all duration-300 w-full sm:w-fit"
+              className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#8267E3] overflow-hidden transition-all duration-300 w-full sm:w-fit "
               style={{
                 background: "linear-gradient(145deg, #1a112b, #2d165e)",
                 backdropFilter: "blur(4px)",
@@ -106,7 +106,7 @@ const Home = () => {
               }}
             >
               <div
-                className="absolute left-0 top-0 h-full"
+                className="absolute left-0 top-0 h-full "
                 style={{
                   width: `${progress}px`,
                   backgroundColor: "#8267E3",
@@ -131,7 +131,7 @@ const Home = () => {
               </span>
               <div
                 className={`absolute top-1/2 -translate-y-1/2 z-30 transition-transform duration-100 ${
-                  isPressed ? "scale-110" : "scale-100"
+                  isPressed ? "scale-110 rotate-icon" : "scale-100"
                 }`}
                 style={{
                   left: `${progress}px`,
@@ -147,38 +147,29 @@ const Home = () => {
 
             {/* Social Media Icons */}
             <div className="flex gap-6 mt-20 justify-center md:justify-start">
-              <a
-                href="https://www.facebook.com/share/168jQRHjqd/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 sm:w-12 sm:h-12 border-2 rounded-[20%] border-[#8267E3] flex justify-center items-center hover:bg-purple-500 hover:text-white transition-all duration-500 cursor-pointer"
-              >
-                <FaFacebookF className="text-2xl" />
-              </a>
-              <a
-                href="https://www.instagram.com/masoom_____bacha_____/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-[#8267E3] rounded-[20%] flex justify-center items-center hover:bg-purple-500 hover:text-white transition-all duration-500 cursor-pointer"
-              >
-                <FaInstagram className="text-2xl" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/vaibhav-garg-468a5134a/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-[#8267E3] rounded-[20%] flex justify-center items-center hover:bg-purple-500 hover:text-white transition-all duration-500 cursor-pointer"
-              >
-                <FaLinkedinIn className="text-2xl" />
-              </a>
-              <a
-                href="https://github.com/vaibhavgarg5522"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-[#8267E3] rounded-[20%] flex justify-center items-center hover:bg-purple-500 hover:text-white transition-all duration-500 cursor-pointer"
-              >
-                <FaGithub className="text-2xl" />
-              </a>
+              {[{
+                href: "https://www.facebook.com/share/168jQRHjqd/",
+                icon: <FaFacebookF className="text-xl sm:text-2xl" />,
+              }, {
+                href: "https://www.instagram.com/masoom_____bacha_____/",
+                icon: <FaInstagram className="text-xl sm:text-2xl" />,
+              }, {
+                href: "https://www.linkedin.com/in/vaibhav-garg-468a5134a/",
+                icon: <FaLinkedinIn className="text-xl sm:text-2xl" />,
+              }, {
+                href: "https://github.com/vaibhavgarg5522",
+                icon: <FaGithub className="text-xl sm:text-2xl" />,
+              }].map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center transition-all duration-500 hover:bg-[#8267E3] hover:shadow-[0_0_15px_#8267E3] text-white"
+                >
+                  {item.icon}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -196,8 +187,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Display All Sections Below on Mobile */}
-      <div className="flex flex-col md:hidden">
+      {/* All Sections with Unified Gradient Background on Mobile */}
+      <div className="flex flex-col md:hidden bg-gradient-to-b from-[#1a112b] via-[#2a1d47] to-[#3b2a66] text-white">
         <section id="about">
           <About />
         </section>

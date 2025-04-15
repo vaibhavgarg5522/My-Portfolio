@@ -68,7 +68,7 @@ const About = () => {
 
           {/* Profile Image */}
           <div className="w-full lg:w-[35%] flex justify-center order-0 lg:order-none -mb-10">
-            <div className="w-[200px] sm:w-[250px] md:w-[300px] h-[350px] sm:h-[470px] md:h-[500px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl md:mt-18 ">
+            <div className="w-[250px] sm:w-[250px] md:w-[290px] h-[410px] sm:h-[470px] md:h-[460px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl md:mt-18 transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500 ">
               <img src={profile} alt="Profile" className="object-cover w-full h-full" />
             </div>
           </div>
