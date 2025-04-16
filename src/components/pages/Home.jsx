@@ -106,7 +106,7 @@ const Home = () => {
               }}
             >
               <div
-                className="absolute left-0 top-0 h-full "
+                className="absolute left-0 top-0 h-full"
                 style={{
                   width: `${progress}px`,
                   backgroundColor: "#8267E3",
@@ -131,7 +131,7 @@ const Home = () => {
               </span>
               <div
                 className={`absolute top-1/2 -translate-y-1/2 z-30 transition-transform duration-100 ${
-                  isPressed ? "scale-110 rotate-icon" : "scale-100"
+                  isPressed ? "scale-120 rotate-icon" : "scale-100"
                 }`}
                 style={{
                   left: `${progress}px`,
@@ -145,31 +145,40 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Social Media Icons */}
+            {/* Social Media Icons with Brand Colors */}
             <div className="flex gap-6 mt-20 justify-center md:justify-start">
-              {[{
-                href: "https://www.facebook.com/share/168jQRHjqd/",
-                icon: <FaFacebookF className="text-xl sm:text-2xl" />,
-              }, {
-                href: "https://www.instagram.com/masoom_____bacha_____/",
-                icon: <FaInstagram className="text-xl sm:text-2xl" />,
-              }, {
-                href: "https://www.linkedin.com/in/vaibhav-garg-468a5134a/",
-                icon: <FaLinkedinIn className="text-xl sm:text-2xl" />,
-              }, {
-                href: "https://github.com/vaibhavgarg5522",
-                icon: <FaGithub className="text-xl sm:text-2xl" />,
-              }].map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center transition-all duration-500 hover:bg-[#8267E3] hover:shadow-[0_0_15px_#8267E3] text-white"
-                >
-                  {item.icon}
-                </a>
-              ))}
+              <a
+                href="https://www.facebook.com/share/168jQRHjqd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#1877F2] hover:shadow-[0_0_15px_#1877F2]"
+              >
+                <FaFacebookF className="text-xl sm:text-2xl" />
+              </a>
+              <a
+                href="https://www.instagram.com/masoom_____bacha_____/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#E4405F] hover:shadow-[0_0_15px_#E4405F]"
+              >
+                <FaInstagram className="text-xl sm:text-2xl" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/vaibhav-garg-468a5134a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#0077B5] hover:shadow-[0_0_15px_#0077B5]"
+              >
+                <FaLinkedinIn className="text-xl sm:text-2xl" />
+              </a>
+              <a
+                href="https://github.com/vaibhavgarg5522"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#8267E3] hover:shadow-[0_0_15px_#333]"
+              >
+                <FaGithub className="text-xl sm:text-2xl" />
+              </a>
             </div>
           </div>
 

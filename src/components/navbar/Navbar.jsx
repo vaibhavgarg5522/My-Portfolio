@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import DownloadIcon from "@mui/icons-material/Download";
 import { useNavigate } from "react-router-dom";
-import { FaBars, FaTimes, FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaGithub,
+} from "react-icons/fa";
 import vaibhavImg from "../../images/image5.jpg";
 
 const Navbar = () => {
@@ -13,7 +20,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Mobile Sidebar */}
+      {/* Sidebar (Mobile) */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-[#1a112b] text-white transform transition-transform duration-300 z-40 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
@@ -28,7 +35,7 @@ const Navbar = () => {
               className="w-9 h-9 rounded-full object-cover border-2 border-[#8267E3]"
             />
             <span className="text-[20px] font-bold bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text">
-              Vaibhav <span className="text-[19px] font-bold bg-[white]  bg-clip-text">Garg</span>
+              Vaibhav <span className="text-[19px] font-bold text-white">Garg</span>
             </span>
           </div>
           <button
@@ -39,7 +46,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Sidebar Items */}
+        {/* Sidebar Nav Links */}
         <ul className="p-4 space-y-4">
           {[
             { name: "Home", path: "/" },
@@ -64,24 +71,28 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Social Icons */}
-        <div className="flex justify-center gap-4 mt-6 px-4">
+        {/* Styled Social Icons */}
+        <div className="flex justify-center gap-3 mt-6 px-4">
           {[
             {
               icon: <FaFacebookF />,
               link: "https://www.facebook.com/share/168jQRHjqd/",
+              color: "#1877F2",
             },
             {
               icon: <FaInstagram />,
               link: "https://www.instagram.com/masoom_____bacha_____/",
+              color: "#E4405F",
             },
             {
               icon: <FaLinkedinIn />,
               link: "https://www.linkedin.com/in/vaibhav-garg5522/",
+              color: "#0077B5",
             },
             {
               icon: <FaGithub />,
               link: "https://github.com/vaibhavgarg5522",
+              color: "#fff",
             },
           ].map((social, idx) => (
             <a
@@ -89,8 +100,13 @@ const Navbar = () => {
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white bg-[#282135] p-2 rounded-full transition-all duration-300
-                         hover:bg-[#8267E3] active:scale-95"
+              className={`w-9 h-9 flex items-center justify-center rounded-full border-2 border-[#8267E3]
+                         transition-all duration-300 hover:scale-120`}
+              style={{
+                backgroundColor: `${social.color}22`,
+                color: social.color,
+                boxShadow: `0 0 10px ${social.color}`,
+              }}
             >
               {social.icon}
             </a>
@@ -102,7 +118,6 @@ const Navbar = () => {
       <nav className="bg-[#1a1a1a] text-white px-6 md:px-16 py-4 shadow-md flex justify-between items-center h-[70px] w-full z-30 fixed top-0">
         {/* Left Section */}
         <div className="flex items-center gap-3 z-50 md:gap-6">
-          {/* Mobile Menu Icon */}
           {!isOpen && (
             <button
               onClick={toggleSidebar}
@@ -114,7 +129,7 @@ const Navbar = () => {
             </button>
           )}
 
-          {/* Name */}
+          {/* Center Name */}
           <h1
             onClick={() => navigate("/")}
             className="text-2xl md:text-3xl font-bold cursor-pointer bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text transition duration-300 hover:scale-105
@@ -124,7 +139,7 @@ const Navbar = () => {
           </h1>
         </div>
 
-        {/* Desktop Links */}
+        {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-8 text-sm font-medium">
           {[
             { name: "Home", path: "/" },

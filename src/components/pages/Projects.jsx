@@ -74,7 +74,7 @@ const Projects = () => {
       <div className="relative z-10">
         {/* Title */}
         <div className="mb-10 md:mt-10 mt-18">
-          <h2 className=" text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right xl:text-right px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] ">
+          <h2 className=" text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right xl:text-right px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] ">
             My Projects
           </h2>
           <p className="text-xl sm:text-3xl md:text-[42px] font-bold uppercase tracking-widest text-transparent md: text-center bg-clip-text bg-gradient-to-r from-[#8B5CF6] via-[#A78BFA] to-[#C4B5FD] animate-pulse shadow-md mb-10 mt-6">
