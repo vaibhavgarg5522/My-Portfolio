@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { FiMapPin, FiSend, FiPhoneCall } from "react-icons/fi";
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import backgroundImage from "../../images/bgsunny.jpg";
 import emailjs from '@emailjs/browser';
 
@@ -13,7 +13,7 @@ const Contact = () => {
       'service_uinyu8d',
       'template_0aflauk',
       form.current,
-      'bKptcgsLisERMObpO' // ✅ REPLACED with your actual Public Key
+      'bKptcgsLisERMObpO'
     )
     .then((result) => {
       alert('Message sent successfully!');
@@ -48,35 +48,32 @@ const Contact = () => {
               Get in Touch
             </h2>
 
-            <a href="mailto:vaibhavgarg5522@gmail.com" className="flex items-center gap-4 bg-[linear-gradient(145deg,_#1a112b,_#2d165e)] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300">
-              <div className="bg-[#8267E3] text-white rounded-full p-3">
-                <FiSend size={24} />
-              </div>
-              <div>
-                <h4 className="font-semibold">Email</h4>
-                <p className="text-[#c4b4ff]">vaibhavgarg5522@gmail.com</p>
-              </div>
-            </a>
+            {/* Email */}
+            <ContactItem
+              icon={<MdEmail size={24} />}
+              title="Email"
+              value="vaibhavgarg5522@gmail.com"
+              href="mailto:vaibhavgarg5522@gmail.com"
+              color="#FF6A3D"
+            />
 
-            <a href="tel:+918218390981" className="flex items-center gap-4 bg-[linear-gradient(145deg,_#1a112b,_#2d165e)] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300 mt-10">
-              <div className="bg-[#8267E3] text-white rounded-full p-3">
-                <FiPhoneCall size={24} />
-              </div>
-              <div>
-                <h4 className="font-semibold">Call</h4>
-                <p className="text-[#c4b4ff]">+91-8218390981</p>
-              </div>
-            </a>
+            {/* Phone */}
+            <ContactItem
+              icon={<MdPhone size={24} />}
+              title="Call"
+              value="+91-8218390981"
+              href="tel:+918218390981"
+              color="#00C896"
+            />
 
-            <a href="https://www.google.com/maps/place/Uttar+Pradesh" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-[linear-gradient(145deg,_#1a112b,_#2d165e)] rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300 mt-10">
-              <div className="bg-[#8267E3] text-white rounded-full p-3">
-                <FiMapPin size={24} />
-              </div>
-              <div>
-                <h4 className="font-semibold">Location</h4>
-                <p className="text-[#c4b4ff]">Uttar-Pradesh, India</p>
-              </div>
-            </a>
+            {/* Location */}
+            <ContactItem
+              icon={<MdLocationOn size={24} />}
+              title="Location"
+              value="Uttar-Pradesh, India"
+              href="https://www.google.com/maps/place/Uttar+Pradesh"
+              color="red"
+            />
           </div>
 
           {/* Contact Form */}
@@ -85,69 +82,66 @@ const Contact = () => {
             onSubmit={sendEmail}
             className="bg-[#121c28] border border-[#8267E3] rounded-xl p-8 space-y-6 md:w-1/2 shadow-2xl"
           >
-            <h3 className="text-2xl font-bold text-center text-[#8267E3] mb-4">Send a Message</h3>
+            <h3 className="text-2xl font-bold text-center text-[#8267E3]">Send Message</h3>
 
             <input
               type="text"
-              placeholder="Name"
-              name="name"
+              name="user_name"
+              placeholder="Your Name"
+              className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:border-[#8B3DFF]"
               required
-              className="w-full p-3 rounded-md bg-transparent border border-[#8267E3] placeholder-[#c4b4ff] text-[#c4b4ff] focus:outline-none focus:ring-2 focus:ring-[#8267E3]"
             />
             <input
               type="email"
-              placeholder="Email"
-              name="email"
+              name="user_email"
+              placeholder="Your Email"
+              className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:border-[#8B3DFF]"
               required
-              className="w-full p-3 rounded-md bg-transparent border border-[#8267E3] placeholder-[#c4b4ff] text-[#c4b4ff] focus:outline-none focus:ring-2 focus:ring-[#8267E3]"
-            />
-            <input
-              type="text"
-              placeholder="Subject"
-              name="subject"
-              required
-              className="w-full p-3 rounded-md bg-transparent border border-[#8267E3] placeholder-[#c4b4ff] text-[#c4b4ff] focus:outline-none focus:ring-2 focus:ring-[#8267E3]"
             />
             <textarea
-              placeholder="Your Message"
               name="message"
-              rows="4"
+              rows="5"
+              placeholder="Your Message"
+              className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:border-[#8B3DFF]"
               required
-              className="w-full p-3 rounded-md bg-transparent border border-[#8267E3] placeholder-[#c4b4ff] text-[#c4b4ff] focus:outline-none focus:ring-2 focus:ring-[#8267E3]"
-            />
+            ></textarea>
+
             <button
               type="submit"
-              className="bg-[#8267E3] hover:bg-[#6d56c8] transition duration-300 text-white font-semibold py-3 px-6 rounded-md shadow-md w-full"
+              className="w-full py-3 bg-[#8267E3] text-white font-semibold rounded-md shadow-md hover:opacity-90 transition duration-300"
             >
-              Submit
+              Send Message
             </button>
           </form>
-        </div>
-
-        <div className="relative w-full mt-20">
-          <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-[#c4b4ff] z-0" />
-          <div className="flex justify-evenly items-center z-10 relative w-full px-4 flex-wrap gap-3">
-            {[
-              { name: "Facebook", url: "https://www.facebook.com/share/168jQRHjqd/" },
-              { name: "Instagram", url: "https://www.instagram.com/masoom_____bacha_____/" },
-              { name: "LinkedIn", url: "https://www.linkedin.com/in/vaibhav-garg-468a5134a/" },
-              { name: "GitHub", url: "https://github.com/vaibhavgarg5522" }
-            ].map(({ name, url }) => (
-              <a
-                key={name}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-1 border border-[#c4b4ff] text-[#c4b4ff] rounded-full text-sm bg-[#0b1c17] hover:bg-[#8267E3] hover:text-white transition-all duration-300"
-              >
-                {name}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </section>
   );
 };
+
+// Glow-style Contact Item (reusable)
+const ContactItem = ({ icon, title, value, href, color }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-4 bg-gradient-to-br from-[#1a112b] to-[#2d165e] rounded-xl p-4 mt-6 shadow-md hover:scale-105 transition-transform duration-300"
+  >
+    <div
+      className="w-11 h-11 flex items-center justify-center rounded-full"
+      style={{
+        backgroundColor: `${color}22`,
+        color: color,
+        boxShadow: `0 0 10px ${color}`,
+      }}
+    >
+      {icon}
+    </div>
+    <div>
+      <h4 className="font-semibold">{title}</h4>
+      <p className="text-[#c4b4ff]">{value}</p>
+    </div>
+  </a>
+);
 
 export default Contact;

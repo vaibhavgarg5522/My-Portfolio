@@ -195,53 +195,45 @@ const About = () => {
 
         {/* Social Icons */}
         <div className="mt-16 flex justify-center flex-wrap gap-6 sm:gap-10">
-          {[
-            {
-              icon: (
-                <FacebookIcon className="text-3xl text-[#1877F2] group-hover:text-white" />
-              ),
-              label: "Facebook",
-              link: "https://www.facebook.com/share/168jQRHjqd/",
-              hoverColor: "bg-[#1877F2]",
-            },
-            {
-              icon: (
-                <InstagramIcon className="text-3xl text-[#E4405F] group-hover:text-white" />
-              ),
-              label: "Instagram",
-              link: "https://www.instagram.com/masoom_____bacha_____/",
-              hoverColor: "bg-[#E4405F]",
-            },
-            {
-              icon: (
-                <GitHubIcon className="text-3xl text-white group-hover:text-[#000]" />
-              ),
-              label: "GitHub",
-              link: "https://github.com/vaibhavgarg5522",
-              hoverColor: "bg-white",
-            },
-            {
-              icon: (
-                <LinkedInIcon className="text-3xl text-[#0A66C2] group-hover:text-white" />
-              ),
-              label: "LinkedIn",
-              link: "https://www.linkedin.com/in/vaibhav-garg-468a5134a/",
-              hoverColor: "bg-[#0A66C2]",
-            },
-          ].map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center">
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group w-12 h-12 border-[2px] rounded-full flex justify-center items-center text-accent text-base transition-all duration-500 cursor-pointer border-[#8267E3] hover:${item.hoverColor}`}
-              >
-                {item.icon}
-              </a>
-              <span className="mt-1 text-xs sm:text-sm">{item.label}</span>
-            </div>
-          ))}
-        </div>
+  {[{
+      icon: <FacebookIcon className="text-3xl text-[#1877F2] group-hover:text-white" />,
+      label: "Facebook",
+      link: "https://www.facebook.com/share/168jQRHjqd/",
+      hoverColor: "hover:bg-[#1877F2]"
+    },
+    {
+      icon: <InstagramIcon className="text-3xl text-[#E4405F] group-hover:text-white" />,
+      label: "Instagram",
+      link: "https://www.instagram.com/masoom_____bacha_____/",
+      hoverColor: "hover:bg-[#E4405F]"
+    },
+    {
+      icon: <GitHubIcon className="text-3xl text-white group-hover:text-[#000]" />,
+      label: "GitHub",
+      link: "https://github.com/vaibhavgarg5522",
+      hoverColor: "hover:bg-white"
+    },
+    {
+      icon: <LinkedInIcon className="text-3xl text-[#0A66C2] group-hover:text-white" />,
+      label: "LinkedIn",
+      link: "https://www.linkedin.com/in/vaibhav-garg-468a5134a/",
+      hoverColor: "hover:bg-[#0A66C2]"
+    },
+  ].map((item, idx) => (
+    <div key={idx} className="flex flex-col items-center">
+      <a
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`group w-12 h-12 border-[2px] rounded-full flex justify-center items-center text-accent text-base transition-all duration-500 cursor-pointer border-[#8267E3] ${item.hoverColor}`}
+      >
+        {item.icon}
+      </a>
+      <span className="mt-1 text-xs sm:text-sm">{item.label}</span>
+    </div>
+  ))}
+</div>
+
       </div>
     </div>
   );
