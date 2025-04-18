@@ -86,7 +86,7 @@ const Navbar = () => {
             },
             {
               icon: <FaLinkedinIn />,
-              link: "https://www.linkedin.com/in/vaibhav-garg5522/",
+              link: "https://www.linkedin.com/in/vaibhav-garg-b72a57353/",
               color: "#0077B5",
             },
             {

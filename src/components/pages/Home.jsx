@@ -164,7 +164,7 @@ const Home = () => {
                 <FaInstagram className="text-xl sm:text-2xl" />
               </a>
               <a
-                href="https://www.linkedin.com/in/vaibhav-garg-468a5134a/"
+                href="https://www.linkedin.com/in/vaibhav-garg-b72a57353/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#0077B5] hover:shadow-[0_0_15px_#0077B5]"

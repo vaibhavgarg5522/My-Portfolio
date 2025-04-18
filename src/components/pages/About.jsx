@@ -216,7 +216,7 @@ const About = () => {
     {
       icon: <LinkedInIcon className="text-3xl text-[#0A66C2] group-hover:text-white" />,
       label: "LinkedIn",
-      link: "https://www.linkedin.com/in/vaibhav-garg-468a5134a/",
+      link: "https://www.linkedin.com/in/vaibhav-garg-b72a57353/",
       hoverColor: "hover:bg-[#0A66C2]"
     },
   ].map((item, idx) => (

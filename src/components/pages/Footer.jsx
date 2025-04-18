@@ -40,7 +40,7 @@ const Footer = () => {
         {/* Right: Social Icons */}
         <div className="flex gap-4 sm:gap-5 justify-center">
           <GlowIcon href="https://github.com/vaibhavgarg5522" icon={<FaGithub />} color="white" />
-          <GlowIcon href="https://www.linkedin.com/in/vaibhav-garg-468a5134a/" icon={<FaLinkedin />} color="#1877F2" />
+          <GlowIcon href="https://www.linkedin.com/in/vaibhav-garg-b72a57353/" icon={<FaLinkedin />} color="#1877F2" />
           <GlowIcon href="https://wa.me/918218390981" icon={<FaWhatsapp />} color="#25D366" />
           <GlowIcon href="mailto:vaibhavgarg340@gmail.com" icon={<FaEnvelope />} color="#FF6A3D" />
         </div>
