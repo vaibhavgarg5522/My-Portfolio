@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo, lazy, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 import vaibhavImg from "../../images/image5.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
@@ -6,6 +6,7 @@ import About from "./About";
 import Skills from "./Skill";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import softSkillLottie from "../../assets/lottie/Animation - 1745079638692.json";
 import {
   FaWhatsapp,
   FaFacebookF,
@@ -13,6 +14,9 @@ import {
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
+
+// Lazy load Lottie
+const Lottie = lazy(() => import("react-lottie"));
 
 const Home = () => {
   const navigate = useNavigate();
@@ -28,7 +32,6 @@ const Home = () => {
         if (!buttonRef.current) return prev;
         const width = buttonRef.current.offsetWidth;
         const percentage = (prev + 2) / width;
-
         if (percentage >= 1) {
           clearInterval(intervalRef.current);
           window.open("https://wa.me/918218390981", "_blank");
@@ -45,6 +48,16 @@ const Home = () => {
     setProgress(0);
   };
 
+  // Memoize Lottie options
+  const softSkillOptions = useMemo(() => ({
+    loop: true,
+    autoplay: true,
+    animationData: softSkillLottie,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  }), []);
+
   return (
     <>
       <section
@@ -57,6 +70,7 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black/60 z-0"></div>
         <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
+          
           {/* Text Section */}
           <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
             <p className="text-[#8267E3] uppercase tracking-widest font-medium text-sm md:text-base">
@@ -66,12 +80,19 @@ const Home = () => {
               I Build <span className="text-[#8267E3]">Beautiful</span> and{" "}
               <span className="text-[#8267E3]">Functional</span> Web Interfaces.
             </h1>
-            <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-6 max-w-[500px]">
+            <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-4 max-w-[500px]">
               I'm Vaibhav Garg — a self-taught React developer passionate about
               building responsive, user-friendly, and clean web experiences. I
               turn ideas into digital reality with precision, performance, and
               creativity.
             </p>
+
+            {/* Lottie Animation (Mobile Only) */}
+            <div className="w-88 sm:w-120 md:hidden">
+              <Suspense fallback={<div className="text-sm text-gray-400">Loading animation...</div>}>
+                <Lottie options={softSkillOptions} />
+              </Suspense>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex gap-4 mb-6 flex-wrap justify-center md:justify-start">
@@ -98,7 +119,7 @@ const Home = () => {
               onTouchStart={handleMouseDown}
               onTouchEnd={handleMouseUp}
               onTouchCancel={handleMouseUp}
-              className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#8267E3] overflow-hidden transition-all duration-300 w-full sm:w-fit "
+              className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#8267E3] overflow-hidden transition-all duration-300 w-full sm:w-fit"
               style={{
                 background: "linear-gradient(145deg, #1a112b, #2d165e)",
                 backdropFilter: "blur(4px)",
@@ -145,7 +166,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Social Media Icons with Brand Colors */}
+            {/* Social Media Icons */}
             <div className="flex gap-6 mt-20 justify-center md:justify-start">
               <a
                 href="https://www.facebook.com/share/168jQRHjqd/"
@@ -196,7 +217,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* All Sections with Unified Gradient Background on Mobile */}
+      {/* Mobile Section Scroll */}
       <div className="flex flex-col md:hidden bg-gradient-to-b from-[#1a112b] via-[#2a1d47] to-[#3b2a66] text-white">
         <section id="about">
           <About />

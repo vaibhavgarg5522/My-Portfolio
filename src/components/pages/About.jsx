@@ -6,6 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+import animationData from "../../assets/lottie/Animation - 1745076698808.json";
 import {
   FaGraduationCap,
   FaUserFriends,
@@ -15,8 +16,19 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { MdDesignServices } from "react-icons/md";
+import Lottie from "react-lottie";
 
 const About = () => {
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  
+
   return (
     <div
       className="min-h-screen bg-cover bg-center text-white py-10 px-5 md:px-10 lg:px-[50px] relative"
@@ -91,8 +103,7 @@ const About = () => {
                 </h4>
                 <p className="mt-2">Self-Taught Developer</p>
                 <p>
-                  Senior Secondary (12th Grade) –
-                  <br />
+                  Senior Secondary (12th Grade) –<br />
                   NIOS, 2025
                 </p>
               </div>
@@ -125,7 +136,15 @@ const About = () => {
                 </h4>
                 <ul className="list-none space-y-1 mt-2">
                   <li className="flex items-center gap-2">
-                    <FaLaptopCode /> ReactJS
+                    <div className="w-5 h-5">
+                      <Lottie
+                        options={lottieOptions}
+                        height={20}
+                        width={20}
+                        isClickToPauseDisabled={true}
+                      />
+                    </div>
+                    <span>ReactJS</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <FaLaptopCode /> Redux
@@ -195,45 +214,49 @@ const About = () => {
 
         {/* Social Icons */}
         <div className="mt-16 flex justify-center flex-wrap gap-6 sm:gap-10">
-  {[{
-      icon: <FacebookIcon className="text-3xl text-[#1877F2] group-hover:text-white" />,
-      label: "Facebook",
-      link: "https://www.facebook.com/share/168jQRHjqd/",
-      hoverColor: "hover:bg-[#1877F2]"
-    },
-    {
-      icon: <InstagramIcon className="text-3xl text-[#E4405F] group-hover:text-white" />,
-      label: "Instagram",
-      link: "https://www.instagram.com/masoom_____bacha_____/",
-      hoverColor: "hover:bg-[#E4405F]"
-    },
-    {
-      icon: <GitHubIcon className="text-3xl text-white group-hover:text-[#000]" />,
-      label: "GitHub",
-      link: "https://github.com/vaibhavgarg5522",
-      hoverColor: "hover:bg-white"
-    },
-    {
-      icon: <LinkedInIcon className="text-3xl text-[#0A66C2] group-hover:text-white" />,
-      label: "LinkedIn",
-      link: "https://www.linkedin.com/in/vaibhav-garg-b72a57353/",
-      hoverColor: "hover:bg-[#0A66C2]"
-    },
-  ].map((item, idx) => (
-    <div key={idx} className="flex flex-col items-center">
-      <a
-        href={item.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`group w-12 h-12 border-[2px] rounded-full flex justify-center items-center text-accent text-base transition-all duration-500 cursor-pointer border-[#8267E3] ${item.hoverColor}`}
-      >
-        {item.icon}
-      </a>
-      <span className="mt-1 text-xs sm:text-sm">{item.label}</span>
-    </div>
-  ))}
-</div>
-
+          {[
+            {
+              icon: (
+                <FacebookIcon className="text-3xl text-[#1877F2] group-hover:text-white" />
+              ),
+              label: "Facebook",
+              link: "https://www.facebook.com/share/168jQRHjqd/",
+            },
+            {
+              icon: (
+                <InstagramIcon className="text-3xl text-[#E4405F] group-hover:text-white" />
+              ),
+              label: "Instagram",
+              link: "https://www.instagram.com/masoom_____bacha_____/ ",
+            },
+            {
+              icon: (
+                <GitHubIcon className="text-3xl text-white group-hover:text-[#000]" />
+              ),
+              label: "GitHub",
+              link: "https://github.com/vaibhavgarg5522",
+            },
+            {
+              icon: (
+                <LinkedInIcon className="text-3xl text-[#0A66C2] group-hover:text-white" />
+              ),
+              label: "LinkedIn",
+              link: "https://www.linkedin.com/in/vaibhav-garg-b72a57353/",
+            },
+          ].map((item, idx) => (
+            <div key={idx} className="flex flex-col items-center">
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group w-12 h-12 border-[2px] rounded-full flex justify-center items-center text-accent text-base transition-all duration-500 cursor-pointer border-[#8267E3] hover:bg-[#8267E3]"
+              >
+                {item.icon}
+              </a>
+              <span className="mt-1 text-xs sm:text-sm">{item.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
