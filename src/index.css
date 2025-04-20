@@ -40,4 +40,19 @@
 .rotate-icon {
   animation: rotateCycle 1s linear infinite;
 }
+/* CSS for Responsive Design */
+@media (max-width: 640px) {
+  .whatsapp-icon {
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-icon {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
+
 

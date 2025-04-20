@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DownloadIcon from "@mui/icons-material/Download";
 import { useNavigate } from "react-router-dom";
+import DownloadIcon from "@mui/icons-material/Download";
 import {
   FaBars,
   FaTimes,
@@ -18,6 +18,37 @@ const Navbar = () => {
   const toggleSidebar = () => setIsOpen((prev) => !prev);
   const closeSidebar = () => setIsOpen(false);
 
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Skill", path: "/skill" },
+    { name: "Projects", path: "/projects" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  const socialLinks = [
+    {
+      icon: <FaFacebookF />,
+      link: "https://www.facebook.com/share/168jQRHjqd/",
+      color: "#1877F2",
+    },
+    {
+      icon: <FaInstagram />,
+      link: "https://www.instagram.com/masoom_____bacha_____/",
+      color: "#E4405F",
+    },
+    {
+      icon: <FaLinkedinIn />,
+      link: "https://www.linkedin.com/in/vaibhav-garg-b72a57353/",
+      color: "#0077B5",
+    },
+    {
+      icon: <FaGithub />,
+      link: "https://github.com/vaibhavgarg5522",
+      color: "#fff",
+    },
+  ];
+
   return (
     <>
       {/* Sidebar (Mobile) */}
@@ -26,7 +57,6 @@ const Navbar = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Sidebar Header */}
         <div className="flex justify-between items-center p-4 border-b border-[#333]">
           <div className="flex items-center gap-3">
             <img
@@ -46,16 +76,8 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Sidebar Nav Links */}
         <ul className="p-4 space-y-4">
-          {[
-            { name: "Home", path: "/" },
-            { name: "About", path: "/about" },
-            { name: "Skill", path: "/skill" },
-            { name: "Projects", path: "/projects" },
-            { name: "Contact", path: "/contact" },
-            { name: "Get My CV", path: "/mycv" },
-          ].map((item, index) => (
+          {[...navLinks, { name: "Get My CV", path: "/mycv" }].map((item, index) => (
             <li
               key={index}
               onClick={() => {
@@ -71,37 +93,14 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Styled Social Icons */}
         <div className="flex justify-center gap-3 mt-6 px-4">
-          {[
-            {
-              icon: <FaFacebookF />,
-              link: "https://www.facebook.com/share/168jQRHjqd/",
-              color: "#1877F2",
-            },
-            {
-              icon: <FaInstagram />,
-              link: "https://www.instagram.com/masoom_____bacha_____/",
-              color: "#E4405F",
-            },
-            {
-              icon: <FaLinkedinIn />,
-              link: "https://www.linkedin.com/in/vaibhav-garg-b72a57353/",
-              color: "#0077B5",
-            },
-            {
-              icon: <FaGithub />,
-              link: "https://github.com/vaibhavgarg5522",
-              color: "#fff",
-            },
-          ].map((social, idx) => (
+          {socialLinks.map((social, idx) => (
             <a
               key={idx}
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-9 h-9 flex items-center justify-center rounded-full border-2 border-[#8267E3]
-                         transition-all duration-300 hover:scale-120`}
+              className={`w-9 h-9 flex items-center justify-center rounded-full border-2 border-[#8267E3] transition-all duration-300 hover:scale-120`}
               style={{
                 backgroundColor: `${social.color}22`,
                 color: social.color,
@@ -129,7 +128,6 @@ const Navbar = () => {
             </button>
           )}
 
-          {/* Center Name */}
           <h1
             onClick={() => navigate("/")}
             className="text-2xl md:text-3xl font-bold cursor-pointer bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text transition duration-300 hover:scale-105
@@ -141,13 +139,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-8 text-sm font-medium">
-          {[
-            { name: "Home", path: "/" },
-            { name: "About", path: "/about" },
-            { name: "Skill", path: "/skill" },
-            { name: "Projects", path: "/projects" },
-            { name: "Contact", path: "/contact" },
-          ].map((item, index) => (
+          {navLinks.map((item, index) => (
             <li
               key={index}
               onClick={() => navigate(item.path)}
@@ -159,7 +151,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* CV Button */}
+        {/* Get My CV Button */}
         <li
           onClick={() => navigate("/mycv")}
           className="hidden md:flex list-none relative overflow-hidden rounded-full border border-[#8267E3] bg-transparent px-6 py-2 cursor-pointer group transition-all duration-300"

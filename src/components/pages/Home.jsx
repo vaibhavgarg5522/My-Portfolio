@@ -6,7 +6,8 @@ import About from "./About";
 import Skills from "./Skill";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import softSkillLottie from "../../assets/lottie/Animation - 1745079638692.json";
+import softSkillLottie from "../../assets/lottie/vTzbLLFwZK.json";
+
 import {
   FaWhatsapp,
   FaFacebookF,
@@ -22,6 +23,9 @@ const Home = () => {
   const navigate = useNavigate();
   const [progress, setProgress] = useState(0);
   const [isPressed, setIsPressed] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState(
+    "linear-gradient(145deg, #1a112b, #2d165e)"
+  );
   const buttonRef = useRef(null);
   const intervalRef = useRef(null);
 
@@ -46,17 +50,28 @@ const Home = () => {
     clearInterval(intervalRef.current);
     setIsPressed(false);
     setProgress(0);
+    setBackgroundColor("linear-gradient(145deg, #1a112b, #2d165e)");
   };
 
-  // Memoize Lottie options
-  const softSkillOptions = useMemo(() => ({
-    loop: true,
-    autoplay: true,
-    animationData: softSkillLottie,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }), []);
+  const handleMouseMove = () => {
+    if (progress > 0 && progress < buttonRef.current.offsetWidth) {
+      setBackgroundColor("linear-gradient(145deg, #1a112b, #2d165e)");
+    } else if (progress >= buttonRef.current.offsetWidth) {
+      setBackgroundColor("linear-gradient(145deg, #4e2c5f, #7a357e)");
+    }
+  };
+
+  const softSkillOptions = useMemo(
+    () => ({
+      loop: true,
+      autoplay: true,
+      animationData: softSkillLottie,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    }),
+    []
+  );
 
   return (
     <>
@@ -70,7 +85,6 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black/60 z-0"></div>
         <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
-          
           {/* Text Section */}
           <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
             <p className="text-[#8267E3] uppercase tracking-widest font-medium text-sm md:text-base">
@@ -82,8 +96,8 @@ const Home = () => {
             </h1>
             <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-4 max-w-[500px]">
               I'm Vaibhav Garg — a self-taught React developer passionate about
-              building responsive, user-friendly, and clean web experiences. I
-              turn ideas into digital reality with precision, performance, and
+              building responsive, user-friendly, and clean web experiences.
+              I turn ideas into digital reality with precision, performance, and
               creativity.
             </p>
 
@@ -112,59 +126,72 @@ const Home = () => {
 
             {/* WhatsApp Button */}
             <div
-              ref={buttonRef}
-              onMouseDown={handleMouseDown}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={handleMouseUp}
-              onTouchStart={handleMouseDown}
-              onTouchEnd={handleMouseUp}
-              onTouchCancel={handleMouseUp}
-              className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#8267E3] overflow-hidden transition-all duration-300 w-full sm:w-fit"
-              style={{
-                background: "linear-gradient(145deg, #1a112b, #2d165e)",
-                backdropFilter: "blur(4px)",
-                WebkitBackdropFilter: "blur(4px)",
-              }}
-            >
-              <div
-                className="absolute left-0 top-0 h-full"
-                style={{
-                  width: `${progress}px`,
-                  backgroundColor: "#8267E3",
-                  borderRadius: "9999px",
-                  transition: "width 0.01s linear",
-                  zIndex: 0,
-                }}
-              ></div>
-              <span
-                className={`${
-                  progress > 20
-                    ? "text-white font-bold"
-                    : "text-white font-semibold"
-                } z-10 transition-all duration-200`}
-                style={{
-                  paddingLeft: "2.5rem",
-                  paddingRight: "1rem",
-                  fontSize: "0.875rem",
-                }}
-              >
-                Happy to chat on WhatsApp
-              </span>
-              <div
-                className={`absolute top-1/2 -translate-y-1/2 z-30 transition-transform duration-100 ${
-                  isPressed ? "scale-120 rotate-icon" : "scale-100"
-                }`}
-                style={{
-                  left: `${progress}px`,
-                  background: "#8267E3",
-                  padding: "8px",
-                  borderRadius: "9999px",
-                  border: "2px solid white",
-                }}
-              >
-                <FaWhatsapp className="text-white text-lg sm:text-xl" />
-              </div>
-            </div>
+  ref={buttonRef}
+  onMouseDown={handleMouseDown}
+  onMouseUp={handleMouseUp}
+  onMouseLeave={handleMouseUp}
+  onTouchStart={handleMouseDown}
+  onTouchEnd={handleMouseUp}
+  onTouchCancel={handleMouseUp}
+  onMouseMove={handleMouseMove}
+  className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#8267E3] overflow-hidden transition-all duration-300 w-full sm:w-fit"
+  style={{
+    background: backgroundColor,
+    backdropFilter: "blur(4px)",
+    WebkitBackdropFilter: "blur(4px)",
+  }}
+>
+  {/* Animated progress bar background */}
+  <div
+    className="absolute left-0 top-0 h-full"
+    style={{
+      width: `${progress}px`,
+      backgroundColor: "#8267E3",
+      borderRadius: "9999px",
+      transition: "width 0.01s linear",
+      zIndex: 0,
+    }}
+  ></div>
+
+  {/* Button text */}
+  <span
+    className={`z-10 whitespace-nowrap ${
+      progress > 20 ? "text-white font-bold" : "text-white font-semibold"
+    }`}
+    style={{
+      paddingLeft: "2.5rem", // leave space for icon
+      paddingRight: "1rem",
+      fontSize: "clamp(0.75rem, 2vw, 1rem)", // responsive text
+    }}
+  >
+    Happy to chat on WhatsApp
+  </span>
+
+  {/* Floating WhatsApp icon */}
+  <div
+    className={`absolute top-1/2 -translate-y-1/2 z-30 transition-transform duration-100 ${
+      isPressed ? "scale-120 rotate-icon" : "scale-100"
+    }`}
+    style={{
+      left: `${progress}px`,
+      background: "#8267E3",
+      padding: "0.5rem",
+      borderRadius: "9999px",
+      border: "2px solid white",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    <FaWhatsapp
+      className="text-white"
+      style={{
+        fontSize: "clamp(1rem, 2.5vw, 1.4rem)", // responsive icon
+      }}
+    />
+  </div>
+</div>
+
 
             {/* Social Media Icons */}
             <div className="flex gap-6 mt-20 justify-center md:justify-start">
@@ -217,7 +244,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mobile Section Scroll */}
+      {/* Mobile Scrollable Sections */}
       <div className="flex flex-col md:hidden bg-gradient-to-b from-[#1a112b] via-[#2a1d47] to-[#3b2a66] text-white">
         <section id="about">
           <About />

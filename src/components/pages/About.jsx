@@ -6,20 +6,28 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
-import animationData from "../../assets/lottie/Animation - 1745076698808.json";
+import animationData from "../../assets/lottie/Animation - 1745076698808.json"; // React animation
+import javascriptanimateDAta from "../../assets/lottie/Animation - 1745132703179 (1).json"; // JavaScript animation
+import { TbBrandRedux } from "react-icons/tb";
+import { RiTailwindCssFill } from "react-icons/ri";
+import educationAnimateDAta from "../../assets/lottie/Animation - 1745155092123.json"
+import phonering from "../../../src/images/phonering.png"
+import uiuxAnimateDAta from "../../assets/lottie/Animation - 1745156507811.json"
+import languageAnimateDAta from "../../assets/lottie/Eqskkx0fOY.json"
+import reactskillsAnimateDAta from "../../assets/lottie/Animation - 1745160291364.json"
+import leadericon from "../../images/leadericon.png"
 import {
-  FaGraduationCap,
   FaUserFriends,
   FaLaptopCode,
   FaGlobe,
   FaLightbulb,
-  FaEnvelope,
+  
 } from "react-icons/fa";
 import { MdDesignServices } from "react-icons/md";
 import Lottie from "react-lottie";
 
 const About = () => {
-  const lottieOptions = {
+  const reactLottieOptions = {
     loop: true,
     autoplay: true,
     animationData: animationData,
@@ -27,7 +35,48 @@ const About = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  
+
+  const jsLottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: javascriptanimateDAta,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const educationOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: educationAnimateDAta,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const languageOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: languageAnimateDAta,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const uiuxOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: uiuxAnimateDAta,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const reactskillsOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: reactskillsAnimateDAta,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   return (
     <div
@@ -99,7 +148,14 @@ const About = () => {
             <div className="flex flex-col gap-10">
               <div>
                 <h4 className="text-xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                  <FaGraduationCap /> Education
+               
+                 
+                   <span className="flex"> <Lottie
+                    options={educationOptions}
+                    height={35}
+                    width={35}
+                    isClickToPauseDisabled={true}
+                  />Education</span>
                 </h4>
                 <p className="mt-2">Self-Taught Developer</p>
                 <p>
@@ -110,7 +166,7 @@ const About = () => {
 
               <div>
                 <h4 className="text-xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2">
-                  <FaEnvelope /> Contact
+                  <img className="w-8 h-8" src={phonering} alt="" /> Contact
                 </h4>
                 <div className="space-y-2 text-sm sm:text-base mt-2">
                   <p className="flex items-center gap-2">
@@ -132,13 +188,18 @@ const About = () => {
             <div className="flex flex-col gap-10">
               <div>
                 <h4 className="text-xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                  <FaLaptopCode /> Skill Set
+                <span className="flex"><Lottie
+                        options={reactskillsOptions}
+                        height={35}
+                        width={35}
+                        isClickToPauseDisabled={true}
+                      />Skill Set</span> 
                 </h4>
                 <ul className="list-none space-y-1 mt-2">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5">
                       <Lottie
-                        options={lottieOptions}
+                        options={reactLottieOptions}
                         height={20}
                         width={20}
                         isClickToPauseDisabled={true}
@@ -147,20 +208,28 @@ const About = () => {
                     <span>ReactJS</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <FaLaptopCode /> Redux
+                    <TbBrandRedux style={{ color: '#61DAFB', fontSize: '18px' }} /> Redux
                   </li>
                   <li className="flex items-center gap-2">
-                    <FaLaptopCode /> JavaScript
+                    <div className="w-5 h-5">
+                      <Lottie
+                        options={jsLottieOptions}
+                        height={20}
+                        width={20}
+                        isClickToPauseDisabled={true}
+                      />
+                    </div>
+                    <span className="FaLaptopCode style={{ color: '#764ABC', fontSize: '40px' }}">JavaScript</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <FaLaptopCode /> Tailwind CSS
+                  <RiTailwindCssFill style={{ color: '#61DAFB', fontSize: '18px' }} /> Tailwind CSS
                   </li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                  <FaUserFriends /> Soft Skills
+                  <FaUserFriends style={{color:"#61DAFB", width:"32px", height:"32px"}} /> Soft Skills
                 </h4>
                 <ul className="list-none space-y-1 mt-2">
                   <li className="flex items-center gap-2">
@@ -183,7 +252,12 @@ const About = () => {
             <div className="flex flex-col gap-10">
               <div>
                 <h4 className="text-xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                  <MdDesignServices /> Interests
+                <span className="flex"><Lottie
+                    options={uiuxOptions}
+                    height={35}
+                    width={35}
+                    isClickToPauseDisabled={true}
+                  />Interests</span>
                 </h4>
                 <ul className="list-none space-y-1 mt-2">
                   <li className="flex items-center gap-2">
@@ -197,7 +271,12 @@ const About = () => {
 
               <div>
                 <h4 className="text-xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                  <FaGlobe /> Languages
+                <span className="flex"><Lottie
+                    options={languageOptions}
+                    height={35}
+                    width={35}
+                    isClickToPauseDisabled={true}
+                  /> Languages</span> 
                 </h4>
                 <ul className="list-none space-y-1 mt-2">
                   <li className="flex items-center gap-2">
