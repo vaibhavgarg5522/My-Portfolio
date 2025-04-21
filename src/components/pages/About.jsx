@@ -136,7 +136,7 @@ const About = () => {
                       width={48}
                       isClickToPauseDisabled={true}
                     />{" "}
-                    <span className="mt-[8px]">Education</span>{" "}
+                    <span className="mt-[8px] ">Education</span>{" "}
                   </span>
                 </h4>
 
@@ -171,7 +171,7 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-2xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2 mt-4">
+                <h4 className="text-2xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2 mt-8">
                   <span className="flex">
                     {" "}
                     <Lottie
@@ -248,15 +248,15 @@ const About = () => {
             {/* Column 2 */}
             <div className="flex flex-col gap-10 ">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                  <span className="flex ">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8">
+                  <span className="flex">
                     <Lottie
                       options={options.reactskills}
                       height={48}
                       width={48}
                       isClickToPauseDisabled={true}
                     />{" "}
-                    <span className="mt-[14px]">Skill Set</span>{" "}
+                    <span className="mt-[14px] ">Skill Set</span>{" "}
                   </span>
                 </h4>
                 <ul className="list-none space-y-1 mt-5 -mb-4">
@@ -303,7 +303,7 @@ const About = () => {
               </div>
 
               <div className=" flex flex-col">
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 ">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8">
                   <span className="flex">
                     <Lottie
                       options={options.language}
@@ -335,7 +335,7 @@ const About = () => {
             {/* Column 3 */}
             <div className="flex flex-col gap-10">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8">
                   <span className="flex">
                     <Lottie
                       options={options.uiux}
@@ -373,7 +373,7 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-3">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8">
                   <span className="flex">
                     <Lottie
                       options={options.technology}
