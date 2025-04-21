@@ -5,154 +5,58 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import EmailIcon from "@mui/icons-material/Email";
+
 import animationData from "../../assets/lottie/Animation - 1745076698808.json"; // React animation
 import javascriptanimateDAta from "../../assets/lottie/Animation - 1745132703179 (1).json"; // JavaScript animation
 import { TbBrandRedux } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
-import educationAnimateDAta from "../../assets/lottie/Animation - 1745155092123.json"
-import ContactAnimateDAta from "../../assets/lottie/zf0zWuD3Du.json"
-import uiuxAnimateDAta from "../../assets/lottie/lMPQLkzhkY.json"
-import languageAnimateDAta from "../../assets/lottie/Eqskkx0fOY.json"
-import reactskillsAnimateDAta from "../../assets/lottie/Animation - 1745160291364.json"
-import uiContentAnimateDAta from "../../assets/lottie/Animation - 1745214505206.json"
-import TechnologyAnimateDAta from "../../assets/lottie/yk6aPcNFzn.json"
-import TechContentAnimateDAta from "../../assets/lottie/uyVek2LkLX.json"
-import SelfDeveloperAnimateDAta from "../../assets/lottie/uqG5ZBZON8.json"
-import EducationContentAnimateDAta from "../../assets/lottie/Ks81DZfdPM.json"
-import EmailAnimateDAta from "../../assets/lottie/WrRQ6tZTUH.json"
-import PhoneAnimateDAta from "../../assets/lottie/HNs3ajiacO.json"
-import LocationAnimateDAta from "../../assets/lottie/Animation - 1745231295412.json"
-import {
-  FaGlobe,
-  FaLightbulb,
-  
-} from "react-icons/fa";
-import { MdDesignServices } from "react-icons/md";
+import educationAnimateDAta from "../../assets/lottie/Animation - 1745155092123.json";
+import ContactAnimateDAta from "../../assets/lottie/zf0zWuD3Du.json";
+import uiuxAnimateDAta from "../../assets/lottie/Animation - 1745214505206.json";
+import languageAnimateDAta from "../../assets/lottie/Eqskkx0fOY.json";
+import reactskillsAnimateDAta from "../../assets/lottie/Animation - 1745160291364.json";
+import uiContentAnimateDAta from "../../assets/lottie/lMPQLkzhkY.json";
+import TechnologyAnimateDAta from "../../assets/lottie/yk6aPcNFzn.json";
+import TechContentAnimateDAta from "../../assets/lottie/uyVek2LkLX.json";
+import SelfDeveloperAnimateDAta from "../../assets/lottie/uqG5ZBZON8.json";
+import EducationContentAnimateDAta from "../../assets/lottie/Ks81DZfdPM.json";
+import EmailAnimateDAta from "../../assets/lottie/WrRQ6tZTUH.json";
+import PhoneAnimateDAta from "../../assets/lottie/HNs3ajiacO.json";
+import LocationAnimateDAta from "../../assets/lottie/Animation - 1745231295412.json";
+import LanguageContentAnimateDAta from "../../assets/lottie/eqDCM5fKmO.json";
+import ProblemSolvingAnimateDAta from "../../assets/lottie/R2XVEvi14A.json";
+import AttentionToDetailAnimateDAta from "../../assets/lottie/LeFDBLau1x.json";
+import { FaLightbulb } from "react-icons/fa";
 import Lottie from "react-lottie";
+const createLottieOptions = (animationData) => ({
+  loop: true,
+  autoplay: true,
+  animationData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+});
 
 const About = () => {
-  const reactLottieOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
-  const jsLottieOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: javascriptanimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const educationOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: educationAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const languageOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: languageAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
-  const uiuxOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: uiuxAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const reactskillsOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: reactskillsAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const uiContentOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: uiContentAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }
-  const TechnologyOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: TechnologyAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }
-  const ContactOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: ContactAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }
-  const TechContentOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: TechContentAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }
-  const SelfDeveloperOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: SelfDeveloperAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }
-    const EducationContentOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: EducationContentAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const EmailOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: EmailAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const PhoneOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: PhoneAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const LocationOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: LocationAnimateDAta,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
+  const options = {
+    animation: createLottieOptions(animationData),
+    js: createLottieOptions(javascriptanimateDAta),
+    education: createLottieOptions(educationAnimateDAta),
+    contact: createLottieOptions(ContactAnimateDAta),
+    uiux: createLottieOptions(uiuxAnimateDAta),
+    language: createLottieOptions(languageAnimateDAta),
+    reactskills: createLottieOptions(reactskillsAnimateDAta),
+    uiContent: createLottieOptions(uiContentAnimateDAta),
+    technology: createLottieOptions(TechnologyAnimateDAta),
+    techContent: createLottieOptions(TechContentAnimateDAta),
+    selfDeveloper: createLottieOptions(SelfDeveloperAnimateDAta),
+    educationContent: createLottieOptions(EducationContentAnimateDAta),
+    email: createLottieOptions(EmailAnimateDAta),
+    phone: createLottieOptions(PhoneAnimateDAta),
+    location: createLottieOptions(LocationAnimateDAta),
+    languageContent: createLottieOptions(LanguageContentAnimateDAta),
+    problemSolving: createLottieOptions(ProblemSolvingAnimateDAta),
+    attentionToDetail: createLottieOptions(AttentionToDetailAnimateDAta),
   };
   return (
     <div
@@ -224,137 +128,142 @@ const About = () => {
             <div className="flex flex-col gap-10">
               <div>
                 <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-               
-                 
-                   <span className="flex"> <Lottie
-                    options={educationOptions}
-                    height={40}
-                    width={40}
-                    isClickToPauseDisabled={true}
-                  /> <span className="mt-[3px]">Education</span> </span>
+                  <span className="flex">
+                    {" "}
+                    <Lottie
+                      options={options.education}
+                      height={48}
+                      width={48}
+                      isClickToPauseDisabled={true}
+                    />{" "}
+                    <span className="mt-[8px]">Education</span>{" "}
+                  </span>
                 </h4>
-                {/*  */}
 
-                 <ul className="list-none space-y-1 mt-2">
-                  
+                <ul className="list-none space-y-1 mt-4">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5">
                       <Lottie
-                        options={SelfDeveloperOptions}
+                        options={options.selfDeveloper}
                         height={28}
                         width={28}
                         isClickToPauseDisabled={true}
                       />
                     </div>
-                    <span className="flex -mb-2 mx-2">Frontend Developer (Self-Taught)</span>
+                    <span className="flex -mb-2 mx-2">
+                      Frontend Developer (Self-Taught)
+                    </span>
                   </li>
                   <li className="flex items-center mt-4 gap-2">
                     <div className="w-5 h-5 -m-2">
                       <Lottie
-                        options={EducationContentOptions}
+                        options={options.educationContent}
                         height={40}
                         width={40}
                         isClickToPauseDisabled={true}
                       />
                     </div>
-                    <span className="flex -mb-5 mx-6 ">Senior Secondary (12th Grade)
-                    NIOS – 2025</span>
+                    <span className="flex -mb-5 mx-6 ">
+                      Senior Secondary (12th Grade) NIOS – 2025
+                    </span>
                   </li>
-                  </ul>
-                
-                  
-               
+                </ul>
               </div>
 
               <div>
-                <h4 className="text-2xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2">
-                <span className="flex"> <Lottie
-                    options={ContactOptions}
-                    height={40}
-                    width={40}
-                    isClickToPauseDisabled={true}
-                  /> <span className="flex mt-1"> Contact</span> </span>
+                <h4 className="text-2xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2 mt-4">
+                  <span className="flex">
+                    {" "}
+                    <Lottie
+                      options={options.contact}
+                      height={50}
+                      width={50}
+                      isClickToPauseDisabled={true}
+                    />{" "}
+                    <span className="flex mt-3"> Contact</span>{" "}
+                  </span>
                 </h4>
-                {/* <div className="space-y-2 sm:text-base mt-2">
-                  <p className="flex items-center gap-2">
-                    <EmailIcon className="text-[#8267E3]" />
-                   
-                  </p>
-                  <p className="flex items-center">📍 India</p>
-                  <p className="flex items-center">💼 Open for opportunities</p>
-                </div> */}
-                
-                <ul className="list-none space-y-1 mt-2">
-                  
+
+                <ul className="list-none space-y-1 mt-5">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5">
                       <Lottie
-                        options={EmailOptions}
+                        options={options.email}
                         height={28}
                         width={28}
                         isClickToPauseDisabled={true}
                       />
                     </div>
-                    <span className="flex -mb-2 mx-2"> <a
-                      href="mailto:vaibhavgarg5522@gmail.com"
-                      className="hover:underline hover:text-[#00C896] transition-colors duration-300"
-                    >
-                      vaibhavgarg5522@gmail.com
-                    </a></span>
+                    <span className="flex -mb-2 mx-2">
+                      {" "}
+                      <a
+                        href="mailto:vaibhavgarg5522@gmail.com"
+                        className="hover:underline hover:text-[#00C896] transition-colors duration-300"
+                      >
+                        vaibhavgarg5522@gmail.com
+                      </a>
+                    </span>
                   </li>
                   <li className="flex items-center mt-4 gap-2">
-                  <a href="tel:+918218390981" className="flex items-center text-white hover:text-[#00c896]">
-                    <div className="w-5 h-5 -m-1">
-                      <Lottie
-                        options={PhoneOptions}
-                        height={37}
-                        width={37}
-                        isClickToPauseDisabled={true}
-                      />
-                    </div>
-                    <span className="flex -mb-4 mx-6 ">+918218390981</span>
+                    <a
+                      href="tel:+918218390981"
+                      className="flex items-center text-white hover:text-[#00c896]"
+                    >
+                      <div className="w-5 h-5 -m-1">
+                        <Lottie
+                          options={options.phone}
+                          height={37}
+                          width={37}
+                          isClickToPauseDisabled={true}
+                        />
+                      </div>
+                      <span className="flex -mb-4 mx-6 ">+918218390981</span>
                     </a>
                   </li>
 
                   <li className="flex items-center mt-4 gap-2">
-  <a
-    href="https://www.google.com/maps/place/Uttar+Pradesh"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center text-white hover:text-[#00c896]"
-  >
-    <div className="flex w-5 h-5 ml-1">
-      <Lottie
-        options={LocationOptions}
-        height={55}
-        width={55}
-        isClickToPauseDisabled={true}
-      />
-    </div>
-    <span className="flex ml-2 -mb-8 ">Uttar Pradesh, India</span>
-  </a>
-</li>
-                  </ul>
-
+                    <a
+                      href="https://www.google.com/maps/place/Uttar+Pradesh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-white hover:text-[#00c896]"
+                    >
+                      <div className="flex w-5 h-5 ml-1">
+                        <Lottie
+                          options={options.location}
+                          height={55}
+                          width={55}
+                          isClickToPauseDisabled={true}
+                        />
+                      </div>
+                      <span className="flex ml-2 -mb-8 ">
+                        Uttar Pradesh, India
+                      </span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
 
             {/* Column 2 */}
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 ">
               <div>
                 <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                <span className="flex "><Lottie
-                        options={reactskillsOptions}
-                        height={40}
-                        width={40}
-                        isClickToPauseDisabled={true}
-                      /> <span className="mt-[7px]" >Skill Set</span> </span> 
+                  <span className="flex ">
+                    <Lottie
+                      options={options.reactskills}
+                      height={48}
+                      width={48}
+                      isClickToPauseDisabled={true}
+                    />{" "}
+                    <span className="mt-[14px]">Skill Set</span>{" "}
+                  </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-2">
+                <ul className="list-none space-y-1 mt-5 -mb-4">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5">
                       <Lottie
-                        options={reactLottieOptions}
+                        options={options.animation}
                         height={28}
                         width={28}
                         isClickToPauseDisabled={true}
@@ -363,12 +272,18 @@ const About = () => {
                     <span className="flex -mb-2 mx-2">ReactJS</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="flex mt-3 gap-2 "> <TbBrandRedux style={{ color: '#61DAFB', fontSize: '29px' }} />Redux</span> 
+                    <span className="flex mt-3 gap-2 ">
+                      {" "}
+                      <TbBrandRedux
+                        style={{ color: "#61DAFB", fontSize: "29px" }}
+                      />
+                      Redux
+                    </span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5">
                       <Lottie
-                        options={jsLottieOptions}
+                        options={options.js}
                         height={35}
                         width={35}
                         isClickToPauseDisabled={true}
@@ -377,32 +292,41 @@ const About = () => {
                     <span className="flex -mb-3 mx-2">JavaScript</span>
                   </li>
                   <li className="flex items-center gap-2 mt-4 ml-[2px]">
-                   <span className="flex gap-2"><RiTailwindCssFill style={{ color: '#61DAFB', fontSize: '27px' }} />Tailwind CSS</span> 
+                    <span className="flex gap-2">
+                      <RiTailwindCssFill
+                        style={{ color: "#61DAFB", fontSize: "27px" }}
+                      />
+                      Tailwind CSS
+                    </span>
                   </li>
                 </ul>
               </div>
 
-              <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                <span className="flex"><Lottie
-                        options={TechnologyOptions}
-                        height={40}
-                        width={40}
-                        isClickToPauseDisabled={true}
-                      /> <span className="flex mt-1">Soft Skills</span> </span>  
+              <div className=" flex flex-col">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 ">
+                  <span className="flex">
+                    <Lottie
+                      options={options.language}
+                      height={45}
+                      width={45}
+                      isClickToPauseDisabled={true}
+                    />{" "}
+                    <span className="flex mt-2">Languages</span>{" "}
+                  </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-2">
+                <ul className="list-none space-y-1 mt-4">
                   <li className="flex items-center gap-2">
-                    <FaLightbulb /> Teamwork
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaLightbulb /> Communication
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaLightbulb /> Problem Solving
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaLightbulb /> Time Management
+                    <div className="w-5 h-5">
+                      <Lottie
+                        options={options.languageContent}
+                        height={28}
+                        width={28}
+                        isClickToPauseDisabled={true}
+                      />
+                    </div>
+                    <span className="flex -mb-3 mx-2">
+                      Fluent in Hindi and English
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -412,54 +336,77 @@ const About = () => {
             <div className="flex flex-col gap-10">
               <div>
                 <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                <span className="flex"><Lottie
-                    options={uiuxOptions}
-                    height={40}
-                    width={40}
-                    isClickToPauseDisabled={true}
-                  /> <span className="flex mt-1">Interests</span> </span>
+                  <span className="flex">
+                    <Lottie
+                      options={options.uiux}
+                      height={52}
+                      width={52}
+                      isClickToPauseDisabled={true}
+                    />{" "}
+                    <span className="flex mt-3">Interests</span>{" "}
+                  </span>
                 </h4>
                 <ul className="list-none space-y-1 mt-2">
-                  <li className="flex items-center ">
-                  <div className="w-5 h-5">
+                  <li className="flex items-center ml-1 ">
+                    <div className="w-5 h-5">
                       <Lottie
-                        options={uiContentOptions}
+                        options={options.uiContent}
                         height={35}
                         width={35}
                         isClickToPauseDisabled={true}
                       />
                     </div>
-                    <span  className="flex -mb-5 mx-3">UI/UX Design</span>
+                    <span className="flex -mb-[13px] mx-4">UI/UX Design</span>
                   </li>
                   <li className="flex items-center gap-2 mt-3 -ml-2">
-                  <div className="w-5 h-5">
+                    <div className="w-5 h-5">
                       <Lottie
-                        options={TechContentOptions}
-                        height={35}
-                        width={35}
+                        options={options.techContent}
+                        height={42}
+                        width={42}
                         isClickToPauseDisabled={true}
                       />
                     </div>
-                    <span className="flex -mb-5 mx-3 ">Technology</span>
+                    <span className="flex -mb-8 mx-5 ">Technology</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                <span className="flex"><Lottie
-                    options={languageOptions}
-                    height={38}
-                    width={38}
-                    isClickToPauseDisabled={true}
-                  /> <span className="flex mt-1">Languages</span> </span> 
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-3">
+                  <span className="flex">
+                    <Lottie
+                      options={options.technology}
+                      height={50}
+                      width={50}
+                      isClickToPauseDisabled={true}
+                    />{" "}
+                    <span className="flex mt-[10px]">Soft Skills</span>{" "}
+                  </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-2">
-                  <li className="flex items-center gap-2">
-                    <FaGlobe /> English
+                <ul className="list-none space-y-1 ">
+                  <li className="flex items-center gap-2 ">
+                    <div className="w-5 h-5">
+                      <Lottie
+                        options={options.problemSolving}
+                        height={42}
+                        width={42}
+                        isClickToPauseDisabled={true}
+                      />
+                    </div>
+                    <span className="flex -mb-[42px] mx-3 ">Problem Solving</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <FaGlobe /> Hindi
+                 
+                  <li className="flex items-center gap-2 mt-10 ml-[7px] ">
+                    <div className="w-5 h-5">
+                      <Lottie
+                        options={options.attentionToDetail}
+                        height={35}
+                        width={35}
+                        isClickToPauseDisabled={true}
+                      />
+                    </div>
+                    <span className="flex -mb-5 mx-3 ">Attention To Detail</span>
                   </li>
                 </ul>
               </div>
