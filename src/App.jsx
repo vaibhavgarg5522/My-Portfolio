@@ -7,13 +7,13 @@ import Contact from "./components/pages/Contact"
 import Projects from "./components/pages/Projects"
 import MyCv from "./components/pages/MyCv"
 import Footer from "./components/pages/Footer"
-import ConfettiOnNavigate from "./components/pages/ConfettiOnNavigate" // 🔥 Add this line
+
 
 function App() {
   return (
     <>
       <Navbar />
-      <ConfettiOnNavigate /> {/* 🔥 Trigger on route change */}
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
