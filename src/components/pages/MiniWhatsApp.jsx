@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import confetti from 'canvas-confetti';
+
 
 const MiniWhatsApp = () => {
   const [progress, setProgress] = useState(0);
@@ -8,8 +9,15 @@ const MiniWhatsApp = () => {
   const [backgroundColor, setBackgroundColor] = useState(
     "linear-gradient(145deg, #1a112b, #2d165e)"
   );
+
   const buttonRef = useRef(null);
   const intervalRef = useRef(null);
+
+  const confettiSettings = useMemo(() => ({
+    particleCount: 100,
+    spread: 70,
+    origin: { x: 0.5, y: 0.5 },
+  }), []);
 
   useEffect(() => {
     if (isPressed) {
@@ -21,41 +29,43 @@ const MiniWhatsApp = () => {
           if (percentage >= 1) {
             clearInterval(intervalRef.current);
             window.open("https://wa.me/918218390981", "_blank");
-            // Confetti effect when the user reaches 100% progress
-            confetti({
-              particleCount: 100,
-              spread: 70,
-              origin: { x: 0.5, y: 0.5 },
-            });
+            confetti(confettiSettings);
             return 0;
           }
           return prev + 2;
         });
-      }, 25);
+      },20 );
     } else {
       clearInterval(intervalRef.current);
       setProgress(0);
     }
 
     return () => clearInterval(intervalRef.current);
-  }, [isPressed]);
+  }, [isPressed, confettiSettings]);
 
-  const handleMouseDown = () => {
+  const handleMouseDown = useCallback(() => {
     setIsPressed(true);
-  };
+  }, []);
 
-  const handleMouseUp = () => {
+  const handleMouseUp = useCallback(() => {
     setIsPressed(false);
     setBackgroundColor("linear-gradient(145deg, #1a112b, #2d165e)");
-  };
+  }, []);
 
-  const handleMouseMove = () => {
-    if (progress > 0 && progress < buttonRef.current.offsetWidth) {
+  const handleMouseMove = useCallback(() => {
+    if (
+      progress > 0 &&
+      buttonRef.current &&
+      progress < buttonRef.current.offsetWidth
+    ) {
       setBackgroundColor("linear-gradient(145deg, #1a112b, #2d165e)");
-    } else if (progress >= buttonRef.current.offsetWidth) {
+    } else if (
+      buttonRef.current &&
+      progress >= buttonRef.current.offsetWidth
+    ) {
       setBackgroundColor("linear-gradient(145deg, #4e2c5f, #7a357e)");
     }
-  };
+  }, [progress]);
 
   return (
     <div>
@@ -125,6 +135,7 @@ const MiniWhatsApp = () => {
 
       {/* Social Media Icons */}
       <div className="flex gap-6 mt-20 justify-center md:justify-start">
+        {/* Same as before, no change needed */}
         <a
           href="https://www.facebook.com/share/168jQRHjqd/"
           target="_blank"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import backgroundImage from '../../images/bgsunny.jpg'; // Make sure this path is correct
 
+
 const filters = ['All', 'UI/UX', 'Web App'];
 
 const projects = [
