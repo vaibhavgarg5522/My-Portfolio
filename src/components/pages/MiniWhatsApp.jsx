@@ -74,7 +74,7 @@ const MiniWhatsApp = () => {
         onTouchEnd={handleMouseUp}
         onTouchCancel={handleMouseUp}
         onMouseMove={handleMouseMove}
-        className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#8267E3] overflow-hidden transition-all duration-300 w-[318px]"
+        className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#8267E3] overflow-hidden transition-all duration-300 w-[316px]"
         style={{
           background: backgroundColor,
           backdropFilter: "blur(4px)",
