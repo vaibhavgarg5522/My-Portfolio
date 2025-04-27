@@ -1,4 +1,4 @@
-import React, {   useMemo, lazy, Suspense ,useEffect} from "react";
+import React, { useMemo, lazy, Suspense, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import vaibhavImg from "../../images/image5.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
@@ -9,16 +9,11 @@ import Contact from "./Contact";
 import softSkillLottie from "../../assets/lottie/vTzbLLFwZK.json";
 import MiniWhatsApp from "./MiniWhatsApp";
 
-
-
 // Lazy load Lottie
 const Lottie = lazy(() => import("react-lottie"));
 
 const Home = () => {
   const navigate = useNavigate();
-  
-
-  
 
   const softSkillOptions = useMemo(
     () => ({
@@ -63,7 +58,7 @@ const Home = () => {
             {/* Lottie Animation (Mobile Only) */}
             <div className="w-88 sm:w-120 md:hidden">
               <Suspense fallback={<div className="text-sm text-gray-400">Loading animation...</div>}>
-                <Lottie options={softSkillOptions} />
+                <Lottie options={softSkillOptions} height={320} width={320} />
               </Suspense>
             </div>
 
@@ -84,7 +79,7 @@ const Home = () => {
             </div>
 
             {/* WhatsApp Button */}
-            <MiniWhatsApp></MiniWhatsApp>
+            <MiniWhatsApp />
           </div>
 
           {/* Profile Image Section */}

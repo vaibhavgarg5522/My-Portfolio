@@ -26,8 +26,12 @@ import LocationAnimateDAta from "../../assets/lottie/Animation - 1745231295412.j
 import LanguageContentAnimateDAta from "../../assets/lottie/eqDCM5fKmO.json";
 import ProblemSolvingAnimateDAta from "../../assets/lottie/R2XVEvi14A.json";
 import AttentionToDetailAnimateDAta from "../../assets/lottie/LeFDBLau1x.json";
-import { FaLightbulb } from "react-icons/fa";
 import Lottie from "react-lottie";
+import { useInView } from "react-intersection-observer";
+
+
+
+
 const createLottieOptions = (animationData) => ({
   loop: true,
   autoplay: true,
@@ -38,6 +42,78 @@ const createLottieOptions = (animationData) => ({
 });
 
 const About = () => {
+
+  const { ref: educationRef, inView: educationInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const { ref: contactRef, inView: contactInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const { ref: emailRef, inView: emailInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const { ref: phoneRef, inView: phoneInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const { ref: selfDevRef, inView: selfDevInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const { ref: eduContentRef, inView: eduContentInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const { ref: softSkillsRef, inView: softSkillsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  
+  const { ref: skillsRef, inView: skillsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  
+  const { ref: languagesRef, inView: languagesInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  
+  const { ref: interestsRef, inView: interestsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const { ref: techContentRef, inView: techContentInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const { ref: uiContentRef, inView: uiContentInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const { ref: locationRef, inView: locationInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const { ref: languageContentRef, inView: languageContentInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const { ref: problemSolvingRef, inView: problemSolvingInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const { ref: attentionToDetailRef, inView: attentionToDetailInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  
+  
   const options = {
     animation: createLottieOptions(animationData),
     js: createLottieOptions(javascriptanimateDAta),
@@ -127,14 +203,15 @@ const About = () => {
             {/* Column 1 */}
             <div className="flex flex-col gap-10">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2">
-                  <span className="flex">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 md:mt-10">
+                  <span className="flex" ref={educationRef}>
                     {" "}
                     <Lottie
                       options={options.education}
-                      height={48}
-                      width={48}
+                      height={50}
+                      width={50}
                       isClickToPauseDisabled={true}
+                      isPaused={!educationInView}
                     />{" "}
                     <span className="mt-[8px] ">Education</span>{" "}
                   </span>
@@ -142,12 +219,13 @@ const About = () => {
 
                 <ul className="list-none space-y-1 mt-4">
                   <li className="flex items-center gap-2">
-                    <div className="w-5 h-5">
+                    <div className="w-5 h-5" ref={selfDevRef}>
                       <Lottie
                         options={options.selfDeveloper}
                         height={28}
                         width={28}
                         isClickToPauseDisabled={true}
+                        isPaused={!selfDevInView}
                       />
                     </div>
                     <span className="flex -mb-2 mx-2">
@@ -155,12 +233,13 @@ const About = () => {
                     </span>
                   </li>
                   <li className="flex items-center mt-4 gap-2">
-                    <div className="w-5 h-5 -m-2">
+                    <div className="w-5 h-5 -m-2" ref={eduContentRef}>
                       <Lottie
                         options={options.educationContent}
                         height={40}
                         width={40}
                         isClickToPauseDisabled={true}
+                        isPaused={!eduContentInView}
                       />
                     </div>
                     <span className="flex -mb-5 mx-6 ">
@@ -172,13 +251,14 @@ const About = () => {
 
               <div>
                 <h4 className="text-2xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2 mt-8">
-                  <span className="flex">
+                  <span className="flex" ref={contactRef}>
                     {" "}
                     <Lottie
                       options={options.contact}
                       height={50}
-                      width={50}
+                      width={58}
                       isClickToPauseDisabled={true}
+                      isPaused={!contactInView}
                     />{" "}
                     <span className="flex mt-3"> Contact</span>{" "}
                   </span>
@@ -186,12 +266,13 @@ const About = () => {
 
                 <ul className="list-none space-y-1 mt-5">
                   <li className="flex items-center gap-2">
-                    <div className="w-5 h-5">
+                    <div className="w-5 h-5" ref={emailRef}>
                       <Lottie
                         options={options.email}
                         height={28}
                         width={28}
                         isClickToPauseDisabled={true}
+                        isPaused={!emailInView}
                       />
                     </div>
                     <span className="flex -mb-2 mx-2">
@@ -209,12 +290,13 @@ const About = () => {
                       href="tel:+918218390981"
                       className="flex items-center text-white hover:text-[#00c896]"
                     >
-                      <div className="w-5 h-5 -m-1">
+                      <div className="w-5 h-5 -m-1" ref={phoneRef}>
                         <Lottie
                           options={options.phone}
                           height={37}
                           width={37}
                           isClickToPauseDisabled={true}
+                          isPaused={!phoneInView}
                         />
                       </div>
                       <span className="flex -mb-4 mx-6 ">+918218390981</span>
@@ -228,12 +310,13 @@ const About = () => {
                       rel="noopener noreferrer"
                       className="flex items-center text-white hover:text-[#00c896]"
                     >
-                      <div className="flex w-5 h-5 ml-1">
+                      <div className="flex w-5 h-5 ml-1" ref={locationRef}>
                         <Lottie
                           options={options.location}
                           height={55}
                           width={55}
                           isClickToPauseDisabled={true}
+                          isStopped={!locationInView}
                         />
                       </div>
                       <span className="flex ml-2 -mb-8 ">
@@ -249,12 +332,13 @@ const About = () => {
             <div className="flex flex-col gap-10 ">
               <div>
                 <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8">
-                  <span className="flex">
+                  <span className="flex" ref={skillsRef}>
                     <Lottie
                       options={options.reactskills}
                       height={48}
                       width={48}
                       isClickToPauseDisabled={true}
+                      isPaused={!skillsInView}
                     />{" "}
                     <span className="mt-[14px] ">Skill Set</span>{" "}
                   </span>
@@ -304,24 +388,26 @@ const About = () => {
 
               <div className=" flex flex-col">
                 <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8">
-                  <span className="flex">
+                  <span className="flex" ref={languagesRef}>
                     <Lottie
                       options={options.language}
-                      height={45}
-                      width={45}
+                      height={48}
+                      width={48}
                       isClickToPauseDisabled={true}
+                      isPaused={!languagesInView}
                     />{" "}
                     <span className="flex mt-2">Languages</span>{" "}
                   </span>
                 </h4>
                 <ul className="list-none space-y-1 mt-4">
                   <li className="flex items-center gap-2">
-                    <div className="w-5 h-5">
+                    <div className="w-5 h-5"  ref={languageContentRef}>
                       <Lottie
                         options={options.languageContent}
                         height={28}
                         width={28}
                         isClickToPauseDisabled={true}
+                        isStopped={!languageContentInView}
                       />
                     </div>
                     <span className="flex -mb-3 mx-2">
@@ -336,35 +422,38 @@ const About = () => {
             <div className="flex flex-col gap-10">
               <div>
                 <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8">
-                  <span className="flex">
+                  <span className="flex" ref={interestsRef}>
                     <Lottie
                       options={options.uiux}
-                      height={52}
-                      width={52}
+                      height={58}
+                      width={58}
                       isClickToPauseDisabled={true}
+                      isPaused={!interestsInView}
                     />{" "}
-                    <span className="flex mt-3">Interests</span>{" "}
+                    <span className="flex mt-4">Interests</span>{" "}
                   </span>
                 </h4>
                 <ul className="list-none space-y-1 mt-2">
                   <li className="flex items-center ml-1 ">
-                    <div className="w-5 h-5">
+                    <div className="w-5 h-5" ref={uiContentRef}>
                       <Lottie
                         options={options.uiContent}
                         height={35}
                         width={35}
                         isClickToPauseDisabled={true}
+                        isStopped={!uiContentInView}
                       />
                     </div>
                     <span className="flex -mb-[13px] mx-4">UI/UX Design</span>
                   </li>
                   <li className="flex items-center gap-2 mt-3 -ml-2">
-                    <div className="w-5 h-5">
+                    <div className="w-5 h-5"  ref={techContentRef}>
                       <Lottie
                         options={options.techContent}
                         height={42}
                         width={42}
                         isClickToPauseDisabled={true}
+                        isStopped={!techContentInView}
                       />
                     </div>
                     <span className="flex -mb-8 mx-5 ">Technology</span>
@@ -374,36 +463,39 @@ const About = () => {
 
               <div>
                 <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8">
-                  <span className="flex">
+                  <span className="flex" ref={softSkillsRef}>
                     <Lottie
                       options={options.technology}
-                      height={50}
-                      width={50}
+                      height={55}
+                      width={55}
                       isClickToPauseDisabled={true}
+                      isPaused={!softSkillsInView}
                     />{" "}
-                    <span className="flex mt-[10px]">Soft Skills</span>{" "}
+                    <span className="flex mt-[13px]">Soft Skills</span>{" "}
                   </span>
                 </h4>
                 <ul className="list-none space-y-1 ">
                   <li className="flex items-center gap-2 ">
-                    <div className="w-5 h-5">
+                    <div className="w-5 h-5" ref={problemSolvingRef}>
                       <Lottie
                         options={options.problemSolving}
                         height={42}
                         width={42}
                         isClickToPauseDisabled={true}
+                        isStopped={!problemSolvingInView}
                       />
                     </div>
                     <span className="flex -mb-[42px] mx-3 ">Problem Solving</span>
                   </li>
                  
                   <li className="flex items-center gap-2 mt-10 ml-[7px] ">
-                    <div className="w-5 h-5">
+                    <div className="w-5 h-5" ref={attentionToDetailRef}>
                       <Lottie
                         options={options.attentionToDetail}
                         height={35}
                         width={35}
                         isClickToPauseDisabled={true}
+                        isStopped={!attentionToDetailInView}
                       />
                     </div>
                     <span className="flex -mb-5 mx-3 ">Attention To Detail</span>
