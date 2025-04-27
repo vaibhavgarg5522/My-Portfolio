@@ -23,14 +23,15 @@ const MiniWhatsApp = () => {
       if (!buttonRef.current) return prev;
       const width = buttonRef.current.offsetWidth;
       const newProgress = (prev + 2) / width;
-      
-      if (newProgress >= 1) {
+
+      if (newProgress >= 0.85) {  // Check if progress has reached 88%
         clearInterval(intervalRef.current);
         window.open("https://wa.me/918218390981", "_blank");
         confetti(confettiSettings);
-        return 0;
+        return 0;  // Reset progress after reaching 88%
       }
-      return prev + 2;
+
+      return prev + 2;  // Increase progress by 2 pixels per interval
     });
   }, [confettiSettings]);
 
@@ -96,9 +97,9 @@ const MiniWhatsApp = () => {
             progress > 20 ? "text-white font-bold" : "text-white font-semibold"
           }`}
           style={{
-            paddingLeft: "2.5rem",
-            paddingRight: "1rem",
-            fontSize: "clamp(0.75rem, 2vw, 1rem)",
+            // paddingLeft: "2.5rem",
+            paddingLeft: "38px",
+            fontSize: "14px",
           }}
         >
           Happy to chat on WhatsApp
@@ -106,7 +107,7 @@ const MiniWhatsApp = () => {
 
         <div
           className={`absolute top-1/2 -translate-y-1/2 z-30 transition-transform duration-100 ${
-            isPressed ? "scale-120 rotate-icon" : "scale-100"
+            isPressed ? "scale-115 rotate-icon" : "scale-100"
           }`}
           style={{
             left: `${progress}px`,

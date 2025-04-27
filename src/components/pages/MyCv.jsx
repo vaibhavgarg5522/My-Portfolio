@@ -22,7 +22,7 @@ const MyCv = () => {
       </div>
 
       {/* Download Fallback */}
-      <div className="mt-6 w-full max-w-md">
+      <div className="mt-6 w-full max-w-md flex justify-center">
         <a
           href="https://drive.google.com/uc?export=download&id=1_9qix8HSyVy9QztW7j4ZckppGAXxOuez"
           download="Vaibhav_Garg_Resume.pdf"
