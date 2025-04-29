@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import profile from "../../assets/image4.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -29,9 +29,6 @@ import AttentionToDetailAnimateDAta from "../../assets/lottie/LeFDBLau1x.json";
 import Lottie from "react-lottie";
 import { useInView } from "react-intersection-observer";
 
-
-
-
 const createLottieOptions = (animationData) => ({
   loop: true,
   autoplay: true,
@@ -42,27 +39,32 @@ const createLottieOptions = (animationData) => ({
 });
 
 const About = () => {
-
+  // Setting up the useInView hooks
   const { ref: educationRef, inView: educationInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
+  
   const { ref: contactRef, inView: contactInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
+
   const { ref: emailRef, inView: emailInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
+
   const { ref: phoneRef, inView: phoneInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
+
   const { ref: selfDevRef, inView: selfDevInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
+
   const { ref: eduContentRef, inView: eduContentInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -72,17 +74,17 @@ const About = () => {
     triggerOnce: true,
     threshold: 0.3,
   });
-  
+
   const { ref: skillsRef, inView: skillsInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
-  
+
   const { ref: languagesRef, inView: languagesInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
-  
+
   const { ref: interestsRef, inView: interestsInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -92,28 +94,43 @@ const About = () => {
     triggerOnce: true,
     threshold: 0.3,
   });
+
   const { ref: uiContentRef, inView: uiContentInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
+
   const { ref: locationRef, inView: locationInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
+
   const { ref: languageContentRef, inView: languageContentInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
+
   const { ref: problemSolvingRef, inView: problemSolvingInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
+
   const { ref: attentionToDetailRef, inView: attentionToDetailInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
-  
-  
+
+  const { ref: jsRef, inView: jsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const { ref: reactskillsRef, inView: reactskillsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  // Lottie animation options for each section
   const options = {
     animation: createLottieOptions(animationData),
     js: createLottieOptions(javascriptanimateDAta),
@@ -134,6 +151,80 @@ const About = () => {
     problemSolving: createLottieOptions(ProblemSolvingAnimateDAta),
     attentionToDetail: createLottieOptions(AttentionToDetailAnimateDAta),
   };
+
+  // useEffect to log when each section comes into view
+  useEffect(() => {
+    if (educationInView) console.log("Education animation in view");
+  }, [educationInView]);
+
+  useEffect(() => {
+    if (contactInView) console.log("Contact animation in view");
+  }, [contactInView]);
+
+  useEffect(() => {
+    if (emailInView) console.log("Email animation in view");
+  }, [emailInView]);
+
+  useEffect(() => {
+    if (phoneInView) console.log("Phone animation in view");
+  }, [phoneInView]);
+
+  useEffect(() => {
+    if (selfDevInView) console.log("Self Developer animation in view");
+  }, [selfDevInView]);
+
+  useEffect(() => {
+    if (eduContentInView) console.log("Education Content animation in view");
+  }, [eduContentInView]);
+
+  useEffect(() => {
+    if (softSkillsInView) console.log("Soft Skills animation in view");
+  }, [softSkillsInView]);
+
+  useEffect(() => {
+    if (skillsInView) console.log("Skills animation in view");
+  }, [skillsInView]);
+
+  useEffect(() => {
+    if (languagesInView) console.log("Languages animation in view");
+  }, [languagesInView]);
+
+  useEffect(() => {
+    if (interestsInView) console.log("Interests animation in view");
+  }, [interestsInView]);
+
+  useEffect(() => {
+    if (techContentInView) console.log("Tech Content animation in view");
+  }, [techContentInView]);
+
+  useEffect(() => {
+    if (uiContentInView) console.log("UI Content animation in view");
+  }, [uiContentInView]);
+
+  useEffect(() => {
+    if (locationInView) console.log("Location animation in view");
+  }, [locationInView]);
+
+  useEffect(() => {
+    if (languageContentInView) console.log("Language Content animation in view");
+  }, [languageContentInView]);
+
+  useEffect(() => {
+    if (problemSolvingInView) console.log("Problem Solving animation in view");
+  }, [problemSolvingInView]);
+
+  useEffect(() => {
+    if (attentionToDetailInView) console.log("Attention to Detail animation in view");
+  }, [attentionToDetailInView]);
+
+  useEffect(() => {
+    if (jsInView) console.log("JavaScript animation in view");
+  }, [jsInView]);
+
+  useEffect(() => {
+    if (reactskillsInView) console.log("React Skills animation in view");
+  }, [reactskillsInView]);
+
   return (
     <div
       className="min-h-screen bg-cover bg-center text-white py-10 px-5 md:px-10 lg:px-[50px] relative"
@@ -217,7 +308,7 @@ const About = () => {
                   </span>
                 </h4>
 
-                <ul className="list-none space-y-1 mt-4">
+                <ul className="list-none space-y-1 mt-4 shadow">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5" ref={selfDevRef}>
                       <Lottie
@@ -345,12 +436,13 @@ const About = () => {
                 </h4>
                 <ul className="list-none space-y-1 mt-5 -mb-4">
                   <li className="flex items-center gap-2">
-                    <div className="w-5 h-5">
+                    <div className="w-5 h-5" ref={reactskillsRef}>
                       <Lottie
                         options={options.animation}
                         height={28}
                         width={28}
                         isClickToPauseDisabled={true}
+                        isPaused={!reactskillsInView}
                       />
                     </div>
                     <span className="flex -mb-2 mx-2">ReactJS</span>
@@ -365,12 +457,13 @@ const About = () => {
                     </span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-5 h-5">
+                    <div className="w-5 h-5" ref={jsRef}>
                       <Lottie
                         options={options.js}
                         height={35}
                         width={35}
                         isClickToPauseDisabled={true}
+                        isPaused={!jsInView}
                       />
                     </div>
                     <span className="flex -mb-3 mx-2">JavaScript</span>

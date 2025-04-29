@@ -1,4 +1,4 @@
-import React, { useMemo, lazy, Suspense, useEffect } from "react";
+import React, { useMemo, lazy, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 import vaibhavImg from "../../images/image5.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
@@ -58,7 +58,7 @@ const Home = () => {
             {/* Lottie Animation (Mobile Only) */}
             <div className="w-80 sm:w-120 md:hidden">
               <Suspense fallback={<div className="text-sm text-gray-400">Loading animation...</div>}>
-                <Lottie options={softSkillOptions} height={320} width={320} />
+                <Lottie options={softSkillOptions} height={340} width={340} />
               </Suspense>
             </div>
 
@@ -94,7 +94,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
       </section>
 
       {/* Mobile Scrollable Sections */}
