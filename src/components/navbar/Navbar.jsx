@@ -9,7 +9,7 @@ import {
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
-import vaibhavImg from "../../images/image5.jpg";
+import vaibhavImg from "../../images/vai1.jpg";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -58,7 +58,7 @@ const Navbar = () => {
         }`}
       >
         <div className="flex justify-between items-center p-4 border-b border-[#333]">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <img
               src={vaibhavImg}
               alt="Profile"

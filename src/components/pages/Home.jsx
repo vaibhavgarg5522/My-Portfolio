@@ -1,4 +1,4 @@
-import React, { useMemo, lazy, Suspense } from "react";
+import React, { useMemo, lazy, Suspense, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import vaibhavImg from "../../images/image5.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
@@ -8,6 +8,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import softSkillLottie from "../../assets/lottie/vTzbLLFwZK.json";
 import MiniWhatsApp from "./MiniWhatsApp";
+import { FaArrowUp } from "react-icons/fa"; // Importing the scroll-to-top arrow icon
 
 // Lazy load Lottie
 const Lottie = lazy(() => import("react-lottie"));
@@ -26,6 +27,31 @@ const Home = () => {
     }),
     []
   );
+
+  // Scroll-to-top button visibility state
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Function to toggle visibility of the button
+  const toggleVisibility = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Listen for scroll event
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
 
   return (
     <>
@@ -48,15 +74,27 @@ const Home = () => {
               I Build <span className="text-[#8267E3]">Beautiful</span> and{" "}
               <span className="text-[#8267E3]">Functional</span> Web Interfaces.
             </h1>
-            <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-4 max-w-[500px]">
-              I'm Vaibhav Garg — a self-taught React developer passionate about
-              building responsive, user-friendly, and clean web experiences.
-              I turn ideas into digital reality with precision, performance, and
-              creativity.
-            </p>
+
+            {/* Updated Self Intro 3D Style */}
+            <div className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10">
+              <div className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
+                <h2 className=" text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
+                  Hey, I'm <span className="text-[#8267E3]">Vaibhav Garg</span>
+                </h2>
+                <p className="leading-relaxed tracking-wide">
+                  A <span className="text-[#00C896] font-semibold">self-taught</span> front-end developer with a passion for building{" "}
+                  <span className="text-[#FFD700] font-semibold">ReactJS</span> apps that are not only beautiful but also performant and accessible.
+                  I create responsive, pixel-perfect UIs that transform ideas into seamless digital experiences.
+                </p>
+
+                <div className="mt-3 text-sm text-[#aaa] italic">
+                  Let’s build something amazing together.
+                </div>
+              </div>
+            </div>
 
             {/* Lottie Animation (Mobile Only) */}
-            <div className="w-80 sm:w-120 md:hidden">
+            <div className="w-90 sm:w-120 md:hidden -mb-4">
               <Suspense fallback={<div className="text-sm text-gray-400">Loading animation...</div>}>
                 <Lottie options={softSkillOptions} height={340} width={340} />
               </Suspense>
@@ -83,7 +121,7 @@ const Home = () => {
           </div>
 
           {/* Profile Image Section */}
-          <div className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10 md:mt-0">
+          <div className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10 md:mb-33">
             <div className="relative rounded-full overflow-hidden shadow-2xl border-4 border-[#8267E3] transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
               <img
                 src={vaibhavImg}
@@ -111,6 +149,19 @@ const Home = () => {
           <Contact />
         </section>
       </div>
+
+      {/* Scroll-to-Top Button */}
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-4 bg-[#8267E3] text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+        style={{
+          zIndex: 1000, // Ensures the button is above other content
+        }}
+      >
+        <FaArrowUp size={18} />
+      </button>
     </>
   );
 };

@@ -32,7 +32,7 @@ const Skills = () => {
 
       {/* Content */}
       <div className="relative z-10">
-        <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] md:mt-15 mt-15  ">
+        <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] md:mt-15 mt-15">
           My Skills
         </h2>
 
@@ -44,14 +44,14 @@ const Skills = () => {
             </h3>
             <div className="space-y-6">
               {technicalSkills.map((skill, idx) => (
-                <div key={idx}>
+                <div key={idx} className="skill-item">
                   <div className="flex justify-between mb-2 px-1 text-sm sm:text-base">
                     <span className="text-gray-200">{skill.name}</span>
                     <span className="text-gray-300">{skill.percent}%</span>
                   </div>
-                  <div className="w-full h-3 sm:h-4 bg-gray-800 rounded-full relative overflow-hidden shadow-inner">
+                  <div className="w-full h-3 sm:h-4 bg-gray-800 rounded-full relative overflow-hidden shadow-inner transition-all duration-500">
                     <div
-                      className="h-full rounded-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff] transition-all duration-300"
+                      className="h-full rounded-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff] transform transition-all duration-500 ease-in-out hover:scale-105"
                       style={{ width: `${skill.percent}%` }}
                     ></div>
                     <div
@@ -73,7 +73,7 @@ const Skills = () => {
               {professionalSkills.map((skill, idx) => (
                 <div
                   key={idx}
-                  className="relative w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 flex items-center justify-center text-center"
+                  className="relative w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 flex items-center justify-center text-center skill-circle transition-all duration-500 ease-in-out transform hover:scale-110"
                 >
                   <svg
                     className="w-full h-full drop-shadow-[0_0_5px_#8267E3]"
@@ -107,10 +107,10 @@ const Skills = () => {
                     </defs>
                   </svg>
                   <div className="absolute flex flex-col items-center justify-center">
-                    <span className="text-base sm:text-lg font-bold text-white drop-shadow">
+                    <span className="text-base sm:text-xl font-bold text-white drop-shadow -mb-2">
                       {skill.percent}%
                     </span>
-                    <span className="text-xs sm:text-sm text-gray-300 mt-1">{skill.name}</span>
+                    <span className="text-[11px] sm:text-sm text-gray-300 mt-1">{skill.name}</span>
                   </div>
                 </div>
               ))}
