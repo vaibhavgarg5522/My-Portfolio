@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import confetti from 'canvas-confetti';
+import { BsArrowRightCircleFill } from "react-icons/bs";
 
 const MiniWhatsApp = () => {
   const [progress, setProgress] = useState(0);
@@ -22,22 +23,22 @@ const MiniWhatsApp = () => {
     setProgress((prev) => {
       if (!buttonRef.current) return prev;
       const width = buttonRef.current.offsetWidth;
-      const newProgress = (prev + 2) / width;
+      const newProgress = prev + 2;
 
-      if (newProgress >= 0.85) {  // Check if progress has reached 88%
+      if (newProgress >= width * 0.84) {  // Check if progress has reached 88% of the width
         clearInterval(intervalRef.current);
         window.open("https://wa.me/918218390981", "_blank");
         confetti(confettiSettings);
-        return 0;  // Reset progress after reaching 88%
+        return width * 0.84;  // Set the progress to 88% when done
       }
 
-      return prev + 2;  // Increase progress by 2 pixels per interval
+      return newProgress;
     });
   }, [confettiSettings]);
 
   useEffect(() => {
     if (isPressed) {
-      intervalRef.current = setInterval(updateProgress, 20);  // Decrease frequency for performance
+      intervalRef.current = setInterval(updateProgress, 20);
     } else {
       clearInterval(intervalRef.current);
       setProgress(0);
@@ -62,6 +63,8 @@ const MiniWhatsApp = () => {
       setBackgroundColor("linear-gradient(145deg, #4e2c5f, #7a357e)");
     }
   }, [progress]);
+
+  
 
   return (
     <div>
@@ -93,16 +96,17 @@ const MiniWhatsApp = () => {
         ></div>
 
         <span
-          className={`z-10 whitespace-nowrap ${
+          className={`z-10 whitespace-nowrap flex items-center gap-2 ${
             progress > 20 ? "text-white font-bold" : "text-white font-semibold"
           }`}
           style={{
-            // paddingLeft: "2.5rem",
             paddingLeft: "38px",
             fontSize: "14px",
           }}
         >
-          Happy to chat on WhatsApp
+          Happy to chat on WhatsApp <span className="text-lg text-[white] ml-3 animate-wiggle" ><BsArrowRightCircleFill /></span>
+
+         
         </span>
 
         <div
@@ -130,7 +134,7 @@ const MiniWhatsApp = () => {
       </div>
 
       {/* Social Media Icons */}
-      <div className="flex gap-6 mt-20 justify-center md:justify-start">
+      <div className="flex gap-6 mt-13 md:mt-17 justify-center md:justify-start">
         <a
           href="https://www.facebook.com/share/168jQRHjqd/"
           target="_blank"
