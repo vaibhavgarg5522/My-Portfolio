@@ -39,7 +39,7 @@ const MiniWhatsApp = () => {
 
   useEffect(() => {
     if (isPressed) {
-      intervalRef.current = setInterval(updateProgress, 20);
+      intervalRef.current = setInterval(updateProgress, 25);
     } else {
       clearInterval(intervalRef.current);
       setProgress(0);
@@ -99,7 +99,7 @@ const MiniWhatsApp = () => {
         {/* Button Text */}
         <span
           className={`z-10 whitespace-nowrap flex items-center gap-2 ${
-            progress > 20 ? "font-bold" : "font-semibold"
+            progress > 25 ? "font-bold" : "font-semibold"
           }`}
           style={{
             paddingLeft: "35px",
