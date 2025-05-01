@@ -6,24 +6,37 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
   const form = useRef();
 
+  // Send email function
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      'service_uinyu8d',
-      'template_0aflauk',
-      form.current,
-      'bKptcgsLisERMObpO'
+    // Get current time
+    const currentTime = new Date().toLocaleString(); // 🕒 get formatted time
+
+    // Prepare form data
+    const formData = {
+      name: form.current.user_name.value,  // Updated to match EmailJS template
+      email: form.current.user_email.value,  // Updated to match EmailJS template
+      subject: form.current.subject.value,
+      message: form.current.message.value,
+      time: currentTime, // add time here
+    };
+
+    // Send email using EmailJS service
+    emailjs.send(
+      'service_uinyu8d', // Your service ID
+      'template_0aflauk', // Your template ID
+      formData,
+      'bKptcgsLisERMObpO' // Your user ID
     )
     .then((result) => {
       alert('Message sent successfully!');
       console.log(result.text);
+      e.target.reset();  // Reset form only after successful submission
     }, (error) => {
       alert('Failed to send message. Please try again later.');
       console.log(error.text);
     });
-
-    e.target.reset();
   };
 
   return (
@@ -48,7 +61,6 @@ const Contact = () => {
               Get in Touch
             </h2>
 
-            {/* Email */}
             <ContactItem
               icon={<MdEmail size={24} />}
               title="Email"
@@ -57,7 +69,6 @@ const Contact = () => {
               color="#FF6A3D"
             />
 
-            {/* Phone */}
             <ContactItem
               icon={<MdPhone size={24} />}
               title="Call"
@@ -66,7 +77,6 @@ const Contact = () => {
               color="#00C896"
             />
 
-            {/* Location */}
             <ContactItem
               icon={<MdLocationOn size={24} />}
               title="Location"
@@ -91,6 +101,7 @@ const Contact = () => {
               className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:border-[#8B3DFF]"
               required
             />
+
             <input
               type="email"
               name="user_email"
@@ -98,6 +109,15 @@ const Contact = () => {
               className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:border-[#8B3DFF]"
               required
             />
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:border-[#8B3DFF]"
+              required
+            />
+
             <textarea
               name="message"
               rows="5"
@@ -109,6 +129,7 @@ const Contact = () => {
             <button
               type="submit"
               className="w-full py-3 bg-[#8267E3] text-white font-semibold rounded-md shadow-md hover:opacity-90 transition duration-300"
+              aria-label="Send Message"
             >
               Send Message
             </button>
@@ -119,7 +140,7 @@ const Contact = () => {
   );
 };
 
-// Glow-style Contact Item (reusable)
+// Contact Item component
 const ContactItem = ({ icon, title, value, href, color }) => (
   <a
     href={href}
