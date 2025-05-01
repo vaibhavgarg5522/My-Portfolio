@@ -160,7 +160,7 @@ const Home = () => {
           zIndex: 1000, // Ensures the button is above other content
         }}
       >
-        <FaArrowUp size={18} />
+        <FaArrowUp size={14} />
       </button>
     </>
   );
