@@ -97,7 +97,7 @@ const Home = () => {
             {/* Lottie Animation (Mobile Only) */}
             <div className="w-90 sm:w-120 md:hidden -mb-4">
               <Suspense fallback={<div className="text-sm text-gray-400">Loading animation...</div>}>
-                <Lottie options={softSkillOptions} height={345} width={345} />
+                <Lottie options={softSkillOptions} height={355} width={355} />
               </Suspense>
             </div>
 
