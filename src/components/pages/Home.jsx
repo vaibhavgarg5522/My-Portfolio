@@ -159,17 +159,18 @@ const Home = () => {
       {/* Baaki Home page content */}
       
     </div>
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-4 bg-[#8267E3] text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
-        style={{
-          zIndex: 1000, // Ensures the button is above other content
-        }}
-      >
-        <FaArrowUp size={14} />
-      </button>
+    <button
+  onClick={scrollToTop}
+  className={`fixed bottom-5 right-1/2 translate-x-1/2 bg-[black] text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
+    isVisible ? "opacity-100" : "opacity-0"
+  }`}
+  style={{
+    zIndex: 1000,
+  }}
+>
+  <FaArrowUp size={14} />
+</button>
+
     </>
   );
 };

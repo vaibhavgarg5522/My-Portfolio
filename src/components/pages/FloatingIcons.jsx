@@ -14,7 +14,7 @@ const FloatingIcons = () => {
     {
       icon: <FaFacebookF />,
       link: "https://www.facebook.com/share/168jQRHjqd/",
-      bg: "bg-blue-600",
+      bg: "bg-[#1877F2]",
     },
    
     {
@@ -25,7 +25,7 @@ const FloatingIcons = () => {
     {
       icon: <FaLinkedinIn />,
       link: "https://www.linkedin.com/in/vaibhav-garg-b72a57353/",
-      bg: "bg-blue-800",
+      bg: "bg-[#0077B5]",
     },
     // {
     //   icon: <FaInstagram />,
@@ -35,7 +35,7 @@ const FloatingIcons = () => {
     {
       icon: <FaEnvelope />,
       link: "mailto:vaibhavgarg5522@gmail.com",
-      bg: "bg-blue-700",
+      bg: "bg-blue-800",
     },
    
    
@@ -48,7 +48,7 @@ const FloatingIcons = () => {
   ];
 
   return (
-    <div className="fixed top-[388px] md:top-[428px] right-[10px] flex flex-col gap-4 z-50">
+    <div className="fixed top-[408px] md:top-[428px] right-[10px] flex flex-col gap-4 z-50">
       {icons.map((item, index) => (
       <a
       key={index}
@@ -57,7 +57,7 @@ const FloatingIcons = () => {
       rel="noopener noreferrer"
       className={`w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md hover:scale-120 transition-transform duration-300 ${item.bg}`}
     >
-       <span className="text-[20px] icon-wiggle">{item.icon}</span>
+       <span className="text-[22px] icon-wiggle">{item.icon}</span>
     </a>
     
       ))}
