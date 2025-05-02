@@ -9,6 +9,7 @@ import Contact from "./Contact";
 import softSkillLottie from "../../assets/lottie/vTzbLLFwZK.json";
 import MiniWhatsApp from "./MiniWhatsApp";
 import { FaArrowUp } from "react-icons/fa"; // Importing the scroll-to-top arrow icon
+import FloatingIcons from "./FloatingIcons";
 
 // Lazy load Lottie
 const Lottie = lazy(() => import("react-lottie"));
@@ -118,10 +119,11 @@ const Home = () => {
 
             {/* WhatsApp Button */}
             <MiniWhatsApp />
+          
           </div>
 
           {/* Profile Image Section */}
-          <div className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10 md:mb-33">
+          <div className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10 ">
             <div className="relative rounded-full overflow-hidden shadow-2xl border-4 border-[#8267E3] transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
               <img
                 src={vaibhavImg}
@@ -150,7 +152,13 @@ const Home = () => {
         </section>
       </div>
 
+
+
       {/* Scroll-to-Top Button */}
+      <div className="relative">
+      {/* Baaki Home page content */}
+      <FloatingIcons />
+    </div>
       <button
         onClick={scrollToTop}
         className={`fixed bottom-8 right-4 bg-[#8267E3] text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${

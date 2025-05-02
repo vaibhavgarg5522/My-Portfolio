@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Shake (wiggle) animation only for icons */
+  @keyframes icon-wiggle {
+    0%, 100% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+  }
+
+  .icon-wiggle {
+    animation: icon-wiggle 1s ease-in-out infinite;
+  }
+}
+
+
+
+
 @keyframes slideIcon {
   0% {
     left: -30px;
@@ -63,4 +86,5 @@
 .animate-fade-in {
   animation: fade-in 0.3s ease-in-out;
 }
+
 

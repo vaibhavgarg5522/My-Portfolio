@@ -134,7 +134,7 @@ const MiniWhatsApp = () => {
       </div>
 
       {/* Social Media Icons */}
-      <div className="flex gap-6 mt-13 md:mt-17 justify-center md:justify-start">
+      {/* <div className="flex gap-6 mt-13 md:mt-17 justify-center md:justify-start">
         <a href="https://www.facebook.com/share/168jQRHjqd/" target="_blank" rel="noopener noreferrer"
           className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[white] hover:shadow-[0_0_15px_#1877F2]">
          <FaFacebookF className="text-xl sm:text-2xl" style={{ color: "#1877F2" ,fontSize:"27px" }} />
@@ -152,7 +152,7 @@ const MiniWhatsApp = () => {
           className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#8267E3] hover:shadow-[0_0_15px_#333]">
           <FaGithub className="text-xl sm:text-2xl"style={{ color: "white" ,fontSize:"28px" }} />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
