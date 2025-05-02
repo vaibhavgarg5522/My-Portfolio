@@ -27,11 +27,11 @@ const FloatingIcons = () => {
       link: "https://www.linkedin.com/in/vaibhav-garg-b72a57353/",
       bg: "bg-blue-800",
     },
-    {
-      icon: <FaInstagram />,
-      link: "https://www.instagram.com/masoom_____bacha_____/",
-      bg: "bg-red-500",
-    },
+    // {
+    //   icon: <FaInstagram />,
+    //   link: "https://www.instagram.com/masoom_____bacha_____/",
+    //   bg: "bg-red-500",
+    // },
     {
       icon: <FaEnvelope />,
       link: "mailto:vaibhavgarg5522@gmail.com",
@@ -39,16 +39,16 @@ const FloatingIcons = () => {
     },
    
    
-    {
-      icon: <FaGithub />,
-      link: "https://github.com/vaibhavgarg5522",
-      bg: "bg-gray-800",
-    },
+    // {
+    //   icon: <FaGithub />,
+    //   link: "https://github.com/vaibhavgarg5522",
+    //   bg: "bg-gray-800",
+    // },
    
   ];
 
   return (
-    <div className="fixed top-[88px] md:top-[288px] right-[15px] flex flex-col gap-4 z-50">
+    <div className="fixed top-[388px] md:top-[288px] right-[15px] flex flex-col gap-4 z-50">
       {icons.map((item, index) => (
       <a
       key={index}
