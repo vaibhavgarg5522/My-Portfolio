@@ -8,14 +8,14 @@ import Projects from "./components/pages/Projects"
 import MyCv from "./components/pages/MyCv"
 import Footer from "./components/pages/Footer"
 import FloatingIcons from "./components/pages/FloatingIcons"
-import SocialSidebar from "./components/pages/SocialSidebar"
+// import SocialSidebar from "./components/pages/SocialSidebar"
 
 
 function App() {
   return (
     <>
       <Navbar />
-      <SocialSidebar />
+      {/* <SocialSidebar /> */}
       <FloatingIcons />
       
       <Routes>

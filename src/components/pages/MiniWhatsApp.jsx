@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaSkype, FaGithub } from 'react-icons/fa';
 import confetti from 'canvas-confetti';
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const MiniWhatsApp = () => {
   const [progress, setProgress] = useState(0);
@@ -134,25 +135,25 @@ const MiniWhatsApp = () => {
       </div>
 
       {/* Social Media Icons */}
-      {/* <div className="flex gap-6 mt-13 md:mt-17 justify-center md:justify-start">
-        <a href="https://www.facebook.com/share/168jQRHjqd/" target="_blank" rel="noopener noreferrer"
-          className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[white] hover:shadow-[0_0_15px_#1877F2]">
-         <FaFacebookF className="text-xl sm:text-2xl" style={{ color: "#1877F2" ,fontSize:"27px" }} />
+      <div className="flex gap-6 mt-13 md:mt-17 justify-center md:justify-start">
+        <a href="https://x.com/vaibhavgarg5522?t=H5maR-6fEwgZef00HQhfQA&s=09" target="_blank" rel="noopener noreferrer"
+          className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#8267E3] hover:shadow-[0_0_15px_#1877F2]">
+         <FaXTwitter className="text-xl sm:text-2xl" style={{ color: "white" ,fontSize:"27px" }} />
 
         </a>
         <a href="https://www.instagram.com/masoom_____bacha_____/" target="_blank" rel="noopener noreferrer"
           className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[white] hover:shadow-[0_0_15px_#E4405F]">
           <FaInstagram className="text-xl sm:text-2xl" style={{ color: "#E4405F" ,fontSize:"28px" }} />
         </a>
-        <a href="https://www.linkedin.com/in/vaibhav-garg-b72a57353/" target="_blank" rel="noopener noreferrer"
+        <a href="skype:+918218390981?call" target="_blank" rel="noopener noreferrer"
           className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[white] hover:shadow-[0_0_15px_#0077B5]">
-          <FaLinkedinIn className="text-xl sm:text-2xl"style={{ color: "#1877F2" ,fontSize:"27px" }} />
+          <FaSkype className="text-xl sm:text-2xl"style={{ color: "#00AFF0" ,fontSize:"27px" }} />
         </a>
         <a href="https://github.com/vaibhavgarg5522" target="_blank" rel="noopener noreferrer"
           className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#8267E3] hover:shadow-[0_0_15px_#333]">
           <FaGithub className="text-xl sm:text-2xl"style={{ color: "white" ,fontSize:"28px" }} />
         </a>
-      </div> */}
+      </div>
     </div>
   );
 };
