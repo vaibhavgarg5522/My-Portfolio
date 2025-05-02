@@ -40,7 +40,8 @@ const socialLinks = [
     id: 5,
     label: 'Skype',
     icon: <FaSkype size={18} />,
-    href: 'https://join.skype.com/invite/yG77bf7pu1wB',
+    href: 'skype:+918218390981?call',
+
     color: 'bg-[#00AFF0]'
   }
 ];
@@ -54,16 +55,16 @@ const SocialIconsBar = () => {
   };
 
   return (
-    <div className="fixed top-[12%] right-0 z-50 flex flex-col items-end">
+    <div className="fixed top-[12%] right-0 z-50 flex flex-col items-end space-y-2">
       {socialLinks.map(({ id, label, icon, href, color }) => (
         <div
           key={id}
           onClick={() => handleClick(id, href)}
           onMouseEnter={() => setActiveId(id)}
           onMouseLeave={() => setActiveId(null)}
-          className={`group relative flex items-center w-[32px] hover:w-[140px] transition-all duration-500 ease-in-out text-white ${color} overflow-hidden cursor-pointer`}
+          className={`group relative flex items-center w-[24px] md:w-[32px] hover:w-[140px] transition-all duration-500 ease-in-out text-white ${color} overflow-hidden cursor-pointer`}
         >
-          <div className="p-2">{icon}</div>
+          <div className="p-1 md:p-2">{icon}</div>
           <span
             className={`absolute right-3 transition-all duration-500 text-sm whitespace-nowrap ${
               activeId === id ? 'opacity-100 right-[45px]' : 'opacity-0'
