@@ -9,7 +9,7 @@ import Contact from "./Contact";
 import softSkillLottie from "../../assets/lottie/vTzbLLFwZK.json";
 import MiniWhatsApp from "./MiniWhatsApp";
 import { FaArrowUp } from "react-icons/fa"; // Importing the scroll-to-top arrow icon
-import FloatingIcons from "./FloatingIcons";
+
 
 // Lazy load Lottie
 const Lottie = lazy(() => import("react-lottie"));
@@ -157,7 +157,7 @@ const Home = () => {
       {/* Scroll-to-Top Button */}
       <div className="relative">
       {/* Baaki Home page content */}
-      <FloatingIcons />
+      
     </div>
       <button
         onClick={scrollToTop}

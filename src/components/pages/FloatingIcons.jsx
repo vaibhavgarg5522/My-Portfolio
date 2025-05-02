@@ -48,7 +48,7 @@ const FloatingIcons = () => {
   ];
 
   return (
-    <div className="fixed top-[388px] md:top-[288px] right-[15px] flex flex-col gap-4 z-50">
+    <div className="fixed top-[388px] md:top-[428px] right-[15px] flex flex-col gap-4 z-50">
       {icons.map((item, index) => (
       <a
       key={index}

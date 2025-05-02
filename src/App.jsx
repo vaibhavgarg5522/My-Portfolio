@@ -7,12 +7,16 @@ import Contact from "./components/pages/Contact"
 import Projects from "./components/pages/Projects"
 import MyCv from "./components/pages/MyCv"
 import Footer from "./components/pages/Footer"
+import FloatingIcons from "./components/pages/FloatingIcons"
+import SocialSidebar from "./components/pages/SocialSidebar"
 
 
 function App() {
   return (
     <>
       <Navbar />
+      <SocialSidebar />
+      <FloatingIcons />
       
       <Routes>
         <Route path="/" element={<Home />} />
