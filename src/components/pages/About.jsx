@@ -294,7 +294,7 @@ const About = () => {
             {/* Column 1 */}
             <div className="flex flex-col gap-10 ">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 md:mt-10 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 md:mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
                   <span className="flex" ref={educationRef}>
                     {" "}
                     <Lottie
@@ -341,7 +341,7 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-2xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
+                <h4 className="text-2xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 ">
                   <span className="flex" ref={contactRef}>
                     {" "}
                     <Lottie
@@ -422,7 +422,7 @@ const About = () => {
             {/* Column 2 */}
             <div className="flex flex-col gap-10 ">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#2c2742]">
                   <span className="flex" ref={skillsRef}>
                     <Lottie
                       options={options.reactskills}
@@ -431,7 +431,7 @@ const About = () => {
                       isClickToPauseDisabled={true}
                       isPaused={!skillsInView}
                     />{" "}
-                    <span className="mt-[14px] ">Skill Set</span>{" "}
+                    <span className="mt-[10px] ">Skill Set</span>{" "}
                   </span>
                 </h4>
                 <ul className="list-none space-y-1 mt-5 -mb-4">
@@ -480,7 +480,7 @@ const About = () => {
               </div>
 
               <div className=" flex flex-col">
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#383153]">
                   <span className="flex" ref={languagesRef}>
                     <Lottie
                       options={options.language}
@@ -514,7 +514,7 @@ const About = () => {
             {/* Column 3 */}
             <div className="flex flex-col gap-10">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#383153]">
                   <span className="flex" ref={interestsRef}>
                     <Lottie
                       options={options.uiux}
@@ -555,7 +555,7 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border pr-4 border-[#8267E3]/30">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border pr-4 border-[#8267E3]/30 xl:bg-[#383153] ">
                   <span className="flex" ref={softSkillsRef}>
                     <Lottie
                       options={options.technology}
