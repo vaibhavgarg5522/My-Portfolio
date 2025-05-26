@@ -93,7 +93,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* ✅ Updated Social Icons */}
         <div className="flex justify-center gap-3 mt-6 px-4">
           {socialLinks.map((social, idx) => (
             <a
@@ -101,7 +100,7 @@ const Navbar = () => {
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-9 h-9 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-125`}
+              className="w-9 h-9 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-125"
               style={{
                 backgroundColor: `${social.color}22`,
                 color: social.color,
@@ -152,7 +151,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Get My CV Button */}
+        {/* Get My CV Button (Desktop) */}
         <li
           onClick={() => navigate("/mycv")}
           className="hidden md:flex list-none relative overflow-hidden rounded-full border border-[#8267E3] bg-transparent px-6 py-2 cursor-pointer group transition-all duration-300"
@@ -164,7 +163,7 @@ const Navbar = () => {
           </div>
         </li>
 
-        {/* Mobile CV Button */}
+        {/* CV Button (Mobile) */}
         <div className="md:hidden absolute right-4 top-4 z-50">
           <button
             onClick={() => {
