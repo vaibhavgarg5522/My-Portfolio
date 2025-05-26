@@ -8,8 +8,9 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import softSkillLottie from "../../assets/lottie/vTzbLLFwZK.json";
 import MiniWhatsApp from "./MiniWhatsApp";
-import { FaArrowUp } from "react-icons/fa"; // Importing the scroll-to-top arrow icon
-
+import { FaArrowUp } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Lazy load Lottie
 const Lottie = lazy(() => import("react-lottie"));
@@ -46,9 +47,13 @@ const Home = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Listen for scroll event
+  // Listen for scroll + AOS init
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
     };
@@ -67,7 +72,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/60 z-0"></div>
         <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
           {/* Text Section */}
-          <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
+          <div
+            className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20"
+           data-aos="fade-right"
+          >
             <p className="text-[#8267E3] uppercase tracking-widest font-medium text-sm md:text-base">
               Front-End Developer | ReactJS Enthusiast
             </p>
@@ -76,7 +84,6 @@ const Home = () => {
               <span className="text-[#8267E3]">Functional</span> Web Interfaces.
             </h1>
 
-            {/* Updated Self Intro 3D Style */}
             <div className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10">
               <div className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
                 <h2 className=" text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
@@ -119,11 +126,13 @@ const Home = () => {
 
             {/* WhatsApp Button */}
             <MiniWhatsApp />
-          
           </div>
 
           {/* Profile Image Section */}
-          <div className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10 ">
+          <div
+            className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10"
+            data-aos="fade-down"
+          >
             <div className="relative rounded-full overflow-hidden shadow-2xl border-4 border-[#8267E3] transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
               <img
                 src={vaibhavImg}
@@ -152,25 +161,16 @@ const Home = () => {
         </section>
       </div>
 
-
-
       {/* Scroll-to-Top Button */}
-      <div className="relative">
-      {/* Baaki Home page content */}
-      
-    </div>
-    <button
-  onClick={scrollToTop}
-  className={`fixed bottom-5 right-1/2 translate-x-1/2 bg-[black] text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
-    isVisible ? "opacity-100" : "opacity-0"
-  }`}
-  style={{
-    zIndex: 1000,
-  }}
->
-  <FaArrowUp size={14} />
-</button>
-
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-5 right-1/2 translate-x-1/2 bg-black text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+        style={{ zIndex: 1000 }}
+      >
+        <FaArrowUp size={14} />
+      </button>
     </>
   );
 };

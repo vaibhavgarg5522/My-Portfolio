@@ -78,7 +78,7 @@ const MiniWhatsApp = () => {
         onTouchEnd={handleMouseUp}
         onTouchCancel={handleMouseUp}
         onMouseMove={handleMouseMove}
-        className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#00C896] overflow-hidden transition-all duration-300 w-[316px]"
+        className="relative flex items-center justify-start cursor-pointer select-none py-3 px-6 rounded-full shadow-lg border border-[#8267E3] overflow-hidden transition-all duration-300 w-[316px]"
         style={{
           background: backgroundColor,
           backdropFilter: "blur(4px)",
@@ -137,20 +137,20 @@ const MiniWhatsApp = () => {
       {/* Social Media Icons */}
       <div className="flex gap-6 mt-13 md:mt-17 justify-center md:justify-start">
         <a href="https://x.com/vaibhavgarg5522?t=H5maR-6fEwgZef00HQhfQA&s=09" target="_blank" rel="noopener noreferrer"
-          className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#8267E3] hover:shadow-[0_0_15px_#1877F2]">
+          className="w-11 h-11 sm:w-12 sm:h-12 rounded-tl-none rounded-tr-xl rounded-br-none rounded-bl-xl border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#8267E3] hover:shadow-[0_0_15px_#1877F2]">
          <FaXTwitter className="text-xl sm:text-2xl" style={{ color: "white" ,fontSize:"27px" }} />
 
         </a>
         <a href="https://www.instagram.com/masoom_____bacha_____/" target="_blank" rel="noopener noreferrer"
-          className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[white] hover:shadow-[0_0_15px_#E4405F]">
+          className="w-11 h-11 sm:w-12 sm:h-12 rounded-tl-none rounded-tr-xl rounded-br-none rounded-bl-xl border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[white] hover:shadow-[0_0_15px_#E4405F]">
           <FaInstagram className="text-xl sm:text-2xl" style={{ color: "#E4405F" ,fontSize:"28px" }} />
         </a>
         <a href="skype:+918218390981?call" target="_blank" rel="noopener noreferrer"
-          className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[white] hover:shadow-[0_0_15px_#0077B5]">
+          className="w-11 h-11 sm:w-12 sm:h-12 rounded-tl-none rounded-tr-xl rounded-br-none rounded-bl-xl border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[white] hover:shadow-[0_0_15px_#0077B5]">
           <FaSkype className="text-xl sm:text-2xl"style={{ color: "#00AFF0" ,fontSize:"27px" }} />
         </a>
         <a href="https://github.com/vaibhavgarg5522" target="_blank" rel="noopener noreferrer"
-          className="w-10 h-10 sm:w-12 sm:h-12 rounded-[20%] border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#8267E3] hover:shadow-[0_0_15px_#333]">
+          className="w-11 h-11 sm:w-12 sm:h-12 rounded-tl-none rounded-tr-xl rounded-br-none rounded-bl-xl border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#8267E3] hover:shadow-[0_0_15px_#333]">
           <FaGithub className="text-xl sm:text-2xl"style={{ color: "white" ,fontSize:"28px" }} />
         </a>
       </div>

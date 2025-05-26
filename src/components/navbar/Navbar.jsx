@@ -45,7 +45,7 @@ const Navbar = () => {
     {
       icon: <FaGithub />,
       link: "https://github.com/vaibhavgarg5522",
-      color: "#fff",
+      color: "#ffffff",
     },
   ];
 
@@ -93,6 +93,7 @@ const Navbar = () => {
           ))}
         </ul>
 
+        {/* ✅ Updated Social Icons */}
         <div className="flex justify-center gap-3 mt-6 px-4">
           {socialLinks.map((social, idx) => (
             <a
@@ -100,11 +101,11 @@ const Navbar = () => {
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-9 h-9 flex items-center justify-center rounded-full border-2 border-[#8267E3] transition-all duration-300 hover:scale-120`}
+              className={`w-9 h-9 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-125`}
               style={{
                 backgroundColor: `${social.color}22`,
                 color: social.color,
-                boxShadow: `0 0 10px ${social.color}`,
+                boxShadow: `0 0 12px ${social.color}`,
               }}
             >
               {social.icon}
@@ -156,24 +157,27 @@ const Navbar = () => {
           onClick={() => navigate("/mycv")}
           className="hidden md:flex list-none relative overflow-hidden rounded-full border border-[#8267E3] bg-transparent px-6 py-2 cursor-pointer group transition-all duration-300"
         >
-          <div className=" absolute inset-0 w-0 group-hover:w-full h-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff] transition-all duration-500 ease-in-out z-0" />
+          <div className="absolute inset-0 w-0 group-hover:w-full h-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff] transition-all duration-500 ease-in-out z-0" />
           <div className="relative z-10 flex items-center gap-1 text-sm font-semibold text-white group-hover:text-white transition-all duration-300">
             Get My CV
             <DownloadIcon style={{ fontSize: 18 }} />
           </div>
         </li>
+
+        {/* Mobile CV Button */}
         <div className="md:hidden absolute right-4 top-4 z-50">
-  <button
-    onClick={() => {
-      navigate("/mycv");
-      closeSidebar();
-    }}
-    className="flex items-center justify-center gap-2 px-4 py-[1px] text-xs border-[#8267E3] border-3   text-white rounded-full shadow-md hover:scale-105 transition-all duration-300"
-  >
-   <span className="flex flex-col text-[#ffffff] font-bold"> <span className="">My</span>  CV</span>
-    
-  </button>
-</div>
+          <button
+            onClick={() => {
+              navigate("/mycv");
+              closeSidebar();
+            }}
+            className="flex items-center justify-center gap-2 px-4 py-[1px] text-xs border-[#8267E3] border-3 text-white rounded-full shadow-md hover:scale-105 transition-all duration-300"
+          >
+            <span className="flex flex-col text-[#ffffff] font-bold">
+              <span className="">My</span> CV
+            </span>
+          </button>
+        </div>
       </nav>
     </>
   );

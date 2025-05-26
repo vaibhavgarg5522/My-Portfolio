@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import backgroundImage from '../../images/bgsunny.jpg'; // Make sure this path is correct
-
+import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import backgroundImage from '../../images/bgsunny.jpg'; // Adjust path if needed
 
 const filters = ['All', 'UI/UX', 'Web App'];
 
@@ -58,6 +59,13 @@ const Projects = () => {
   const filteredProjects =
     activeFilter === 'All' ? projects : projects.filter((p) => p.type === activeFilter);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <section
       className="min-h-screen px-4 sm:px-8 md:px-16 py-12 md:py-20 text-white bg-cover bg-center bg-no-repeat relative"
@@ -74,17 +82,17 @@ const Projects = () => {
 
       <div className="relative z-10">
         {/* Title */}
-        <div className="mb-10 md:mt-10 mt-18">
+        <div className="mb-10 md:mt-10 mt-18" data-aos="zoom-in">
           <h2 className=" text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right xl:text-right px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] ">
             My Projects
           </h2>
-          <p className="text-xl sm:text-3xl md:text-[42px] font-bold uppercase tracking-widest text-transparent md: text-center bg-clip-text bg-gradient-to-r from-[#8B5CF6] via-[#A78BFA] to-[#C4B5FD] animate-pulse shadow-md mb-10 mt-6">
+          <p className="text-xl sm:text-3xl md:text-[42px] font-bold uppercase tracking-widest text-transparent text-center bg-clip-text bg-gradient-to-r from-[#8B5CF6] via-[#A78BFA] to-[#C4B5FD] animate-pulse shadow-md mb-10 mt-6">
             What I Will Do For You
           </p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center gap-3 flex-wrap mb-12">
+        <div className="flex justify-center gap-3 flex-wrap mb-12" data-aos="fade-up">
           {filters.map((filter) => (
             <button
               key={filter}
@@ -102,9 +110,11 @@ const Projects = () => {
 
         {/* Project Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredProjects.map((project) => (
+          {filteredProjects.map((project, index) => (
             <div
               key={project.id}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
               className="relative flex flex-col rounded-xl border border-[#8267E3] bg-gradient-to-br from-[#261741] to-[#1e1c36] p-5 shadow-md hover:shadow-[#8267E3]/70 transition duration-300 hover:scale-[1.015]"
             >
               <img
