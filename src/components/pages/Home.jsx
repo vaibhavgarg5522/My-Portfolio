@@ -1,10 +1,4 @@
-import React, {
-  useMemo,
-  lazy,
-  Suspense,
-  useState,
-  useEffect,
-} from "react";
+import React, { useMemo, lazy, Suspense, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import vaibhavImg from "../../images/image5.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
@@ -17,7 +11,6 @@ import MiniWhatsApp from "./MiniWhatsApp";
 import { FaArrowUp } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useInView } from "react-intersection-observer";
 
 // Lazy load Lottie
 const Lottie = lazy(() => import("react-lottie"));
@@ -62,14 +55,6 @@ const Home = () => {
     };
   }, []);
 
-  // Visibility detection
-  const [refHeading, inViewHeading] = useInView({ triggerOnce: true });
-  const [refSubText, inViewSubText] = useInView({ triggerOnce: true });
-  const [refLottie, inViewLottie] = useInView({ triggerOnce: true });
-  const [refBtn1, inViewBtn1] = useInView({ triggerOnce: true });
-  const [refBtn2, inViewBtn2] = useInView({ triggerOnce: true });
-  const [refImg, inViewImg] = useInView({ triggerOnce: true });
-
   return (
     <>
       <section
@@ -85,30 +70,24 @@ const Home = () => {
           {/* Text Section */}
           <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
             <p
-              className={`text-[#8267E3] uppercase tracking-widest font-medium text-sm md:text-base transition-opacity duration-1000 ${
-                inViewHeading ? "opacity-100" : "opacity-0"
-              }`}
-              ref={refHeading}
+              className="text-[#8267E3] uppercase tracking-widest font-medium text-sm md:text-base"
+              data-aos="fade-right"
             >
               Front-End Developer | ReactJS Enthusiast
             </p>
-
             <h1
-              className={`text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6 transition-transform duration-1000 ${
-                inViewHeading ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-              }`}
+              className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6"
+              data-aos="fade-up"
             >
               I Build <span className="text-[#8267E3]">Beautiful</span> and{" "}
               <span className="text-[#8267E3]">Functional</span> Web Interfaces.
             </h1>
 
-            <div
-              className={`text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10 transition-opacity duration-1000 ${
-                inViewSubText ? "opacity-100" : "opacity-0"
-              }`}
-              ref={refSubText}
-            >
-              <div className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
+            <div className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10">
+              <div
+                className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30"
+                data-aos="fade-right"
+              >
                 <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
                   Hey, I'm <span className="text-[#8267E3]">Vaibhav Garg</span>
                 </h2>
@@ -118,7 +97,10 @@ const Home = () => {
                     self-taught
                   </span>{" "}
                   front-end developer with a passion for building{" "}
-                  <span className="text-[#FFD700] font-semibold">
+                  <span
+                    className="text-[#FFD700] font-semibold"
+                    data-aos="fade-left"
+                  >
                     ReactJS
                   </span>{" "}
                   apps that are not only beautiful but also performant and
@@ -134,34 +116,32 @@ const Home = () => {
             {/* Lottie Animation (Mobile Only) */}
             <div
               className="w-90 sm:w-120 md:hidden -mb-4"
-              ref={refLottie}
+              data-aos="fade-down"
             >
-              {inViewLottie && (
-                <Suspense fallback={<div className="text-sm text-gray-400">Loading animation...</div>}>
-                  <div className="flex justify-center items-center">
-                    <Lottie options={softSkillOptions} height={355} width={355} />
+              <Suspense
+                fallback={
+                  <div className="text-sm text-gray-400">
+                    Loading animation...
                   </div>
-                </Suspense>
-              )}
+                }
+              >
+                <div className="flex justify-center items-center">
+                  <Lottie options={softSkillOptions} height={355} width={355} />
+                </div>
+              </Suspense>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex gap-4 mb-6 flex-wrap justify-center md:justify-start">
               <button
                 onClick={() => navigate("/projects")}
-                className={`bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition-all duration-1000 ${
-                  inViewBtn1 ? "opacity-100" : "opacity-0"
-                }`}
-                ref={refBtn1}
+                className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300" data-aos="fade-right"
               >
                 View Projects
               </button>
               <button
                 onClick={() => navigate("/contact")}
-                className={`border border-[#8267E3] text-white hover:bg-[#8267E3] px-5 py-2 rounded-full text-sm font-semibold transition-all duration-1000 ${
-                  inViewBtn2 ? "opacity-100" : "opacity-0"
-                }`}
-                ref={refBtn2}
+                className="border border-[#8267E3] text-white hover:bg-[#8267E3] px-5 py-2 rounded-full text-sm font-semibold transition duration-300" data-aos="fade-left"
               >
                 Hire Me
               </button>
@@ -173,10 +153,8 @@ const Home = () => {
 
           {/* Profile Image Section */}
           <div
-            className={`w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10 transition-all duration-1000 ${
-              inViewImg ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
-            ref={refImg}
+            className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10"
+            data-aos="fade-down"
           >
             <div className="relative rounded-full overflow-hidden shadow-2xl border-4 border-[#8267E3] transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
               <img
@@ -209,7 +187,7 @@ const Home = () => {
       {/* Scroll-to-Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-black text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
+        className={`fixed bottom-5 right-1/2 translate-x-1/2 bg-black text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{ zIndex: 1000 }}
