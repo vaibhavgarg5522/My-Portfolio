@@ -209,7 +209,7 @@ const Home = () => {
       {/* Scroll-to-Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-black text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
+        className={`fixed bottom-5 left-1/2 -translate-x-1/2 transform bg-[#8267E3] hover:bg-[#6d56c8] text-white p-3 rounded-full shadow-[0_0_10px_#8267E3] hover:shadow-[0_0_20px_#8267E3] transition-all duration-300 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{ zIndex: 1000 }}
