@@ -86,7 +86,7 @@ const Home = () => {
             <div className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10">
               <div
                 className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30"
-                data-aos="fade-right"
+                data-aos="fade-up"
               >
                 <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
                   Hey, I'm <span className="text-[#8267E3]">Vaibhav Garg</span>
@@ -116,7 +116,7 @@ const Home = () => {
             {/* Lottie Animation (Mobile Only) */}
             <div
               className="w-90 sm:w-120 md:hidden -mb-4"
-              data-aos="fade-down"
+              data-aos="fade-up"
             >
               <Suspense
                 fallback={
@@ -135,13 +135,13 @@ const Home = () => {
             <div className="flex gap-4 mb-6 flex-wrap justify-center md:justify-start">
               <button
                 onClick={() => navigate("/projects")}
-                className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300" data-aos="fade-right"
+                className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300" data-aos="fade-up"
               >
                 View Projects
               </button>
               <button
                 onClick={() => navigate("/contact")}
-                className="border border-[#8267E3] text-white hover:bg-[#8267E3] px-5 py-2 rounded-full text-sm font-semibold transition duration-300" data-aos="fade-left"
+                className="border border-[#8267E3] text-white hover:bg-[#8267E3] px-5 py-2 rounded-full text-sm font-semibold transition duration-300" data-aos="fade-up"
               >
                 Hire Me
               </button>
