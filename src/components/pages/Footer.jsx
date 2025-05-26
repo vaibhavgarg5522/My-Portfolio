@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <footer className="relative z-50 text-white pt-12 pb-6 px-4 sm:px-8 md:px-16 overflow-hidden bg-gradient-to-br from-[#0d0b1a] via-[#16132a] to-[#1e1b38]">
 
@@ -15,16 +24,19 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <div className="relative z-10 max-w-6xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-10 shadow-lg transition-all duration-500">
+      <div
+        className="relative z-10 max-w-6xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-10 shadow-lg transition-all duration-500"
+        data-aos="zoom-in"
+      >
 
         {/* Left: Name + Tagline */}
-        <div className="text-center lg:text-left">
+        <div className="text-center lg:text-left" data-aos="zoom-in">
           <h2 className="text-2xl font-bold text-[#8B3DFF]">Vaibhav Garg</h2>
           <p className="text-gray-400 mt-1 text-sm sm:text-base">Crafting beautiful frontends with passion 🚀</p>
         </div>
 
         {/* Center: Navigation Links */}
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6" data-aos="zoom-in">
           {["Home", "About", "Projects", "Contact"].map((link, i) => (
             <a
               key={i}
@@ -38,7 +50,7 @@ const Footer = () => {
         </div>
 
         {/* Right: Social Icons */}
-        <div className="flex gap-4 sm:gap-5 justify-center">
+        <div className="flex gap-4 sm:gap-5 justify-center" data-aos="zoom-in">
           <GlowIcon href="https://github.com/vaibhavgarg5522" icon={<FaGithub />} color="white" />
           <GlowIcon href="https://www.linkedin.com/in/vaibhav-garg-b72a57353/" icon={<FaLinkedin />} color="#1877F2" />
           <GlowIcon href="https://wa.me/918218390981" icon={<FaWhatsapp />} color="#25D366" />
@@ -47,7 +59,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Note */}
-      <div className="text-center text-xs sm:text-sm text-gray-500 mt-6 px-4 z-10 relative">
+      <div className="text-center text-xs sm:text-sm text-gray-500 mt-6 px-4 z-10 relative" data-aos="zoom-in">
         Built with <span className="text-[#8B3DFF]">💙 ReactJS</span> | © {new Date().getFullYear()} Vaibhav Garg. All rights reserved.
       </div>
 

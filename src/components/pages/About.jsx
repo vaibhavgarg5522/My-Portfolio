@@ -300,11 +300,11 @@ const About = () => {
 
         {/* Info Grid Section */}
         <div className="w-full">
-          <div className="bg-[linear-gradient(to_right,#131314_10%,#8267E3_90%)] p-6 sm:p-8 md:p-10 rounded-3xl shadow-2xl text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"  data-aos="fade-right">
+          <div className="bg-[linear-gradient(to_right,#131314_10%,#8267E3_90%)] p-6 sm:p-8 md:p-10 rounded-3xl shadow-2xl text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"  >
             {/* Column 1 */}
             <div className="flex flex-col gap-10 ">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 md:mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 md:mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30" data-aos="fade-up">
                   <span className="flex" ref={educationRef}>
                     {" "}
                     <Lottie
@@ -318,7 +318,7 @@ const About = () => {
                   </span>
                 </h4>
 
-                <ul className="list-none space-y-1 mt-4 shadow">
+                <ul className="list-none space-y-1 mt-4 shadow" data-aos="fade-right">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5" ref={selfDevRef}>
                       <Lottie
@@ -351,7 +351,7 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-2xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 ">
+                <h4 className="text-2xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 " data-aos="fade-up">
                   <span className="flex" ref={contactRef}>
                     {" "}
                     <Lottie
@@ -365,7 +365,7 @@ const About = () => {
                   </span>
                 </h4>
 
-                <ul className="list-none space-y-1 mt-5">
+                <ul className="list-none space-y-1 mt-5" data-aos="fade-right">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5" ref={emailRef}>
                       <Lottie
@@ -432,7 +432,7 @@ const About = () => {
             {/* Column 2 */}
             <div className="flex flex-col gap-10 ">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#2c2742]">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#2c2742]" data-aos="fade-up">
                   <span className="flex" ref={skillsRef}>
                     <Lottie
                       options={options.reactskills}
@@ -444,7 +444,7 @@ const About = () => {
                     <span className="mt-[10px] ">Skill Set</span>{" "}
                   </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-5 -mb-4">
+                <ul className="list-none space-y-1 mt-5 -mb-4" data-aos="fade-right">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5" ref={reactskillsRef}>
                       <Lottie
@@ -490,7 +490,7 @@ const About = () => {
               </div>
 
               <div className=" flex flex-col">
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#383153]">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#383153]" data-aos="fade-up">
                   <span className="flex" ref={languagesRef}>
                     <Lottie
                       options={options.language}
@@ -502,7 +502,7 @@ const About = () => {
                     <span className="flex mt-2">Languages</span>{" "}
                   </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-4">
+                <ul className="list-none space-y-1 mt-4" data-aos="fade-right">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5"  ref={languageContentRef}>
                       <Lottie
@@ -524,7 +524,7 @@ const About = () => {
             {/* Column 3 */}
             <div className="flex flex-col gap-10">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#383153]">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#383153]" data-aos="fade-up">
                   <span className="flex" ref={interestsRef}>
                     <Lottie
                       options={options.uiux}
@@ -536,7 +536,7 @@ const About = () => {
                     <span className="flex mt-4">Interests</span>{" "}
                   </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-2">
+                <ul className="list-none space-y-1 mt-2" data-aos="fade-right">
                   <li className="flex items-center ml-1 ">
                     <div className="w-5 h-5" ref={uiContentRef}>
                       <Lottie
@@ -565,7 +565,7 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border pr-4 border-[#8267E3]/30 xl:bg-[#383153] ">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border pr-4 border-[#8267E3]/30 xl:bg-[#383153] " data-aos="fade-up">
                   <span className="flex" ref={softSkillsRef}>
                     <Lottie
                       options={options.technology}
@@ -577,7 +577,7 @@ const About = () => {
                     <span className="flex mt-[13px]">Soft Skills</span>{" "}
                   </span>
                 </h4>
-                <ul className="list-none space-y-1 ">
+                <ul className="list-none space-y-1 " data-aos="fade-right">
                   <li className="flex items-center gap-2 ">
                     <div className="w-5 h-5" ref={problemSolvingRef}>
                       <Lottie

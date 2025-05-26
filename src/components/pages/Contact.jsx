@@ -8,12 +8,10 @@ import "aos/dist/aos.css";
 const Contact = () => {
   const form = useRef();
 
-  // Initialize AOS animation
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // Send email function
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -33,14 +31,14 @@ const Contact = () => {
       formData,
       'bKptcgsLisERMObpO'
     )
-    .then((result) => {
-      alert('Message sent successfully!');
-      console.log(result.text);
-      e.target.reset();
-    }, (error) => {
-      alert('Failed to send message. Please try again later.');
-      console.log(error.text);
-    });
+      .then((result) => {
+        alert('Message sent successfully!');
+        console.log(result.text);
+        e.target.reset();
+      }, (error) => {
+        alert('Failed to send message. Please try again later.');
+        console.log(error.text);
+      });
   };
 
   return (
@@ -74,6 +72,7 @@ const Contact = () => {
               value="vaibhavgarg5522@gmail.com"
               href="mailto:vaibhavgarg5522@gmail.com"
               color="#FF6A3D"
+              animation="fade-left"
             />
 
             <ContactItem
@@ -82,6 +81,7 @@ const Contact = () => {
               value="+91-8218390981"
               href="tel:+918218390981"
               color="#00C896"
+              animation="fade-right"
             />
 
             <ContactItem
@@ -90,6 +90,7 @@ const Contact = () => {
               value="Uttar-Pradesh, India"
               href="https://www.google.com/maps/place/Uttar+Pradesh"
               color="red"
+              animation="fade-left"
             />
           </div>
 
@@ -148,14 +149,14 @@ const Contact = () => {
   );
 };
 
-// Contact Item component
-const ContactItem = ({ icon, title, value, href, color }) => (
+// Updated Contact Item to accept animation as a prop
+const ContactItem = ({ icon, title, value, href, color, animation }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-4 bg-gradient-to-br from-[#1a112b] to-[#2d165e] rounded-xl p-4 mt-6 shadow-md hover:scale-105 transition-transform duration-300"
-    data-aos="fade-up"
+    data-aos={animation}
   >
     <div
       className="w-11 h-11 flex items-center justify-center rounded-full"
