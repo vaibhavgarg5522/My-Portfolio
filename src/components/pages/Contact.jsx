@@ -1,42 +1,44 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import backgroundImage from "../../images/bgsunny.jpg";
 import emailjs from '@emailjs/browser';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const form = useRef();
 
-  // Send email function
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Get current time
-    const currentTime = new Date().toLocaleString(); // 🕒 get formatted time
+    const currentTime = new Date().toLocaleString();
 
-    // Prepare form data
     const formData = {
-      name: form.current.user_name.value,  // Updated to match EmailJS template
-      email: form.current.user_email.value,  // Updated to match EmailJS template
+      name: form.current.user_name.value,
+      email: form.current.user_email.value,
       subject: form.current.subject.value,
       message: form.current.message.value,
-      time: currentTime, // add time here
+      time: currentTime,
     };
 
-    // Send email using EmailJS service
     emailjs.send(
-      'service_uinyu8d', // Your service ID
-      'template_0aflauk', // Your template ID
+      'service_uinyu8d',
+      'template_0aflauk',
       formData,
-      'bKptcgsLisERMObpO' // Your user ID
+      'bKptcgsLisERMObpO'
     )
-    .then((result) => {
-      alert('Message sent successfully!');
-      console.log(result.text);
-      e.target.reset();  // Reset form only after successful submission
-    }, (error) => {
-      alert('Failed to send message. Please try again later.');
-      console.log(error.text);
-    });
+      .then((result) => {
+        alert('Message sent successfully!');
+        console.log(result.text);
+        e.target.reset();
+      }, (error) => {
+        alert('Failed to send message. Please try again later.');
+        console.log(error.text);
+      });
   };
 
   return (
@@ -57,7 +59,10 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row justify-between gap-10">
           {/* Contact Info */}
           <div className="w-full md:w-[60%]">
-            <h2 className="text-[33px] sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:text-right md:mt-19 mt-15">
+            <h2
+              className="text-[33px] sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:text-right md:mt-19 mt-15"
+              data-aos="fade-right"
+            >
               Get in Touch
             </h2>
 
@@ -67,6 +72,7 @@ const Contact = () => {
               value="vaibhavgarg5522@gmail.com"
               href="mailto:vaibhavgarg5522@gmail.com"
               color="#FF6A3D"
+              animation="fade-left"
             />
 
             <ContactItem
@@ -75,6 +81,7 @@ const Contact = () => {
               value="+91-8218390981"
               href="tel:+918218390981"
               color="#00C896"
+              animation="fade-right"
             />
 
             <ContactItem
@@ -83,6 +90,7 @@ const Contact = () => {
               value="Uttar-Pradesh, India"
               href="https://www.google.com/maps/place/Uttar+Pradesh"
               color="red"
+              animation="fade-left"
             />
           </div>
 
@@ -91,6 +99,7 @@ const Contact = () => {
             ref={form}
             onSubmit={sendEmail}
             className="bg-[#121c28] border border-[#8267E3] rounded-xl p-8 space-y-6 md:w-1/2 shadow-2xl"
+            data-aos="fade-left"
           >
             <h3 className="text-2xl font-bold text-center text-[#8267E3]">Send Message</h3>
 
@@ -140,13 +149,14 @@ const Contact = () => {
   );
 };
 
-// Contact Item component
-const ContactItem = ({ icon, title, value, href, color }) => (
+// Updated Contact Item to accept animation as a prop
+const ContactItem = ({ icon, title, value, href, color, animation }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-4 bg-gradient-to-br from-[#1a112b] to-[#2d165e] rounded-xl p-4 mt-6 shadow-md hover:scale-105 transition-transform duration-300"
+    data-aos={animation}
   >
     <div
       className="w-11 h-11 flex items-center justify-center rounded-full"
