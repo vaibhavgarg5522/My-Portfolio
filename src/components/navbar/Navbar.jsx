@@ -114,7 +114,7 @@ const Navbar = () => {
       </div>
 
       {/* Top Navbar */}
-      <nav className="bg-[#1a1a1a] text-white px-6 md:px-16 py-4 shadow-md flex justify-between items-center h-[70px] w-full z-30 fixed top-0 right-3">
+      <nav className="bg-[#1a1a1a] text-white px-6 md:px-16 py-4 shadow-md flex justify-between items-center h-[70px] w-full z-30 fixed top-0">
         {/* Left Section */}
         <div className="flex items-center gap-3 z-50 md:gap-6">
           {!isOpen && (
@@ -131,7 +131,7 @@ const Navbar = () => {
           <h1
             onClick={() => navigate("/")}
             className="text-2xl md:text-3xl font-bold cursor-pointer bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text transition duration-300 hover:scale-105
-            absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0 right-2"
+            absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0"
           >
             Vaibhav <span className="text-white">Garg</span>
           </h1>
@@ -164,7 +164,7 @@ const Navbar = () => {
         </li>
 
         {/* CV Button (Mobile) */}
-        <div className="md:hidden absolute right-6 top-4  z-50">
+        <div className="md:hidden absolute right-4 top-4 z-50">
           <button
             onClick={() => {
               navigate("/mycv");
