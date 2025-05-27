@@ -13,10 +13,8 @@ const MiniWhatsApp = () => {
   const [backgroundColor, setBackgroundColor] = useState(
     "linear-gradient(145deg, #1a112b, #2d165e)"
   );
-  const [animate, setAnimate] = useState(false); // for triggering AOS manually
 
   const buttonRef = useRef(null);
-  const observerRef = useRef(null);
   const intervalRef = useRef(null);
 
   const confettiSettings = useMemo(() => ({
@@ -41,14 +39,6 @@ const MiniWhatsApp = () => {
       return newProgress;
     });
   }, [confettiSettings]);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      disableMutationObserver: true,
-    });
-  }, []);
 
   useEffect(() => {
     if (isPressed) {
@@ -79,32 +69,17 @@ const MiniWhatsApp = () => {
   }, [progress]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setAnimate(true);
-          AOS.refresh(); // manually refresh AOS when visible
-        }
-      },
-      { threshold: 0.3 } // when 30% visible
-    );
-
-    if (observerRef.current) {
-      observer.observe(observerRef.current);
-    }
-
-    return () => {
-      if (observerRef.current) {
-        observer.unobserve(observerRef.current);
-      }
-    };
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   }, []);
 
   return (
-    <div ref={observerRef}>
+    <div>
       {/* WhatsApp Button with AOS */}
       <div
-        data-aos={animate ? "fade-up" : ""}
+        data-aos="fade-up"
         ref={buttonRef}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
@@ -160,16 +135,16 @@ const MiniWhatsApp = () => {
             alignItems: "center",
             justifyContent: "center",
             boxShadow: "0 0 20px #25D366",
-            backgroundColor: "black",
+            backgroundColor: "black"
           }}
         >
           <WhatsAppIcon style={{ color: "#25D366", fontSize: "36px" }} />
         </div>
       </div>
 
-      {/* Social Media Icons */}
+      {/* Social Media Icons with AOS */}
       <div
-        data-aos={animate ? "fade-right" : ""}
+        data-aos="fade-up"
         className="flex gap-6 mt-13 md:mt-17 justify-center md:justify-start"
       >
         <a
