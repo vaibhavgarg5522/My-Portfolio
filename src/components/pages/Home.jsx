@@ -157,6 +157,22 @@ const Home = () => {
             </div>
 
             <MiniWhatsApp />
+            
+      
+            <About />
+          
+        
+            <Skills />
+          
+      
+            <Projects />
+        
+         
+            <Contact />
+          
+       
+     
+
           </div>
 
           <div
@@ -176,22 +192,7 @@ const Home = () => {
       </section>
 
       {/* 📱 Mobile Scrollable Sections with AOS trigger on visible */}
-      <div className="flex flex-col md:hidden bg-gradient-to-b from-[#1a112b] via-[#2a1d47] to-[#3b2a66] text-white">
       
-            <About />
-          
-        
-            <Skills />
-          
-      
-            <Projects />
-        
-         
-            <Contact />
-          
-       
-      </div>
-
       <button
         onClick={scrollToTop}
         className={`fixed bottom-5 right-1/2 translate-x-1/2 bg-black text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
