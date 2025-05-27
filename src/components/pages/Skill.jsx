@@ -37,7 +37,7 @@ const Skills = () => {
       <div className="relative z-10 max-w-7xl w-full text-white">
         <h2
           className="text-center text-4xl md:text-5xl font-bold mb-12 text-[#8267E3]"
-          data-aos="fade-down"
+          // data-aos="fade-down"
         >
           My Skills
         </h2>
@@ -46,7 +46,7 @@ const Skills = () => {
           {/* Technical Skills */}
           <div
             className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-white/20 shadow-lg"
-            data-aos="fade-right"
+            // data-aos="fade-right"
           >
             <h3 className="text-2xl font-semibold text-[#8267E3] mb-6 text-center">
               Technical Skills
@@ -75,7 +75,7 @@ const Skills = () => {
           {/* Professional Skills */}
           <div
             className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-white/20 shadow-lg"
-            data-aos="fade-left"
+            // data-aos="fade-left"
           >
             <h3 className="text-2xl font-semibold text-[#8267E3] mb-6 text-center">
               Professional Skills
