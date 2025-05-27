@@ -1,4 +1,11 @@
-import React, { useMemo, lazy, Suspense, useState, useEffect } from "react";
+import React, {
+  useMemo,
+  lazy,
+  Suspense,
+  useState,
+  useEffect,
+  useCallback,
+} from "react";
 import { useNavigate } from "react-router-dom";
 import vaibhavImg from "../../images/image5.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
@@ -11,6 +18,7 @@ import MiniWhatsApp from "./MiniWhatsApp";
 import { FaArrowUp } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { InView } from "react-intersection-observer";
 
 // Lazy load Lottie
 const Lottie = lazy(() => import("react-lottie"));
@@ -44,12 +52,17 @@ const Home = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const refreshAOS = useCallback(() => {
+    AOS.refreshHard();
+  }, []);
+
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
     AOS.init({
       duration: 1000,
       once: true,
     });
+
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
     };
@@ -67,7 +80,6 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black/60 z-0"></div>
         <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
-          {/* Text Section */}
           <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
             <p
               className="text-[#8267E3] uppercase tracking-widest font-medium text-sm md:text-base"
@@ -83,11 +95,11 @@ const Home = () => {
               <span className="text-[#8267E3]">Functional</span> Web Interfaces.
             </h1>
 
-            <div className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10" data-aos="fade-right">
-              <div
-                className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30"
-                
-              >
+            <div
+              className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10"
+              data-aos="fade-right"
+            >
+              <div className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
                 <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
                   Hey, I'm <span className="text-[#8267E3]">Vaibhav Garg</span>
                 </h2>
@@ -113,11 +125,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Lottie Animation (Mobile Only) */}
-            <div
-              className="w-90 sm:w-120 md:hidden -mb-4"
-              data-aos="fade-up"
-            >
+            <div className="w-90 sm:w-120 md:hidden -mb-4" data-aos="fade-up">
               <Suspense
                 fallback={
                   <div className="text-sm text-gray-400">
@@ -131,27 +139,26 @@ const Home = () => {
               </Suspense>
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex gap-4 mb-6 flex-wrap justify-center md:justify-start">
               <button
                 onClick={() => navigate("/projects")}
-                className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300" data-aos="fade-up"
+                className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
+                data-aos="fade-up"
               >
                 View Projects
               </button>
               <button
                 onClick={() => navigate("/contact")}
-                className="border border-[#8267E3] text-white hover:bg-[#8267E3] px-5 py-2 rounded-full text-sm font-semibold transition duration-300" data-aos="fade-up"
+                className="border border-[#8267E3] text-white hover:bg-[#8267E3] px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
+                data-aos="fade-up"
               >
                 Hire Me
               </button>
             </div>
 
-            {/* WhatsApp Button */}
             <MiniWhatsApp />
           </div>
 
-          {/* Profile Image Section */}
           <div
             className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10"
             data-aos="fade-down"
@@ -168,23 +175,30 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mobile Scrollable Sections */}
+      {/* 📱 Mobile Scrollable Sections with AOS trigger on visible */}
       <div className="flex flex-col md:hidden bg-gradient-to-b from-[#1a112b] via-[#2a1d47] to-[#3b2a66] text-white">
-        <section id="about">
-          <About />
-        </section>
-        <section id="skills">
-          <Skills />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
+        <InView as="section" onChange={(inView) => inView && refreshAOS()}>
+          <div id="about">
+            <About />
+          </div>
+        </InView>
+        <InView as="section" onChange={(inView) => inView && refreshAOS()}>
+          <div id="skills">
+            <Skills />
+          </div>
+        </InView>
+        <InView as="section" onChange={(inView) => inView && refreshAOS()}>
+          <div id="projects">
+            <Projects />
+          </div>
+        </InView>
+        <InView as="section" onChange={(inView) => inView && refreshAOS()}>
+          <div id="contact">
+            <Contact />
+          </div>
+        </InView>
       </div>
 
-      {/* Scroll-to-Top Button */}
       <button
         onClick={scrollToTop}
         className={`fixed bottom-5 right-1/2 translate-x-1/2 bg-black text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
