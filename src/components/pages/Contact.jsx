@@ -60,7 +60,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="w-full md:w-[60%]">
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-[14px] sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:text-right md:mt-19 mt-15"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:text-right md:mt-19 mt-15"
               data-aos="fade-right"
             >
               Get in Touch
