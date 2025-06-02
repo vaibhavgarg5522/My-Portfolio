@@ -54,7 +54,7 @@ const Contact = () => {
                    fontStyle: "italic",
                  }}
     >
-      <div className="absolute inset-0 bg-[#1c0f2b88] backdrop-blur-sm z-0" />
+      <div className="absolute inset-0 bg-black/60 z-0" />
 
       <div className="relative z-10">
         <div className="flex flex-col md:flex-row justify-between gap-10">
@@ -100,7 +100,7 @@ const Contact = () => {
             ref={form}
             onSubmit={sendEmail}
             className="bg-[#121c28] border border-[#8267E3] rounded-xl p-8 space-y-6 md:w-1/2 shadow-2xl"
-            data-aos="fade-up"
+            data-aos="slide-up"
           >
             <h3 className="text-2xl font-bold text-center text-[#8267E3]">Send Message</h3>
 

@@ -72,11 +72,15 @@ const Home = () => {
     <>
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center bg-cover bg-center px-4 md:px-8 py-12 relative"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          fontFamily: "Poppins, sans-serif",
-        }}
+       className="min-h-screen px-4 sm:px-8 md:px-16 py-12 md:py-20 text-white bg-cover bg-center bg-no-repeat relative"
+                   style={{
+                     backgroundImage: `url(${backgroundImage})`,
+                     backgroundSize: 'cover',
+                     backgroundPosition: 'center',
+                     backgroundRepeat: 'no-repeat',
+                     backgroundAttachment: 'fixed',
+                     fontFamily: `'Poppins', sans-serif`
+                   }}
       >
         <div className="absolute inset-0 bg-black/60 z-0"></div>
         <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
@@ -125,7 +129,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="w-90 sm:w-120 md:hidden -mb-4" data-aos="fade-up">
+            <div className="w-90 sm:w-120 md:hidden -mb-4" data-aos="slide-up">
               <Suspense
                 fallback={
                   <div className="text-sm text-gray-400">
@@ -143,14 +147,14 @@ const Home = () => {
               <button
                 onClick={() => navigate("/projects")}
                 className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
-                data-aos="fade-up"
+                data-aos="fade-right"
               >
                 View Projects
               </button>
               <button
                 onClick={() => navigate("/contact")}
                 className="border border-[#8267E3] text-white hover:bg-[#8267E3] px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
-                data-aos="fade-up"
+                data-aos="fade-right"
               >
                 Hire Me
               </button>
@@ -161,7 +165,7 @@ const Home = () => {
 
           <div
             className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10"
-            data-aos="fade-down"
+            data-aos="fade-up"
           >
             <div className="relative rounded-full overflow-hidden shadow-2xl border-4 border-[#8267E3] transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
               <img

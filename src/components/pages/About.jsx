@@ -294,7 +294,7 @@ const About = () => {
 
           {/* Profile Image */}
           <div className="w-full lg:w-[35%] flex justify-center order-0 lg:order-none -mb-10">
-            <div className="w-[250px] sm:w-[250px] md:w-[290px] h-[430px] sm:h-[500px] md:h-[500px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl md:mt-18 transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500" data-aos="fade-up">
+            <div className="w-[250px] sm:w-[250px] md:w-[290px] h-[430px] sm:h-[500px] md:h-[500px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl md:mt-18 transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500" data-aos="slide-up">
               <img
                 src={profile}
                 alt="Profile"
@@ -324,7 +324,7 @@ const About = () => {
                   </span>
                 </h4>
 
-                <ul className="list-none space-y-1 mt-4 shadow" data-aos="fade-up">
+                <ul className="list-none space-y-1 mt-4 shadow" data-aos="slide-up">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5" ref={selfDevRef}>
                       <Lottie
@@ -371,7 +371,7 @@ const About = () => {
                   </span>
                 </h4>
 
-                <ul className="list-none space-y-1 mt-5" data-aos="fade-up">
+                <ul className="list-none space-y-1 mt-5" data-aos="slide-up">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5" ref={emailRef}>
                       <Lottie
@@ -450,7 +450,7 @@ const About = () => {
                     <span className="mt-[10px] ">Skill Set</span>{" "}
                   </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-5 -mb-4" data-aos="fade-up">
+                <ul className="list-none space-y-1 mt-5 -mb-4" data-aos="slide-up">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5" ref={reactskillsRef}>
                       <Lottie
@@ -508,7 +508,7 @@ const About = () => {
                     <span className="flex mt-2">Languages</span>{" "}
                   </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-4" data-aos="fade-up">
+                <ul className="list-none space-y-1 mt-4" data-aos="slide-up">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5"  ref={languageContentRef}>
                       <Lottie
@@ -542,7 +542,7 @@ const About = () => {
                     <span className="flex mt-4">Interests</span>{" "}
                   </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-2" data-aos="fade-up">
+                <ul className="list-none space-y-1 mt-2" data-aos="slide-up">
                   <li className="flex items-center ml-1 ">
                     <div className="w-5 h-5" ref={uiContentRef}>
                       <Lottie
