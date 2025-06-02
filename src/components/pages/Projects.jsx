@@ -51,6 +51,15 @@ const projects = [
     live: 'https://frontend-ebon-one.vercel.app/',
     github: 'https://github.com/vaibhavgarg5522/Food-Delivery-Website',
   },
+  {
+    id: 6,
+    title: 'Pixisphere Assignment - Photography Web App',
+    desc: 'A dynamic photography platform built using Next.js, featuring category listings and photographer profiles with filter, sort, and search capabilities.',
+    image: '/images1/pixisphereimg.png',
+    type: 'Web App',
+    live: 'https://pixisphere-assignment-xi.vercel.app/category',
+    github: 'https://github.com/vaibhavgarg5522/pixisphere-assignment',
+  },
 ];
 
 const Projects = () => {
@@ -77,13 +86,11 @@ const Projects = () => {
         backgroundAttachment: 'fixed',
       }}
     >
-      {/* Overlay to darken background slightly */}
       <div className="absolute inset-0 bg-[#1c0f2b88] backdrop-blur-sm z-0" />
 
       <div className="relative z-10">
-        {/* Title */}
         <div className="mb-10 md:mt-10 mt-18" data-aos="fade-up">
-          <h2 className=" text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right xl:text-right px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] " data-aos="fade-up">
+          <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right xl:text-right px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px]" data-aos="fade-right">
             My Projects
           </h2>
           <p className="text-xl sm:text-3xl md:text-[42px] font-bold uppercase tracking-widest text-transparent text-center bg-clip-text bg-gradient-to-r from-[#8B5CF6] via-[#A78BFA] to-[#C4B5FD] animate-pulse shadow-md mb-10 mt-6" data-aos="fade-up">
@@ -91,7 +98,6 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Filter Tabs */}
         <div className="flex justify-center gap-3 flex-wrap mb-12" data-aos="fade-up">
           {filters.map((filter) => (
             <button
@@ -108,7 +114,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Project Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredProjects.map((project, index) => (
             <div

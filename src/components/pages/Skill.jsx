@@ -41,7 +41,7 @@ const Skills = () => {
       <div className="relative z-10 max-w-7xl mx-auto">
         <h2
           className=" mt-10 text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right px-6 py-4 sm:py-6 rounded-full shadow-xl w-full max-w-[520px] mx-auto md:mx-0"
-          data-aos="fade-up"
+          data-aos="fade-right"
         >
           My Skills
         </h2>

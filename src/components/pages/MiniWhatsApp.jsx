@@ -144,7 +144,7 @@ const MiniWhatsApp = () => {
 
       {/* Social Media Icons with AOS */}
       <div
-        data-aos="fade-up"
+        data-aos="fade-right"
         className="flex gap-6 mt-13 md:mt-17 justify-center md:justify-start"
       >
         <a
