@@ -272,7 +272,7 @@ const About = () => {
                   Vaibhav Garg
                 </span>
               </p>
-              <p>
+              <p data-aos="fade-right">
                 I’m a{" "}
                 <span className="font-semibold text-white inline">
                   Front-End Developer

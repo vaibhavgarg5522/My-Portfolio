@@ -60,7 +60,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="w-full md:w-[60%]">
             <h2
-              className="text-[33px] sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:text-right md:mt-19 mt-15"
+              className="text-[33px] sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:text-right md:mt-19 mt-15"
               data-aos="fade-right"
             >
               Get in Touch
@@ -72,7 +72,7 @@ const Contact = () => {
               value="vaibhavgarg5522@gmail.com"
               href="mailto:vaibhavgarg5522@gmail.com"
               color="#FF6A3D"
-              animation="fade-up"
+              animation="fade-right"
             />
 
             <ContactItem
@@ -81,7 +81,7 @@ const Contact = () => {
               value="+91-8218390981"
               href="tel:+918218390981"
               color="#00C896"
-              animation="fade-up"
+              animation="fade-right"
             />
 
             <ContactItem
@@ -90,7 +90,7 @@ const Contact = () => {
               value="Uttar-Pradesh, India"
               href="https://www.google.com/maps/place/Uttar+Pradesh"
               color="red"
-              animation="fade-up"
+              animation="fade-right"
             />
           </div>
 

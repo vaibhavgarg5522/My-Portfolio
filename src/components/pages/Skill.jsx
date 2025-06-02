@@ -1,6 +1,15 @@
 import { useState, useEffect } from "react";
 import backgroundImage from "../../images/bgsunny.jpg";
-import { FaReact, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import {
+  FaReact,
+  FaJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaUsers,
+  FaPaintBrush,
+  FaTasks,
+  FaComments,
+} from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -10,21 +19,50 @@ const Skills = () => {
   }, []);
 
   const [technicalSkills] = useState([
-    { name: "ReactJs", percent: 89, icon: <FaReact className="text-[#61DAFB] text-xl" /> },
-    { name: "JavaScript", percent: 83, icon: <FaJs className="text-[#F7DF1E] text-xl" /> },
-    { name: "CSS", percent: 80, icon: <FaCss3Alt className="text-[#264de4] text-xl" /> },
-    { name: "HTML", percent: 97, icon: <FaHtml5 className="text-[#e34c26] text-xl" /> },
+    {
+      name: "ReactJs",
+      percent: 89,
+      icon: <FaReact className="text-[#61DAFB] text-xl" />,
+    },
+    {
+      name: "JavaScript",
+      percent: 83,
+      icon: <FaJs className="text-[#F7DF1E] text-xl" />,
+    },
+    {
+      name: "CSS",
+      percent: 80,
+      icon: <FaCss3Alt className="text-[#264de4] text-xl" />,
+    },
+    {
+      name: "HTML",
+      percent: 97,
+      icon: <FaHtml5 className="text-[#e34c26] text-xl" />,
+    },
   ]);
 
   const [professionalSkills] = useState([
-    { name: "Team Work", percent: 90 },
-    { name: "Creativity", percent: 80 },
-    { name: "Project Management", percent: 75 },
-    { name: "Communication", percent: 70 },
+    {
+      name: "Team Work",
+      percent: 90,
+      icon: <FaUsers className="text-white text-lg" />,
+    },
+    {
+      name: "Creativity",
+      percent: 80,
+      icon: <FaPaintBrush className="text-white text-lg" />,
+    },
+    {
+      name: "Project Management",
+      percent: 75,
+      icon: <FaTasks className="text-white text-lg" />,
+    },
+    {
+      name: "Communication",
+      percent: 70,
+      icon: <FaComments className="text-white text-lg" />,
+    },
   ]);
-
-  const circleRadius = 45;
-  const circumference = 2 * Math.PI * circleRadius;
 
   return (
     <section
@@ -40,12 +78,11 @@ const Skills = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto">
         <h2
-          className=" mt-10 text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right px-6 py-4 sm:py-6 rounded-full shadow-xl w-full max-w-[520px] mx-auto md:mx-0"
+          className="mt-10 text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right px-6 py-4 sm:py-6 rounded-full shadow-xl w-full max-w-[520px] mx-auto md:mx-0"
           data-aos="fade-right"
         >
           My Skills
         </h2>
-        
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 mt-12">
           {/* Technical Skills */}
@@ -82,56 +119,33 @@ const Skills = () => {
             </div>
           </div>
 
-          {/* Professional Skills */}
+          {/* Professional Skills - Timeline Icons on Line */}
           <div
-            className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20"
+            className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20 relative"
             data-aos="fade-up"
           >
             <h3 className="text-2xl font-semibold text-[#8267E3] mb-6 text-center">
               Professional Skills
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 sm:gap-8 justify-items-center">
+
+            <div className="relative pl-6 sm:pl-8 border-l-4 border-[#8267E3] space-y-10">
               {professionalSkills.map((skill, idx) => (
-                <div
-                  key={idx}
-                  className="relative w-38 sm:w-32 md:w-36 h-38 sm:h-32 md:h-36 flex items-center justify-center text-center transition-transform duration-500 transform hover:scale-110"
-                >
-                  <svg
-                    className="w-full h-full drop-shadow-[0_0_5px_#8267E3]"
-                    viewBox="0 0 100 100"
-                  >
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="45"
-                      stroke="#2e2e38"
-                      strokeWidth="10"
-                      fill="none"
-                    />
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="45"
-                      stroke="url(#grad)"
-                      strokeWidth="10"
-                      fill="none"
-                      strokeDasharray={circumference}
-                      strokeDashoffset={circumference * (1 - skill.percent / 100)}
-                      transform="rotate(-90 50 50)"
-                      className="transition-all duration-700"
-                    />
-                    <defs>
-                      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#8267E3" />
-                        <stop offset="100%" stopColor="#aa94ff" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div className="absolute flex flex-col items-center justify-center">
-                    <span className="text-xl font-bold text-white drop-shadow -mb-1">
-                      {skill.percent}%
-                    </span>
-                    <span className="text-sm text-gray-300 mt-1">{skill.name}</span>
+                <div key={idx} className="relative flex items-center gap-4">
+                  {/* Icon on the vertical line */}
+                  <div className="absolute -left-[51px] sm:-left-[58px] top-0 z-10">
+                    <div className="w-12 h-12 rounded-full bg-[#8267E3] border-[4px] border-white shadow-xl flex items-center justify-center text-white text-xl">
+                      {skill.icon}
+                    </div>
+                  </div>
+
+                  {/* Skill Info Box */}
+                  <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-lg p-4 w-full shadow-md hover:scale-[1.02] transition-transform duration-300">
+                    <h4 className="text-lg sm:text-xl text-white font-semibold">
+                      {skill.name}
+                    </h4>
+                    <p className="text-gray-300 text-sm">
+                      Proficiency: {skill.percent}%
+                    </p>
                   </div>
                 </div>
               ))}
