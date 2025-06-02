@@ -236,12 +236,18 @@ const About = () => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center text-white py-10 px-5 md:px-10 lg:px-[50px] relative"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        fontFamily: `'Poppins', sans-serif`,
-        fontStyle: "italic",
-      }}
+      className="min-h-screen px-4 sm:px-8 md:px-16 py-12 md:py-20 text-white bg-cover bg-center bg-no-repeat relative"
+            style={{
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundAttachment: 'fixed',
+              fontFamily: `'Poppins', sans-serif`,
+              fontStyle: "italic",
+            }}
+
+     
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>

@@ -43,15 +43,16 @@ const Contact = () => {
 
   return (
     <section
-      className="min-h-screen bg-cover bg-center text-white py-16 px-6 md:px-20 flex flex-col gap-16 relative"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        fontFamily: `'Poppins', sans-serif`,
-        fontStyle: "italic",
-      }}
+     className="min-h-screen px-4 sm:px-8 md:px-16 py-12 md:py-20 text-white bg-cover bg-center bg-no-repeat relative"
+                 style={{
+                   backgroundImage: `url(${backgroundImage})`,
+                   backgroundSize: 'cover',
+                   backgroundPosition: 'center',
+                   backgroundRepeat: 'no-repeat',
+                   backgroundAttachment: 'fixed',
+                   fontFamily: `'Poppins', sans-serif`,
+                   fontStyle: "italic",
+                 }}
     >
       <div className="absolute inset-0 bg-[#1c0f2b88] backdrop-blur-sm z-0" />
 
@@ -60,7 +61,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="w-full md:w-[60%]">
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:text-right md:mt-19 mt-15"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:text-right md:mt-19 mt-15"
               data-aos="fade-right"
             >
               Get in Touch
