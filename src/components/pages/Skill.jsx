@@ -133,18 +133,18 @@ const Skills = () => {
                 <div key={idx} className="relative flex items-center gap-4">
                   {/* Icon on the vertical line */}
                   <div className="absolute -left-[51px] sm:-left-[58px] top-0 z-10">
-                    <div className="w-12 h-12 rounded-full bg-[#8267E3] border-[4px] border-white shadow-xl flex items-center justify-center text-white text-xl">
+                    <div className="w-12 h-12 rounded-full bg-[#8267E3] border-[4px] border-white shadow-xl flex items-center justify-center text-white text-xl" data-aos="fade-up">
                       {skill.icon}
                     </div>
                   </div>
 
                   {/* Skill Info Box */}
-                  <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-lg p-4 w-full shadow-md hover:scale-[1.02] transition-transform duration-300">
+                  <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-lg p-4 w-full shadow-md hover:scale-[1.02] transition-transform duration-300" >
                     <h4 className="text-lg sm:text-xl text-white font-semibold">
                       {skill.name}
                     </h4>
-                    <p className="text-gray-300 text-sm">
-                      Proficiency: {skill.percent}%
+                    <p className="text-[#cfc6ff] text-sm font-medium">
+                      Proficiency:<span className="font-bold">{skill.percent}%</span>
                     </p>
                   </div>
                 </div>

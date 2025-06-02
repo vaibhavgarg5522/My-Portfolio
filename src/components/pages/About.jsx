@@ -250,7 +250,7 @@ const About = () => {
         {/* About Me Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-10 mb-20">
           <div className="block lg:hidden w-full">
-            <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] md:mt-25 mt-10"
+            <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-[13px] sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] md:mt-25 mt-10"
             data-aos="fade-right">
               About Me
             </h2>
