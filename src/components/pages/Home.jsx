@@ -20,6 +20,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { InView } from "react-intersection-observer";
 
+
 // Lazy load Lottie
 const Lottie = lazy(() => import("react-lottie"));
 
@@ -164,7 +165,7 @@ const Home = () => {
           </div>
 
           <div
-            className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10"
+            className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10 md:mb-30"
             data-aos="fade-up"
           >
             <div className="relative rounded-full overflow-hidden shadow-2xl border-4 border-[#8267E3] transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">

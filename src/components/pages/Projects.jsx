@@ -89,7 +89,7 @@ const Projects = () => {
       <div className="absolute inset-0 bg-black/60 z-0" />
 
       <div className="relative z-10">
-        <div className="mb-10 md:mt-10 mt-10" data-aos="fade-up">
+        <div className="mb-10 md:mt-10 mt-10" >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right xl:text-right px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px]" data-aos="fade-right">
             My Projects
           </h2>

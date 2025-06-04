@@ -138,7 +138,7 @@ const Skills = () => {
             className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20 relative"
             data-aos="fade-up"
           >
-            <h3 className="text-2xl font-semibold text-[#8267E3] mb-6 text-center">
+            <h3 className="text-2xl font-bold text-[#8267E3] mb-6 text-center">
               Technical Skills
             </h3>
             {renderTimelineSkills(technicalSkills, true)}
@@ -149,7 +149,7 @@ const Skills = () => {
             className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20 relative"
             data-aos="fade-up"
           >
-            <h3 className="text-2xl font-semibold text-[#8267E3] mb-6 text-center">
+            <h3 className="text-2xl font-bold text-[#8267E3] mb-6 text-center">
               Professional Skills
             </h3>
             {renderTimelineSkills(professionalSkills)}

@@ -30,6 +30,8 @@ import Lottie from "react-lottie";
 import { useInView } from "react-intersection-observer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import waveHandAnimateData from "../../assets/lottie/Animation - 1748962588865.json"
+import { DivideIcon } from "lucide-react";
 
 
 
@@ -136,6 +138,11 @@ const About = () => {
     threshold: 0.3,
   });
 
+    const { ref: HandRef, inView: HandInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   // Lottie animation options for each section
   const options = {
     animation: createLottieOptions(animationData),
@@ -156,6 +163,7 @@ const About = () => {
     languageContent: createLottieOptions(LanguageContentAnimateDAta),
     problemSolving: createLottieOptions(ProblemSolvingAnimateDAta),
     attentionToDetail: createLottieOptions(AttentionToDetailAnimateDAta),
+     Hand: createLottieOptions(waveHandAnimateData),
   };
 
   // useEffect to log when each section comes into view
@@ -224,6 +232,10 @@ const About = () => {
   }, [attentionToDetailInView]);
 
   useEffect(() => {
+    if (HandInView) console.log("Wavehand animation in view");
+  }, [HandInView]);
+
+  useEffect(() => {
     if (jsInView) console.log("JavaScript animation in view");
   }, [jsInView]);
 
@@ -256,7 +268,7 @@ const About = () => {
         {/* About Me Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-10 mb-20">
           <div className="block lg:hidden w-full">
-            <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] md:mt-25 mt-10"
+            <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px] md:mt-19 mt-10"
             data-aos="fade-right">
               About Me
             </h2>
@@ -265,36 +277,52 @@ const About = () => {
           {/* Text Section */}
           <div className="w-full lg:w-[60%] order-1 lg:order-none">
             <div className="hidden lg:block">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-right px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:mt-25" data-aos="fade-up">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-right px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl mb-10 w-full sm:w-[400px] md:w-[520px] md:mt-19" data-aos="fade-up">
                 About Me
               </h2>
             </div>
 
-            <div className="backdrop-blur-sm p-6 sm:p-8 rounded-2xl text-left text-gray-200 text-base sm:text-lg leading-relaxed space-y-4 shadow-xl"  data-aos="fade-up">
-              <p className="text-xl sm:text-2xl">Hi 👋</p>
-              <p className="text-xl sm:text-2xl font-medium">
-                My name is{" "}
-                <span className="text-2xl sm:text-3xl md:text-[42px] font-semibold uppercase tracking-[0.15em] text-[#8267E3] border-b border-[#8267E3] inline-block pb-2 sm:mb-10 mb-4">
-                  Vaibhav Garg
-                </span>
-              </p>
-              <p data-aos="fade-right">
-                I’m a{" "}
-                <span className="font-semibold text-white inline">
-                  Front-End Developer
-                </span>{" "}
-                focused on building sleek, functional, and responsive web
-                experiences using{" "}
-                <span className="font-semibold text-white inline">ReactJS</span>
-                , with a passion for{" "}
-                <span className="font-semibold text-white inline">UI/UX</span>.
-              </p>
-            </div>
+            {/*  */}
+           <div
+  className="backdrop-blur-sm p-6 sm:p-8 rounded-2xl text-left text-gray-200 text-base sm:text-lg leading-relaxed space-y-4 shadow-xl"
+  data-aos="fade-up"
+>
+  <div className="text-xl sm:text-2xl flex items-center gap-2">
+    <span>Hi</span>
+    <span className="w-[35px] h-[35px] inline-block mb-3" ref={HandRef}>
+      <Lottie
+        options={options.Hand}
+        height={45}
+        width={45}
+        isClickToPauseDisabled={true}
+        isStopped={!HandInView}
+      />
+    </span>
+  </div>
+
+  <p className="text-xl sm:text-2xl font-medium">
+    My name is{" "}
+    <span className="text-2xl sm:text-3xl md:text-[42px] font-semibold uppercase tracking-[0.15em] text-[#8267E3] border-b border-[#8267E3] inline-block pb-2 sm:mb-8 mb-3">
+      Vaibhav Garg
+    </span>
+  </p>
+
+  <p data-aos="fade-right">
+    I’m a{" "}
+    <span className="font-semibold text-white inline">Front-End Developer</span>{" "}
+    focused on building sleek, functional, and responsive web experiences using{" "}
+    <span className="font-semibold text-white inline">ReactJS</span>, with a
+    passion for{" "}
+    <span className="font-semibold text-white inline">UI/UX</span>.
+  </p>
+</div>
+
+
           </div>
 
           {/* Profile Image */}
           <div className="w-full lg:w-[35%] flex justify-center order-0 lg:order-none -mb-10">
-            <div className="w-[250px] sm:w-[250px] md:w-[290px] h-[430px] sm:h-[500px] md:h-[500px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl md:mt-18 transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500" data-aos="slide-up">
+            <div className="w-[250px] sm:w-[250px] md:w-[290px] h-[430px] sm:h-[500px] md:h-[500px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl md:mt-15 transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500" data-aos="slide-up">
               <img
                 src={profile}
                 alt="Profile"
@@ -324,7 +352,7 @@ const About = () => {
                   </span>
                 </h4>
 
-                <ul className="list-none space-y-1 mt-4 shadow" data-aos="slide-up">
+                <ul className="list-none space-y-1 mt-4 shadow" data-aos="fade-up">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5" ref={selfDevRef}>
                       <Lottie
@@ -371,7 +399,7 @@ const About = () => {
                   </span>
                 </h4>
 
-                <ul className="list-none space-y-1 mt-5" data-aos="slide-up">
+                <ul className="list-none space-y-1 mt-5" data-aos="fade-up">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5" ref={emailRef}>
                       <Lottie
@@ -450,7 +478,7 @@ const About = () => {
                     <span className="mt-[10px] ">Skill Set</span>{" "}
                   </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-5 -mb-4" data-aos="slide-up">
+                <ul className="list-none space-y-1 mt-5 -mb-4" data-aos="fade-up">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5" ref={reactskillsRef}>
                       <Lottie
@@ -508,7 +536,7 @@ const About = () => {
                     <span className="flex mt-2">Languages</span>{" "}
                   </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-4" data-aos="slide-up">
+                <ul className="list-none space-y-1 mt-4" data-aos="fade-up">
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5"  ref={languageContentRef}>
                       <Lottie
@@ -542,7 +570,7 @@ const About = () => {
                     <span className="flex mt-4">Interests</span>{" "}
                   </span>
                 </h4>
-                <ul className="list-none space-y-1 mt-2" data-aos="slide-up">
+                <ul className="list-none space-y-1 mt-2" data-aos="fade-up">
                   <li className="flex items-center ml-1 ">
                     <div className="w-5 h-5" ref={uiContentRef}>
                       <Lottie
@@ -616,7 +644,7 @@ const About = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="hidden md:mt-16 md:flex md:justify-center md:flex-wrap md:gap-6 md:sm:gap-10">
+        <div className="hidden md:mt-16 md:flex md:justify-center md:flex-wrap md:gap-6 md:sm:gap-10" data-aos="fade-up">
   {[
     {
       icon: (

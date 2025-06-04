@@ -58,7 +58,7 @@ const Navbar = () => {
         }`}
       >
         <div className="flex justify-between items-center p-4 border-b border-[#333]">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 cursor-pointer">
             <img
               src={vaibhavImg}
               alt="Profile"
@@ -70,7 +70,7 @@ const Navbar = () => {
           </div>
           <button
             onClick={closeSidebar}
-            className="text-white text-xl p-1 rounded-full hover:bg-[#2a2a2a] transition-all duration-200 active:scale-90"
+            className="text-white text-xl p-1 rounded-full hover:bg-[#2a2a2a] transition-all duration-200 active:scale-90 cursor-pointer"
           >
             <FaTimes />
           </button>

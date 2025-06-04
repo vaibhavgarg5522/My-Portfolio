@@ -109,3 +109,38 @@
 /* index.css */
 
 
+@layer utilities {
+  /* 👋 Waving Animation */
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(14deg); }
+    30% { transform: rotate(-8deg); }
+    45% { transform: rotate(14deg); }
+    60% { transform: rotate(-4deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  .animate-wave {
+    animation: wave 2s infinite;
+  }
+
+  /* Neon Glow */
+  .drop-shadow-glow {
+    text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7, 0 0 15px #a855f7;
+  }
+
+  /* Subtle fade-zoom animation */
+  @keyframes fadeInSlow {
+    from {
+      opacity: 0;
+      transform: translateX(-10px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+  .animate-fadeInSlow {
+    animation: fadeInSlow 1.2s ease-out both;
+  }
+}
