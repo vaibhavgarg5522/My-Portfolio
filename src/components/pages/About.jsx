@@ -308,7 +308,7 @@ const About = () => {
   </p>
 
   {/* Glowing outer border */}
-  <div className=" absolute w-[85%] h-[44%] top-48 left-9 rounded-3xl border-2 sm:w-[90%] sm:h-[35%] sm:top-50 sm:left-11
+  <div className=" absolute w-[87%] h-[40%] top-48 left-9 rounded-3xl border-2 sm:w-[90%] sm:h-[35%] sm:top-50 sm:left-11
       md:w-[91%] md:h-[29%] md:top-52 md:left-12
       lg:w-[93%] lg:h-[27%] lg:top-54 lg:left-10 border-purple-300 opacity-30 z-0" />
 
