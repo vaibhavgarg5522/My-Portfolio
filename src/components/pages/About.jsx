@@ -337,13 +337,13 @@ const About = () => {
             data-aos="fade-up"
           >
             {/* Secondary offset circular border */}
-            <div className="absolute w-[240px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full border-2 border-[#8267E3] opacity-40 translate-x-4 translate-y-4 z-0 "/>
+            <div className="absolute w-[270px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full border-2 border-[#8267E3] opacity-40 translate-x-4 translate-y-4 z-0 "/>
           
             {/* Primary glowing circular border */}
-            <div className="absolute w-[240px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full border-2 border-[#8267E3] opacity-80 blur-[2px] z-0" />
+            <div className="absolute w-[270px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full border-2 border-[#8267E3] opacity-80 blur-[2px] z-0" />
           
             {/* Foreground circular image */}
-            <div className="relative z-10 w-[240px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full overflow-hidden transition-transform duration-500 border-[#8267E3] border-3 hover:scale-105">
+            <div className="relative z-10 w-[270px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full overflow-hidden transition-transform duration-500 border-[#8267E3] border-3 hover:scale-105">
               <img
                 src={profile}
                 alt="Vaibhav Garg"

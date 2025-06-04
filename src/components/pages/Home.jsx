@@ -19,7 +19,7 @@ import { FaArrowUp } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { InView } from "react-intersection-observer";
-// import Persona from "./Persona";
+
 
 // Lazy load Lottie
 const Lottie = lazy(() => import("react-lottie"));
@@ -164,27 +164,19 @@ const Home = () => {
             <MiniWhatsApp />
           </div>
 
-  <div
-  className="relative mt-10 md:mb-30 flex justify-center items-center"
-  data-aos="fade-up"
->
-  {/* Secondary offset circular border */}
-  <div className="absolute w-[260px] sm:w-[320px]  h-[380px] sm:h-[480px] rounded-full border-2 border-[#8267E3] opacity-40 translate-x-4 translate-y-4 z-0 "/>
-
-  {/* Primary glowing circular border */}
-  <div className="absolute w-[260px] sm:w-[320px]  h-[380px] sm:h-[480px]  rounded-full border-2 border-[#8267E3] opacity-80 blur-[2px] z-0" />
-
-  {/* Foreground circular image */}
-  <div className="relative z-10 w-[260px] sm:w-[320px]  h-[380px] sm:h-[480px]  rounded-full overflow-hidden transition-transform duration-500 border-[#8267E3] border-3 hover:scale-105">
-    <img
-      src={vaibhavImg}
-      alt="Vaibhav Garg"
-      className="object-cover w-full h-full"
-    />
-  </div>
-</div>
-
-
+          <div
+            className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10 md:mb-30"
+            data-aos="fade-up"
+          >
+            <div className="relative rounded-full overflow-hidden shadow-2xl border-4 border-[#8267E3] transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
+              <img
+                src={vaibhavImg}
+                alt="Vaibhav Garg"
+                className="object-cover w-full h-full hover:grayscale-0 transition duration-500"
+              />
+              <div className="absolute inset-0 rounded-full shadow-[0_0_30px_#8267E3] opacity-60"></div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -211,9 +203,6 @@ const Home = () => {
           </div>
         </InView>
       </div>
-      {/* <div>
-        <Persona></Persona>
-      </div> */}
 
       <button
         onClick={scrollToTop}
