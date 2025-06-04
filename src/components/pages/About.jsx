@@ -284,7 +284,7 @@ const About = () => {
 
             {/*  */}
            <div
-  className="backdrop-blur-sm p-6 sm:p-8 rounded-2xl text-left text-gray-200 text-base sm:text-lg leading-relaxed space-y-4 shadow-xl"
+  className="backdrop-blur-sm p-6 sm:p-8 rounded-2xl text-left text-gray-200 text-base sm:text-lg leading-relaxed space-y-4 shadow-xl mt-6"
   data-aos="fade-right"
 >
   <div className="text-xl sm:text-2xl flex items-center gap-2">
@@ -332,11 +332,21 @@ const About = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="w-full lg:w-[35%] flex justify-center order-0 lg:order-none -mb-10">
-            <div className="w-[250px] sm:w-[250px] md:w-[290px] h-[430px] sm:h-[500px] md:h-[500px] rounded-full overflow-hidden border-4 border-[#8267E3] shadow-2xl md:mt-15 transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500" data-aos="slide-up">
+          <div
+            className="relative mt-10 md:mb-30 flex justify-center items-center w-full lg:w-[35%] order-0 lg:order-none -mb-10"
+            data-aos="fade-up"
+          >
+            {/* Secondary offset circular border */}
+            <div className="absolute w-[240px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full border-2 border-[#8267E3] opacity-40 translate-x-4 translate-y-4 z-0 "/>
+          
+            {/* Primary glowing circular border */}
+            <div className="absolute w-[240px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full border-2 border-[#8267E3] opacity-80 blur-[2px] z-0" />
+          
+            {/* Foreground circular image */}
+            <div className="relative z-10 w-[240px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full overflow-hidden transition-transform duration-500 border-[#8267E3] border-3 hover:scale-105">
               <img
                 src={profile}
-                alt="Profile"
+                alt="Vaibhav Garg"
                 className="object-cover w-full h-full"
               />
             </div>
