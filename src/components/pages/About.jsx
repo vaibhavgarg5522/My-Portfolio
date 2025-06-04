@@ -285,7 +285,7 @@ const About = () => {
             {/*  */}
            <div
   className="backdrop-blur-sm p-6 sm:p-8 rounded-2xl text-left text-gray-200 text-base sm:text-lg leading-relaxed space-y-4 shadow-xl"
-  data-aos="fade-up"
+  data-aos="fade-right"
 >
   <div className="text-xl sm:text-2xl flex items-center gap-2">
     <span>Hi</span>
@@ -308,12 +308,13 @@ const About = () => {
   </p>
 
   {/* Glowing outer border */}
-  <div className=" absolute w-[87%] h-[40%] top-48 left-9 rounded-3xl border-2 sm:w-[90%] sm:h-[35%] sm:top-50 sm:left-11
+  <div>
+    <div className=" absolute w-[87%] h-[41%] top-48 left-9 rounded-3xl border-2 sm:w-[90%] sm:h-[35%] sm:top-50 sm:left-11
       md:w-[91%] md:h-[29%] md:top-52 md:left-12
       lg:w-[93%] lg:h-[27%] lg:top-54 lg:left-10 border-purple-300 opacity-30 z-0" />
 
   {/* Foreground glowing card */}
-  <div className="relative z-10 bg-gradient-to-br from-[#1e1b3a] to-[#302e52] rounded-2xl px-3 py-3 shadow-[0_0_40px_rgba(144,97,249,0.2)] w-full max-w-3xl backdrop-blur-md">
+  <div className="relative z-10 bg-gradient-to-br from-[#1e1b3a] to-[#302e52] rounded-2xl px-3 py-3 shadow-[0_0_40px_rgba(144,97,249,0.2)] w-full max-w-3xl backdrop-blur-md"data-aos="fade-right">
    
     <p className="text-base sm:text-lg text-gray-200 leading-relaxed">
       I’m a <span className="font-semibold text-white">Front-End Developer</span> focused on building sleek,
@@ -321,6 +322,7 @@ const About = () => {
       <span className="font-semibold text-white">ReactJS</span>, with a passion for{" "}
       <span className="font-semibold text-white">UI/UX</span>.
     </p>
+  </div>
   </div>
 </div>
 
