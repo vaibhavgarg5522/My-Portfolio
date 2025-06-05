@@ -59,7 +59,13 @@ const Navbar = () => {
         }`}
       >
         <div className="flex justify-between items-center p-4 border-b border-[#333]">
-          <div className="flex items-center gap-4 cursor-pointer">
+          <div
+            className="flex items-center gap-4 cursor-pointer"
+            onClick={() => {
+              navigate("/persona");
+              closeSidebar();
+            }}
+          >
             <img
               src={vaibhavImg}
               alt="Profile"

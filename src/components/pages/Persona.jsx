@@ -29,9 +29,14 @@ const Persona = () => {
             <img
               src={vaiImg}
               alt="Vaibhav Garg"
-              className="w-70 h-70 sm:w-72 sm:h-72 rounded-full object-cover mx-auto border-4 border-[#8267E3]"
+              className="w-65 h-90 sm:w-72 sm:h-72 rounded-full object-cover mx-auto border-4 border-[#8267E3]"
             />
-            <h3 className="text-3xl sm:text-4xl font-semibold text-center mt-4">Vaibhav Garg</h3>
+            {/* Show "Persona" on small screens only */}
+<h3 className="text-4xl font-semibold text-center mt-4 block md:hidden">Persona</h3>
+
+{/* Show "Vaibhav Garg" on medium and larger screens */}
+<h3 className="text-4xl font-semibold text-center mt-4 hidden md:block">Vaibhav Garg</h3>
+
             <p className="mt-4 font-semibold text-lg text-[#A259FF]">
               “I design with all my heart thinking about the users”
             </p>
@@ -100,15 +105,16 @@ const Persona = () => {
           </div>
 
           {/* Right Panel */}
-          <div className="md:col-span-2 md:mt-87 mt-1 space-y-6" data-aos="fade-up">
-            <div className="text-center md:text-left">
-              <h2 className="text-4xl font-bold text-[#A259FF] text-center ">Persona</h2>
-            </div>
+          <div className=" md:col-span-2 md:mt-87 mt-1 space-y-6" data-aos="fade-up">
+           <div className="hidden md:block text-center md:text-left">
+  <h2 className="text-4xl font-bold text-[#A259FF] text-center">Persona</h2>
+</div>
+
 
             {/* Bio */}
             <div>
-              <h4 className="text-[#A259FF] font-semibold mb-1">Biography</h4>
-              <p className="text-sm text-gray-300">
+              <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-1 sm:text-start ">Biography</h4>
+              <p className="text-sm text-gray-300 mt-2">
                 Hi, I’m Vaibhav Garg — a frontend developer who believes that every line of code can carry emotion, every design can tell a story, and every interface can make someone’s day a little better.
                 <br /><br />
                 Hailing from Muzaffarnagar, I’ve always found joy in creating. Whether it’s building something from scratch or polishing pixels until they shine, I pour my heart into everything I do.
@@ -126,8 +132,8 @@ const Persona = () => {
             {/* Goals & Needs */}
             <div className="grid md:grid-cols-2 gap-4">
               <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
-                <h4 className="text-[#A259FF] font-semibold mb-2">Goals</h4>
-                <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
+                <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start ">Goals</h4>
+                <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1 ">
                   <li>Become a frontend developer who communicates design and code fluently</li>
                   <li>Craft real-world frontend projects and grow professionally</li>
                   <li>Contribute to open-source projects and give back to the dev community</li>
@@ -136,7 +142,7 @@ const Persona = () => {
                 </ul>
               </div>
               <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
-                <h4 className="text-[#A259FF] font-semibold mb-2">Needs</h4>
+                <h4 className="text-center text-xl text-[#A259FF] font-semibold mb-2 sm:text-start ">Needs</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Tools that simplify development process</li>
                   <li>Constructive feedback and code reviews</li>
@@ -151,7 +157,7 @@ const Persona = () => {
             {/* Behavior & Pain Points */}
             <div className="grid md:grid-cols-2 gap-4">
               <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
-                <h4 className="text-[#A259FF] font-semibold mb-2">Behavior</h4>
+                <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start ">Behavior</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Kind-hearted and empathetic with others</li>
                   <li>Listens more than speaks — absorbs deeply</li>
@@ -164,7 +170,7 @@ const Persona = () => {
               </div>
 
               <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
-                <h4 className="text-[#A259FF] font-semibold mb-2">Pain Points</h4>
+                <h4 className="text-[#A259FF] font-semibold mb-2 text-center text-xl sm:text-start ">Pain Points</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Too many tools and frameworks often create confusion instead of clarity</li>
                   <li>Sometimes, detailed feedback is missing — and that slows personal growth</li>
