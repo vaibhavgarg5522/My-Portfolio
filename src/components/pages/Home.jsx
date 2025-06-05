@@ -21,6 +21,7 @@ import "aos/dist/aos.css";
 import { InView } from "react-intersection-observer";
 
 
+
 // Lazy load Lottie
 const Lottie = lazy(() => import("react-lottie"));
 
@@ -87,7 +88,7 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
           <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
             <p
-              className="text-[#8267E3] uppercase tracking-widest font-medium text-sm md:text-base"
+              className="text-[#A259FF] uppercase tracking-widest font-medium text-sm md:text-base"
               data-aos="fade-right"
             >
               Front-End Developer | ReactJS Enthusiast
@@ -96,8 +97,8 @@ const Home = () => {
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6"
               data-aos="fade-up"
             >
-              I Build <span className="text-[#8267E3]">Beautiful</span> and{" "}
-              <span className="text-[#8267E3]">Functional</span> Web Interfaces.
+              I Build <span className="text-[#A259FF]">Beautiful</span> and{" "}
+              <span className="text-[#A259FF]">Functional</span> Web Interfaces.
             </h1>
 
             <div
@@ -106,7 +107,7 @@ const Home = () => {
             >
               <div className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
                 <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
-                  Hey, I'm <span className="text-[#8267E3]">Vaibhav Garg</span>
+                  Hey, I'm <span className="text-[#A259FF]">Vaibhav Garg</span>
                 </h2>
                 <p className="leading-relaxed tracking-wide">
                   A{" "}
@@ -203,6 +204,8 @@ const Home = () => {
           </div>
         </InView>
       </div>
+
+      
 
       <button
         onClick={scrollToTop}

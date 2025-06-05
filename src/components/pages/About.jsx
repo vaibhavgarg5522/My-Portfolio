@@ -32,6 +32,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import waveHandAnimateData from "../../assets/lottie/Animation - 1748962588865.json"
 import { DivideIcon } from "lucide-react";
+import Persona from "./Persona"
 
 
 
@@ -302,7 +303,7 @@ const About = () => {
 
   <p className="text-xl sm:text-2xl font-medium">
     My name is{" "}
-    <span className="text-2xl sm:text-3xl md:text-[42px] font-semibold uppercase tracking-[0.15em] text-[#8267E3] border-b border-[#8267E3] inline-block pb-2 sm:mb-8 mb-3">
+    <span className="text-2xl sm:text-3xl md:text-[42px] font-semibold uppercase tracking-[0.15em] text-[#A259FF] border-b border-[#A259FF] inline-block pb-2 sm:mb-8 mb-3">
       Vaibhav Garg
     </span>
   </p>
@@ -311,16 +312,16 @@ const About = () => {
   <div>
     <div className=" absolute w-[87%] h-[41%] top-48 left-9 rounded-3xl border-2 sm:w-[90%] sm:h-[35%] sm:top-50 sm:left-11
       md:w-[91%] md:h-[29%] md:top-52 md:left-12
-      lg:w-[93%] lg:h-[27%] lg:top-54 lg:left-10 border-purple-300 opacity-30 z-0" />
+      lg:w-[93%] lg:h-[27%] lg:top-54 lg:left-10 border-purple-300 opacity-30 z-0"  />
 
   {/* Foreground glowing card */}
-  <div className="relative z-10 bg-gradient-to-br from-[#1e1b3a] to-[#302e52] rounded-2xl px-3 py-3 shadow-[0_0_40px_rgba(144,97,249,0.2)] w-full max-w-3xl backdrop-blur-md"data-aos="fade-right">
+  <div className="relative z-10 bg-gradient-to-br from-[#1e1b3a] to-[#302e52] rounded-2xl px-3 py-3 shadow-[0_0_40px_rgba(144,97,249,0.2)] w-full max-w-3xl backdrop-blur-md" data-aos="fade-right">
    
     <p className="text-base sm:text-lg text-gray-200 leading-relaxed">
-      I’m a <span className="font-semibold text-white">Front-End Developer</span> focused on building sleek,
+      I’m a <span className="font-semibold text-[#A259FF]">Front-End Developer</span> focused on building sleek,
       functional, and responsive web experiences using{" "}
-      <span className="font-semibold text-white">ReactJS</span>, with a passion for{" "}
-      <span className="font-semibold text-white">UI/UX</span>.
+      <span className="font-semibold text-[#A259FF]">ReactJS</span>, with a passion for{" "}
+      <span className="font-semibold text-[white]">UI/UX</span>.
     </p>
   </div>
   </div>
@@ -343,7 +344,7 @@ const About = () => {
             <div className="absolute w-[270px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full border-2 border-[#8267E3] opacity-80 blur-[2px] z-0" />
           
             {/* Foreground circular image */}
-            <div className="relative z-10 w-[270px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full overflow-hidden transition-transform duration-500 border-[#8267E3] border-3 hover:scale-105">
+            <div className="relative z-10 w-[270px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full overflow-hidden transition-transform duration-500 border-[#8267E3] border-2  hover:scale-105">
               <img
                 src={profile}
                 alt="Vaibhav Garg"
@@ -351,15 +352,19 @@ const About = () => {
               />
             </div>
           </div>
+          
         </div>
+
+        <div> <Persona></Persona> </div>
 
         {/* Info Grid Section */}
         <div className="w-full">
+          
           <div className="bg-[linear-gradient(to_right,#131314_10%,#8267E3_90%)] p-6 sm:p-8 md:p-10 rounded-3xl shadow-2xl text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"  >
             {/* Column 1 */}
             <div className="flex flex-col gap-10 ">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 md:mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30" data-aos="fade-right">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#A259FF] flex items-center gap-2 md:mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30" data-aos="fade-right">
                   <span className="flex" ref={educationRef}>
                     {" "}
                     <Lottie
@@ -406,7 +411,7 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-2xl sm:text-2xl font-extrabold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 " data-aos="fade-right">
+                <h4 className="text-2xl sm:text-2xl font-extrabold text-[#A259FF] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 " data-aos="fade-right">
                   <span className="flex" ref={contactRef}>
                     {" "}
                     <Lottie
@@ -487,7 +492,7 @@ const About = () => {
             {/* Column 2 */}
             <div className="flex flex-col gap-10 ">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#2c2742]" data-aos="fade-right">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#A259FF] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#2c2742]" data-aos="fade-right">
                   <span className="flex" ref={skillsRef}>
                     <Lottie
                       options={options.reactskills}
@@ -545,7 +550,7 @@ const About = () => {
               </div>
 
               <div className=" flex flex-col">
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#383153]" data-aos="fade-right">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#A259FF] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#383153]" data-aos="fade-right">
                   <span className="flex" ref={languagesRef}>
                     <Lottie
                       options={options.language}
@@ -579,7 +584,7 @@ const About = () => {
             {/* Column 3 */}
             <div className="flex flex-col gap-10">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#383153]" data-aos="fade-right">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#A259FF] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30 xl:bg-[#383153]" data-aos="fade-right">
                   <span className="flex" ref={interestsRef}>
                     <Lottie
                       options={options.uiux}
@@ -663,6 +668,8 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        
 
         {/* Social Icons */}
         <div className="hidden md:mt-16 md:flex md:justify-center md:flex-wrap md:gap-6 md:sm:gap-10" data-aos="fade-up">

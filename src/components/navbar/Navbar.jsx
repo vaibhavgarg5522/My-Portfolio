@@ -62,9 +62,9 @@ const Navbar = () => {
             <img
               src={vaibhavImg}
               alt="Profile"
-              className="w-9 h-9 rounded-full object-cover border-2 border-[#8267E3]"
+              className="w-9 h-9 rounded-full object-cover border-2 border-[#A259FF]"
             />
-            <span className="text-[20px] font-bold bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text">
+            <span className="text-[20px] font-bold bg-[#A259FF] text-transparent bg-clip-text">
               Vaibhav <span className="text-[19px] font-bold text-white">Garg</span>
             </span>
           </div>
@@ -120,7 +120,7 @@ const Navbar = () => {
           {!isOpen && (
             <button
               onClick={toggleSidebar}
-              className="block md:hidden p-[8px] rounded-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff]
+              className="block md:hidden p-[8px] rounded-full bg-[#A259FF]
                          text-white text-base shadow-md transition-all duration-300 hover:scale-105 active:scale-95"
               title="Menu"
             >
@@ -130,7 +130,7 @@ const Navbar = () => {
 
           <h1
             onClick={() => navigate("/")}
-            className="text-2xl md:text-3xl font-bold cursor-pointer bg-gradient-to-r from-[#8267E3] to-[#aa94ff] text-transparent bg-clip-text transition duration-300 hover:scale-105
+            className="text-2xl md:text-3xl font-bold cursor-pointer bg-[#A259FF] text-transparent bg-clip-text transition duration-300 hover:scale-105
             absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0"
           >
             Vaibhav <span className="text-white">Garg</span>
@@ -143,10 +143,10 @@ const Navbar = () => {
             <li
               key={index}
               onClick={() => navigate(item.path)}
-              className="relative cursor-pointer group transition-all duration-300 text-white hover:text-[#8267E3]"
+              className="relative cursor-pointer group transition-all duration-300 text-white hover:text-[#A259FF]"
             >
               {item.name}
-              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-[#8267E3] to-[#aa94ff] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#A259FF] transition-all duration-300 group-hover:w-full"></span>
             </li>
           ))}
         </ul>
@@ -154,9 +154,9 @@ const Navbar = () => {
         {/* Get My CV Button (Desktop) */}
         <li
           onClick={() => navigate("/mycv")}
-          className="hidden md:flex list-none relative overflow-hidden rounded-full border border-[#8267E3] bg-transparent px-6 py-2 cursor-pointer group transition-all duration-300"
+          className="hidden md:flex list-none relative overflow-hidden rounded-full border border-[#A259FF] bg-transparent px-6 py-2 cursor-pointer group transition-all duration-300"
         >
-          <div className="absolute inset-0 w-0 group-hover:w-full h-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff] transition-all duration-500 ease-in-out z-0" />
+          <div className="absolute inset-0 w-0 group-hover:w-full h-full bg-[#A259FF] transition-all duration-500 ease-in-out z-0" />
           <div className="relative z-10 flex items-center gap-1 text-sm font-semibold text-white group-hover:text-white transition-all duration-300">
             Get My CV
             <DownloadIcon style={{ fontSize: 18 }} />
@@ -170,7 +170,7 @@ const Navbar = () => {
               navigate("/mycv");
               closeSidebar();
             }}
-            className="flex items-center justify-center gap-2 px-4 py-[1px] text-xs border-[#8267E3] border-3 text-white rounded-full shadow-md hover:scale-105 transition-all duration-300"
+            className="flex items-center justify-center gap-2 px-4 py-[1px] text-xs border-[#A259FF] border-3 text-white rounded-full shadow-md hover:scale-105 transition-all duration-300"
           >
             <span className="flex flex-col text-[#ffffff] font-bold">
               <span className="">My</span> CV

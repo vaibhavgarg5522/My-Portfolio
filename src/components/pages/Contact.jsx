@@ -102,7 +102,7 @@ const Contact = () => {
             className="bg-[#121c28] border border-[#8267E3] rounded-xl p-8 space-y-6 md:w-1/2 shadow-2xl"
             data-aos="slide-up"
           >
-            <h3 className="text-2xl font-bold text-center text-[#8267E3]">Send Message</h3>
+            <h3 className="text-2xl font-bold text-center text-[#A259FF]">Send Message</h3>
 
             <input
               type="text"

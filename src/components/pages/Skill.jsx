@@ -65,7 +65,7 @@ const Skills = () => {
   ]);
 
   const renderTimelineSkills = (skills, isTechnical = false) => (
-    <div className="relative pl-6 sm:pl-8 border-l-4 border-[#8267E3] space-y-10">
+    <div className="relative pl-6 sm:pl-8 border-l-4 border-[#A259FF] space-y-10">
       {skills.map((skill, idx) => (
         <div key={idx} className="relative flex items-center gap-4">
           {/* Icon on the vertical line */}
@@ -74,7 +74,7 @@ const Skills = () => {
               className={`w-10 h-10 rounded-full border-[3px] border-white shadow-xl flex items-center justify-center text-xl ${
                 isTechnical
                   ? "bg-black" // Dark background for technical skill icons
-                  : "bg-[#8267E3] text-white"
+                  : "bg-[#A259FF] text-white"
               }`}
               data-aos="fade-up"
             >
@@ -97,7 +97,7 @@ const Skills = () => {
                 style={{ left: `calc(${skill.percent}% - 8px)` }}
               ></div>
               <div
-                className="h-full rounded-full bg-gradient-to-r from-[#8267E3] to-[#aa94ff] transition-all duration-1000"
+                className="h-full rounded-full bg-[#A259FF] transition-all duration-1000"
                 style={{ width: `${skill.percent}%` }}
               ></div>
 
@@ -138,7 +138,7 @@ const Skills = () => {
             className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20 relative"
             data-aos="fade-up"
           >
-            <h3 className="text-2xl font-bold text-[#8267E3] mb-6 text-center">
+            <h3 className="text-2xl font-bold text-[#A259FF] mb-6 text-center">
               Technical Skills
             </h3>
             {renderTimelineSkills(technicalSkills, true)}
@@ -149,7 +149,7 @@ const Skills = () => {
             className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20 relative"
             data-aos="fade-up"
           >
-            <h3 className="text-2xl font-bold text-[#8267E3] mb-6 text-center">
+            <h3 className="text-2xl font-bold text-[#A259FF] mb-6 text-center">
               Professional Skills
             </h3>
             {renderTimelineSkills(professionalSkills)}
