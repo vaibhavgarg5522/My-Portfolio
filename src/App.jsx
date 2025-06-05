@@ -9,6 +9,7 @@ import MyCv from "./components/pages/MyCv"
 import Footer from "./components/pages/Footer"
 import FloatingIcons from "./components/pages/FloatingIcons"
 // import SocialSidebar from "./components/pages/SocialSidebar"
+import Persona from "./components/pages/Persona"
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/persona" element={<Persona />} /> 
         <Route path="/skill" element={<Skill />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />

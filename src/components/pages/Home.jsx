@@ -19,6 +19,7 @@ import { FaArrowUp } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { InView } from "react-intersection-observer";
+import Persona from './Persona'
 
 
 
@@ -186,6 +187,11 @@ const Home = () => {
         <InView as="section" onChange={(inView) => inView && refreshAOS()}>
           <div id="about">
             <About />
+          </div>
+        </InView>
+        <InView as="section" onChange={(inView) => inView && refreshAOS()}>
+          <div id="persona">
+            <Persona />
           </div>
         </InView>
         <InView as="section" onChange={(inView) => inView && refreshAOS()}>

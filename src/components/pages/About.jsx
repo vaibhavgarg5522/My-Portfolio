@@ -32,7 +32,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import waveHandAnimateData from "../../assets/lottie/Animation - 1748962588865.json"
 import { DivideIcon } from "lucide-react";
-import Persona from "./Persona"
+// import Persona from "./Persona"
 
 
 
@@ -262,6 +262,7 @@ const About = () => {
 
      
     >
+      {/* <div> <Persona></Persona> </div> */}
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
 
@@ -355,7 +356,7 @@ const About = () => {
           
         </div>
 
-        <div> <Persona></Persona> </div>
+        
 
         {/* Info Grid Section */}
         <div className="w-full">

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import vaiImg from '../../../src/images/vai1.jpg';
-import backgroundImage from '../../images/bgsunny.jpg'; 
+import backgroundImage from '../../images/bgsunny.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -11,7 +11,7 @@ const Persona = () => {
 
   return (
     <div
-      className="min-h-screen w-full px-4 py-10 font-sans text-white bg-cover bg-center bg-no-repeat relative"
+      className="min-h-screen w-full font-sans text-white bg-cover bg-center bg-no-repeat relative"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -21,19 +21,17 @@ const Persona = () => {
       }}
     >
       <div className="absolute inset-0 bg-black/60 z-0" /> {/* 🔲 Dark overlay */}
-      <div className="relative z-10 w-full max-w-full mx-auto rounded-lg p-4 md:p-8 space-y-10">
+
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 md:px-8 py-10 space-y-10">
         <div className="grid md:grid-cols-3 gap-6">
           {/* Left Panel */}
-          <div
-            className=" p-6 rounded-lg text-center shadow-lg h-fit"
-            data-aos="fade-right"
-          >
+          <div className="p-6 rounded-lg text-center shadow-lg h-fit mt-6" data-aos="fade-right">
             <img
               src={vaiImg}
               alt="Vaibhav Garg"
-              className="w-48 h-48 rounded-full object-cover mx-auto border-4 border-[#8267E3]"
+              className="w-70 h-70 sm:w-72 sm:h-72 rounded-full object-cover mx-auto border-4 border-[#8267E3]"
             />
-            <h3 className="text-3xl sm:text-4xl font-semibold text-center">Vaibhav Garg</h3>
+            <h3 className="text-3xl sm:text-4xl font-semibold text-center mt-4">Vaibhav Garg</h3>
             <p className="mt-4 font-semibold text-lg text-[#A259FF]">
               “I design with all my heart thinking about the users”
             </p>
@@ -56,7 +54,7 @@ const Persona = () => {
 
             {/* Technology */}
             <div className="mt-6 text-left">
-              <p className="font-bold text-sm mb-3 text-[#A259FF]">Technology</p>
+              <p className="font-bold text-xl text-center mb-3 text-[#A259FF]">Technology</p>
               {[
                 ['IT & Internet', 60],
                 ['Design Software', 50],
@@ -76,8 +74,8 @@ const Persona = () => {
             </div>
 
             {/* Personality */}
-            <div className=" rounded-lg p-4 shadow-md mt-6" data-aos="fade-up">
-              <h4 className="text-[#A259FF] font-semibold mb-4">Personality</h4>
+            <div className=" rounded-lg  shadow-md mt-6" data-aos="fade-up">
+              <h4 className="text-[#A259FF] text-xl font-semibold mb-4">Personality</h4>
               {[
                 ['Introvert', 'Extrovert', 60],
                 ['Logic', 'Creative', 70],
@@ -102,9 +100,9 @@ const Persona = () => {
           </div>
 
           {/* Right Panel */}
-          <div className="md:col-span-2 space-y-6" data-aos="fade-up">
+          <div className="md:col-span-2 md:mt-87 mt-1 space-y-6" data-aos="fade-up">
             <div className="text-center md:text-left">
-              <h2 className="text-4xl font-bold text-[#A259FF] text-center mb-2">Persona</h2>
+              <h2 className="text-4xl font-bold text-[#A259FF] text-center ">Persona</h2>
             </div>
 
             {/* Bio */}
@@ -127,7 +125,7 @@ const Persona = () => {
 
             {/* Goals & Needs */}
             <div className="grid md:grid-cols-2 gap-4">
-              <div className=" rounded-lg p-4 shadow-md" data-aos="fade-up">
+              <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
                 <h4 className="text-[#A259FF] font-semibold mb-2">Goals</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Become a frontend developer who communicates design and code fluently</li>
@@ -137,7 +135,7 @@ const Persona = () => {
                   <li>Build a strong personal brand and portfolio that tells a story</li>
                 </ul>
               </div>
-              <div className=" rounded-lg p-4 shadow-md" data-aos="fade-up">
+              <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
                 <h4 className="text-[#A259FF] font-semibold mb-2">Needs</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Tools that simplify development process</li>
@@ -152,7 +150,7 @@ const Persona = () => {
 
             {/* Behavior & Pain Points */}
             <div className="grid md:grid-cols-2 gap-4">
-              <div className=" rounded-lg p-4 shadow-md" data-aos="fade-up">
+              <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
                 <h4 className="text-[#A259FF] font-semibold mb-2">Behavior</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Kind-hearted and empathetic with others</li>
@@ -165,7 +163,7 @@ const Persona = () => {
                 </ul>
               </div>
 
-              <div className=" rounded-lg p-4 shadow-md" data-aos="fade-up">
+              <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
                 <h4 className="text-[#A259FF] font-semibold mb-2">Pain Points</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Too many tools and frameworks often create confusion instead of clarity</li>
