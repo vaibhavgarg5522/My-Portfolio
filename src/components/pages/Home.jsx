@@ -167,7 +167,7 @@ const Home = () => {
           </div>
 
           <div
-            className="w-[260px] sm:w-[320px] md:w-[360px] h-[] flex justify-center items-center mt-10 md:mb-30 rounded-4xl"
+            className="w-[260px] sm:w-[320px] md:w-[360px]  flex justify-center items-center mt-10 md:mb-30 rounded-4xl"
             data-aos="fade-up"
           >
             <div className="relative overflow-hidden shadow-2xl rounded-4xl  border-[#8267E3] transition-transform  hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">

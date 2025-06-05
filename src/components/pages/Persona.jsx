@@ -29,7 +29,7 @@ const Persona = () => {
             <img
               src={vaiImg}
               alt="Vaibhav Garg"
-              className="w-56 h-110 sm:w-56 sm:h-110  object-contain mx-auto object-top border-4 border-[#8267E3] rounded-4xl " data-aos="fade-up"
+              className="w-86 h-120 sm:w-66 sm:h-110  object-contain mx-auto object-top  border-[#8267E3] rounded-[40px] " data-aos="fade-up"
             />
             {/* Show "Persona" on small screens only */}
 <h3 className="text-4xl font-semibold text-center mt-4 block md:hidden">Persona</h3>
