@@ -7,7 +7,7 @@ import React, {
   useCallback,
 } from "react";
 import { useNavigate } from "react-router-dom";
-import vaibhavImg from "../../images/image5.jpg";
+import vaibhavImg from "../../images/sunny6.jpg";
 import backgroundImage from "../../images/bgsunny.jpg";
 import About from "./About";
 import Skills from "./Skill";
@@ -167,16 +167,17 @@ const Home = () => {
           </div>
 
           <div
-            className="w-[260px] sm:w-[320px] md:w-[360px] flex justify-center items-center mt-10 md:mb-30"
+            className="w-[260px] sm:w-[320px] md:w-[360px] h-[] flex justify-center items-center mt-10 md:mb-30 rounded-4xl"
             data-aos="fade-up"
           >
-            <div className="relative rounded-full overflow-hidden shadow-2xl border-4 border-[#8267E3] transition-transform hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
-              <img
-                src={vaibhavImg}
-                alt="Vaibhav Garg"
-                className="object-cover w-full h-full hover:grayscale-0 transition duration-500"
-              />
-              <div className="absolute inset-0 rounded-full shadow-[0_0_30px_#8267E3] opacity-60"></div>
+            <div className="relative overflow-hidden shadow-2xl rounded-4xl  border-[#8267E3] transition-transform  hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
+             <img
+  src={vaibhavImg}
+  alt="Vaibhav Garg"
+  className="w-86 h-120 sm:w-86 sm:h-140 object-contain mx-auto object-top rounded-20xl"
+/>
+
+              <div className="absolute inset-0 shadow-[0_0_30px_#8267E3] opacity-60"></div>
             </div>
           </div>
         </div>

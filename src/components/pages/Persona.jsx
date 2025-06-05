@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import vaiImg from '../../../src/images/vai1.jpg';
+import vaiImg from '../../../src/images/sunny6.jpg';
 import backgroundImage from '../../images/bgsunny.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -25,11 +25,11 @@ const Persona = () => {
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 md:px-8 py-10 space-y-10">
         <div className="grid md:grid-cols-3 gap-6">
           {/* Left Panel */}
-          <div className="p-6 rounded-lg text-center shadow-lg h-fit mt-6" data-aos="fade-right">
+          <div className="p-6 rounded-lg text-center shadow-lg h-fit mt-6" >
             <img
               src={vaiImg}
               alt="Vaibhav Garg"
-              className="w-65 h-90 sm:w-72 sm:h-72 rounded-full object-cover mx-auto border-4 border-[#8267E3]"
+              className="w-56 h-110 sm:w-56 sm:h-110  object-contain mx-auto object-top border-4 border-[#8267E3] rounded-4xl " data-aos="fade-up"
             />
             {/* Show "Persona" on small screens only */}
 <h3 className="text-4xl font-semibold text-center mt-4 block md:hidden">Persona</h3>
@@ -37,11 +37,11 @@ const Persona = () => {
 {/* Show "Vaibhav Garg" on medium and larger screens */}
 <h3 className="text-4xl font-semibold text-center mt-4 hidden md:block">Vaibhav Garg</h3>
 
-            <p className="mt-4 font-semibold text-lg text-[#A259FF]">
+            <p className="mt-4 font-semibold text-lg text-[#A259FF]"data-aos="zoom-in">
               “I design with all my heart thinking about the users”
             </p>
 
-            <div className="mt-6 text-left text-sm space-y-1">
+            <div className="mt-6 text-left text-sm space-y-1"data-aos="fade-right">
               <p><span className="font-bold text-[#A259FF]">Age</span>: 30</p>
               <p><span className="font-bold text-[#A259FF]">Gender</span>: Male</p>
               <p><span className="font-bold text-[#A259FF]">Job Title</span>: Frontend Developer</p>
@@ -50,7 +50,7 @@ const Persona = () => {
               <p><span className="font-bold text-[#A259FF]">Location</span>: Muzaffarnagar, Uttar Pradesh</p>
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-2 text-xs font-semibold">
+            <div className="mt-6 grid grid-cols-2 gap-2 text-xs font-semibold" data-aos="fade-right">
               <span className="bg-[#8267E3] text-white px-2 py-1 rounded">PASSIONATE</span>
               <span className="bg-[#8267E3] text-white px-2 py-1 rounded">CREATIVE</span>
               <span className="bg-[#8267E3] text-white px-2 py-1 rounded">HARDWORKING</span>
@@ -58,7 +58,7 @@ const Persona = () => {
             </div>
 
             {/* Technology */}
-            <div className="mt-6 text-left">
+            <div className="mt-6 text-left" data-aos="fade-up">
               <p className="font-bold text-xl text-center mb-3 text-[#A259FF]">Technology</p>
               {[
                 ['IT & Internet', 60],
@@ -105,7 +105,7 @@ const Persona = () => {
           </div>
 
           {/* Right Panel */}
-          <div className=" md:col-span-2 md:mt-87 mt-1 space-y-6" data-aos="fade-up">
+          <div className=" md:col-span-2 md:mt-53 mt-1 space-y-6" data-aos="fade-up">
            <div className="hidden md:block text-center md:text-left">
   <h2 className="text-4xl font-bold text-[#A259FF] text-center">Persona</h2>
 </div>

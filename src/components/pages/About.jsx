@@ -626,7 +626,7 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#8267E3] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border pr-4 border-[#8267E3]/30 xl:bg-[#383153] " data-aos="fade-right">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#A259FF] flex items-center gap-2 mt-8 shadow-[0_0_20px_#8267E3] border pr-4 border-[#8267E3]/30 xl:bg-[#383153] " data-aos="fade-right">
                   <span className="flex" ref={softSkillsRef}>
                     <Lottie
                       options={options.technology}
