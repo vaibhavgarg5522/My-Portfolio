@@ -90,7 +90,7 @@ const Home = () => {
           <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
             <p
               className="text-[#A259FF] uppercase tracking-widest font-medium text-sm md:text-base"
-              data-aos="fade-right"
+              data-aos="zoom-in"
             >
               Front-End Developer | ReactJS Enthusiast
             </p>
@@ -167,7 +167,7 @@ const Home = () => {
           </div>
 
           <div
-            className="w-[260px] sm:w-[320px] md:w-[360px]  flex justify-center items-center mt-10 md:mb-30 rounded-4xl"
+            className="w-[260px] sm:w-[320px] mt-8 md:w-[360px]  flex justify-center items-center  md:mb-30 rounded-4xl"
             data-aos="fade-up"
           >
             <div className="relative overflow-hidden shadow-2xl rounded-4xl  border-[#8267E3] transition-transform  hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
