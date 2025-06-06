@@ -59,7 +59,7 @@ const Persona = () => {
 
             {/* Technology */}
             <div className="mt-6 text-left" data-aos="fade-up">
-              <p className="font-bold text-xl text-center mb-3 text-[#A259FF]" data-aos="zoom-in" >Technology</p>
+              <p className="font-bold text-xl text-center mb-3 text-[#A259FF]"  >Technology</p>
               {[
                 ['IT & Internet', 60],
                 ['Design Software', 50],
@@ -80,7 +80,7 @@ const Persona = () => {
 
             {/* Personality */}
             <div className=" rounded-lg  shadow-md mt-6" data-aos="fade-up">
-              <h4 className="text-[#A259FF] text-xl font-semibold mb-4" data-aos="zoom-in">Personality</h4>
+              <h4 className="text-[#A259FF] text-xl font-semibold mb-4" >Personality</h4>
               {[
                 ['Introvert', 'Extrovert', 60],
                 ['Logic', 'Creative', 75],
@@ -113,7 +113,7 @@ const Persona = () => {
 
             {/* Bio */}
             <div>
-              <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-1 sm:text-start " data-aos="zoom-in">Biography</h4>
+              <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-1 sm:text-start " >Biography</h4>
               <p className="text-sm text-gray-300 mt-2">
                 Hi, I’m Vaibhav Garg — a frontend developer who believes that every line of code can carry emotion, every design can tell a story, and every interface can make someone’s day a little better.
                 <br /><br />
@@ -132,7 +132,7 @@ const Persona = () => {
             {/* Goals & Needs */}
             <div className="grid md:grid-cols-2 gap-4">
               <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
-                <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start " data-aos="zoom-in">Goals</h4>
+                <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start " >Goals</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1 ">
                   <li>Become a frontend developer who communicates design and code fluently</li>
                   <li>Craft real-world frontend projects and grow professionally</li>
@@ -142,7 +142,7 @@ const Persona = () => {
                 </ul>
               </div>
               <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
-                <h4 className="text-center text-xl text-[#A259FF] font-semibold mb-2 sm:text-start " data-aos="zoom-in">Needs</h4>
+                <h4 className="text-center text-xl text-[#A259FF] font-semibold mb-2 sm:text-start " >Needs</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Tools that simplify development process</li>
                   <li>Constructive feedback and code reviews</li>
@@ -157,7 +157,7 @@ const Persona = () => {
             {/* Behavior & Pain Points */}
             <div className="grid md:grid-cols-2 gap-4">
               <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
-                <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start " data-aos="zoom-in">Behavior</h4>
+                <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start " >Behavior</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Kind-hearted and empathetic with others</li>
                   <li>Listens more than speaks — absorbs deeply</li>
@@ -170,7 +170,7 @@ const Persona = () => {
               </div>
 
               <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
-                <h4 className="text-[#A259FF] font-semibold mb-2 text-center text-xl sm:text-start " data-aos="zoom-in">Pain Points</h4>
+                <h4 className="text-[#A259FF] font-semibold mb-2 text-center text-xl sm:text-start " >Pain Points</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Too many tools and frameworks often create confusion instead of clarity</li>
                   <li>Sometimes, detailed feedback is missing — and that slows personal growth</li>
@@ -181,7 +181,7 @@ const Persona = () => {
               </div>
               {/* Motivations */}
 <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
-  <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start" data-aos="zoom-in">Motivations</h4>
+  <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start" >Motivations</h4>
   <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
     <li>Support from my family and my beloved wife during tough times — they inspire me endlessly</li>
     <li>I’m deeply motivated to move forward and build a better life for myself and my loved ones</li>
@@ -194,7 +194,7 @@ const Persona = () => {
 
 {/* Future Plans */}
 <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
-  <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start" data-aos="zoom-in">Future Plans</h4>
+  <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start" >Future Plans</h4>
   <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
    
     <li>Use my income not just for myself — but to support others, bring smiles to their faces, and offer peace where it’s needed most</li>
