@@ -90,7 +90,7 @@ const Home = () => {
           <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
             <p
               className="text-[#A259FF] uppercase tracking-widest font-medium text-sm md:text-base"
-              data-aos="zoom-in"
+              
             >
               Front-End Developer | ReactJS Enthusiast
             </p>

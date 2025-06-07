@@ -69,13 +69,13 @@ const Skills = () => {
       {skills.map((skill, idx) => (
         <div key={idx} className="relative flex items-center gap-4">
           {/* Icon on the vertical line */}
-          <div className="absolute -left-[51px] sm:-left-[58px] top-0 z-10">
+          <div className="absolute -left-[47px] sm:-left-[58px] top-0 z-10">
             <div
-              className={`w-10 h-10 rounded-full border-[3px] border-white shadow-xl flex items-center justify-center text-xl ${
+              className={`w-10 h-10 rounded-full border-[3px] border-white shadow-xl flex items-center justify-center  text-xl ${
                 isTechnical
                   ? "bg-black" // Dark background for technical skill icons
                   : "bg-[#A259FF] text-white"
-              }`}
+              }` }
               data-aos="fade-up"
             >
               {skill.icon}
@@ -91,18 +91,18 @@ const Skills = () => {
             </h4>
 
             {/* Progress Bar with glowing thumb and percentage at the right end */}
-            <div className="relative w-full h-[6px] bg-white rounded-full">
+            <div className="relative w-full h-[6px] bg-white rounded-full" >
               <div
-                className="absolute -top-[6px] w-[16px] h-[16px] bg-[#140f23] border-2 border-white rounded-full shadow-lg"
-                style={{ left: `calc(${skill.percent}% - 8px)` }}
+                className="absolute -top-[6px] w-[16px] h-[16px] bg-[#140f23] border-2 border-white rounded-full shadow-lg"  data-aos="fade-right"
+                style={{ left: `calc(${skill.percent}% - 8px) ` }}
               ></div>
               <div
                 className="h-full rounded-full bg-[#A259FF] transition-all duration-1000"
-                style={{ width: `${skill.percent}%` }}
+                style={{ width: `${skill.percent}% ` }} 
               ></div>
 
               {/* Percentage label at the end of the progress bar */}
-              <span className="absolute -top-7 right-0 text-white font-semibold text-sm">
+              <span className="absolute -top-7 right-0 text-white font-semibold text-sm" >
                 {skill.percent}%
               </span>
             </div>

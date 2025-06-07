@@ -93,10 +93,10 @@ const Persona = () => {
                     <span>{left}</span>
                     <span>{right}</span>
                   </div>
-                  <div className="relative w-full h-2 bg-gray-700 rounded-full">
+                  <div className="relative w-full h-2 bg-gray-700 rounded-full" >
                     <div
                       className="absolute top-[3px] -translate-y-1/2 w-9 h-4 bg-[#A259FF] rounded-full shadow-md"
-                      style={{ left: `calc(${value}% - 8px)` }}
+                      style={{ left: `calc(${value}% - 8px)` }} data-aos="fade-right"
                     ></div>
                   </div>
                 </div>
