@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import backgroundImage from '../../images/bgsunny.jpg'; // Adjust path if needed
+import { FaHtml5, FaCss3Alt, FaReact, FaJsSquare, FaGithub } from 'react-icons/fa';
+import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
+import backgroundImage from '../../images/bgsunny.jpg';
 
 const filters = ['All', 'UI/UX', 'Web App'];
+
+const stackIcons = {
+  React: <FaReact />,
+  JavaScript: <FaJsSquare />,
+  HTML5: <FaHtml5 />,
+  CSS3: <FaCss3Alt />,
+  TailwindCSS: <SiTailwindcss />,
+  NextJS: <SiNextdotjs />,
+};
 
 const projects = [
   {
@@ -14,6 +25,7 @@ const projects = [
     type: 'Web App',
     live: 'https://medi-care-hub-website.vercel.app/',
     github: 'https://github.com/vaibhavgarg5522/MediCare-Hub-Website',
+    stack: ['React', 'JavaScript', 'HTML5', 'CSS3', 'TailwindCSS']
   },
   {
     id: 2,
@@ -23,6 +35,7 @@ const projects = [
     type: 'Web App',
     live: 'https://spotify-clone-website-tau.vercel.app/',
     github: 'https://github.com/vaibhavgarg5522/Spotify-Clone-Website',
+    stack: ['React', 'JavaScript', 'HTML5', 'CSS3', 'TailwindCSS']
   },
   {
     id: 3,
@@ -32,6 +45,7 @@ const projects = [
     type: 'Web App',
     live: 'https://e-commerce-app-alpha-rust.vercel.app/',
     github: 'https://github.com/vaibhavgarg5522/E-Commerce-App',
+    stack: ['React', 'JavaScript', 'HTML5', 'CSS3', ]
   },
   {
     id: 4,
@@ -41,6 +55,7 @@ const projects = [
     type: 'UI/UX',
     live: 'https://mini-web-projects-react-js.vercel.app/',
     github: 'https://github.com/vaibhavgarg5522/Mini-Web-Projects-ReactJS',
+    stack: ['React', 'JavaScript', 'HTML5', 'CSS3', 'TailwindCSS']
   },
   {
     id: 5,
@@ -50,6 +65,7 @@ const projects = [
     type: 'Web App',
     live: 'https://frontend-ebon-one.vercel.app/',
     github: 'https://github.com/vaibhavgarg5522/Food-Delivery-Website',
+    stack: ['React', 'JavaScript', 'HTML5', 'CSS3',]
   },
   {
     id: 6,
@@ -59,20 +75,16 @@ const projects = [
     type: 'Web App',
     live: 'https://pixisphere-assignment-xi.vercel.app/category',
     github: 'https://github.com/vaibhavgarg5522/pixisphere-assignment',
+    stack: ['NextJS', 'React' ,'JavaScript', 'HTML5', 'CSS3', 'TailwindCSS']
   },
 ];
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-
-  const filteredProjects =
-    activeFilter === 'All' ? projects : projects.filter((p) => p.type === activeFilter);
+  const filteredProjects = activeFilter === 'All' ? projects : projects.filter((p) => p.type === activeFilter);
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
@@ -89,7 +101,7 @@ const Projects = () => {
       <div className="absolute inset-0 bg-black/60 z-0" />
 
       <div className="relative z-10">
-        <div className="mb-10 md:mt-10 mt-10" >
+        <div className="mb-10 md:mt-10 mt-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right xl:text-right px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px]" data-aos="fade-right">
             My Projects
           </h2>
@@ -128,8 +140,16 @@ const Projects = () => {
                 className="w-full h-44 object-cover rounded-lg mb-4 border border-[#8267E3]/40"
               />
               <h3 className="text-lg font-bold text-white mb-1">{project.title}</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">{project.desc}</p>
-              <div className="flex gap-3 mt-5">
+              <p className="text-sm text-gray-300 leading-relaxed mb-2">{project.desc}</p>
+              <div className="flex items-center gap-3 flex-wrap text-base text-[#A78BFA] mb-4">
+                {project.stack.map((tech, i) => (
+                  <div key={i} className="flex items-center gap-1">
+                    <span className="text-xl">{stackIcons[tech]}</span>
+                    <span className="text-sm text-white">{tech}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex gap-3 mt-auto">
                 <a
                   href={project.live}
                   target="_blank"
