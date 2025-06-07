@@ -89,7 +89,7 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
           <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
             <p
-              className="text-[#A259FF] uppercase tracking-widest font-medium text-sm md:text-base"
+              className=" text-[#A259FF] uppercase tracking-widest font-medium text-sm md:text-base"
               
             >
               Front-End Developer | ReactJS Enthusiast
@@ -104,9 +104,9 @@ const Home = () => {
 
             <div
               className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10"
-              data-aos="fade-right"
+              
             >
-              <div className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30">
+              <div className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30" data-aos="fade-up">
                 <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
                   Hey, I'm <span className="text-[#A259FF]">Vaibhav Garg</span>
                 </h2>
@@ -167,17 +167,17 @@ const Home = () => {
           </div>
 
           <div
-            className="w-[260px] sm:w-[320px] mt-8 md:w-[360px]  flex justify-center items-center  md:mb-30 rounded-4xl"
-            data-aos="fade-up"
+            className="w-[260px] sm:w-[320px] mt-8  md:w-[360px]  flex justify-center items-center  md:mb-30 rounded-4xl"
+            
           >
             <div className="relative overflow-hidden shadow-2xl rounded-4xl  border-[#8267E3] transition-transform  hover:scale-105 hover:shadow-[#8267E3]/50 duration-500">
              <img
   src={vaibhavImg}
   alt="Vaibhav Garg"
-  className="w-86 h-120 sm:w-86 sm:h-140 object-contain mx-auto object-top rounded-20xl"
+  className="w-86 h-120 sm:w-86 sm:h-140 object-contain mx-auto object-top rounded-20xl "data-aos="fade-up"
 />
 
-              <div className="absolute inset-0 shadow-[0_0_30px_#8267E3] opacity-60"></div>
+              <div className="absolute inset-0 shadow-[0_0_30px_#8267E3] opacity-60 "></div>
             </div>
           </div>
         </div>

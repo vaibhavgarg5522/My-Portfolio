@@ -97,7 +97,7 @@ const Skills = () => {
                 style={{ left: `calc(${skill.percent}% - 8px) ` }}
               ></div>
               <div
-                className="h-full rounded-full bg-[#A259FF] transition-all duration-1000"
+                className="h-full rounded-full bg-[#A259FF] transition-all duration-1000" 
                 style={{ width: `${skill.percent}% ` }} 
               ></div>
 

@@ -68,9 +68,9 @@ const Persona = () => {
               ].map(([label, value], i) => (
                 <div key={i} className="mb-3">
                   <p className="text-xs text-gray-300 mb-1">{label}</p>
-                  <div className="w-full h-3 bg-gray-400 rounded">
+                  <div className="w-full h-3 bg-gray-400 rounded" >
                     <div
-                      className="h-3 bg-[#A259FF] rounded"
+                      className="h-3 bg-[#A259FF] rounded" 
                       style={{ width: `${value}%` }}
                     ></div>
                   </div>
