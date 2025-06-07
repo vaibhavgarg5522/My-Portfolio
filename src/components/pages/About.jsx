@@ -365,7 +365,7 @@ const About = () => {
             {/* Column 1 */}
             <div className="flex flex-col gap-10 ">
               <div>
-                <h4 className="text-2xl sm:text-2xl font-semibold text-[#A259FF] flex items-center gap-2 md:mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30" data-aos="Zoom-in">
+                <h4 className="text-2xl sm:text-2xl font-semibold text-[#A259FF] flex items-center gap-2 md:mt-8 shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30" data-aos="zoom-in">
                   <span className="flex" ref={educationRef}>
                     {" "}
                     <Lottie
