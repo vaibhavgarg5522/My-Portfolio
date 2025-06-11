@@ -120,7 +120,7 @@ const Projects = () => {
           </h2>
           <p
             className="text-xl sm:text-3xl md:text-[42px] font-bold uppercase tracking-widest text-transparent text-center bg-clip-text bg-gradient-to-r from-[#A259FF] via-[#A78BFA] to-[#C4B5FD] animate-pulse shadow-md mb-10 mt-6"
-            data-aos="zoom-in"
+            data-aos="zoom-in-up"
           >
             What I Will Do For You
           </p>

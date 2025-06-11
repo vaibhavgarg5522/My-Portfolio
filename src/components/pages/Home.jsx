@@ -86,7 +86,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/60 z-0"></div>
         <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
           <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
-            <p className="text-[#A259FF] uppercase tracking-widest font-medium text-sm md:text-base">
+            <p className="text-[#A259FF] uppercase tracking-widest font-medium text-sm md:text-base" data-aos="zoom-in-up">
               I design & develop websites for clients
             </p>
 

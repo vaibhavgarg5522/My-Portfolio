@@ -336,7 +336,7 @@ const About = () => {
           {/* Profile Image */}
           <div
             className="relative mt-10 md:mb-30 flex justify-center items-center w-full lg:w-[35%] order-0 lg:order-none -mb-10"
-            data-aos="fade-up"
+            data-aos="zoom-in-up"
           >
             {/* Secondary offset circular border */}
             <div className="absolute w-[270px] sm:w-[260px] md:w-[280px] h-[480px] sm:h-[500px] md:h-[520px] rounded-full border-2 border-[#8267E3] opacity-40 translate-x-4 translate-y-4 z-0 "/>
