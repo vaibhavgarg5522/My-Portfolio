@@ -11,6 +11,7 @@ import FloatingIcons from "./components/pages/FloatingIcons"
 // import SocialSidebar from "./components/pages/SocialSidebar"
 import Persona from "./components/pages/Persona"
 import GetWebsite from './components/GetWebsite';
+import ScrollToTop from "./components/ScrollToTop"
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
       <Navbar />
       {/* <SocialSidebar /> */}
       <FloatingIcons />
-      
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/getawebsite" element={<GetWebsite />} />

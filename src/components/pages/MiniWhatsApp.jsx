@@ -166,12 +166,12 @@ const MiniWhatsApp = () => {
         </a>
 
         <a
-          href="https://www.facebook.com/vaibhavgarg5522" // ✅ Facebook link
+          href="https://www.facebook.com/share/168jQRHjqd/" // ✅ Facebook link
           target="_blank"
           rel="noopener noreferrer"
-          className="w-11 h-11 sm:w-12 sm:h-12 rounded-tl-none rounded-tr-xl rounded-br-none rounded-bl-xl border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#1877F2] hover:shadow-[0_0_15px_#1877F2]"
+          className="w-11 h-11 sm:w-12 sm:h-12 rounded-tl-none rounded-tr-xl rounded-br-none rounded-bl-xl border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[white] hover:shadow-[0_0_15px_#1877F2]"
         >
-          <FaFacebookF className="text-xl sm:text-2xl" style={{ color: "white", fontSize: "27px" }} />
+          <FaFacebookF className="text-xl sm:text-2xl" style={{ color: "#1877F2", fontSize: "27px" }} />
         </a>
 
         <a

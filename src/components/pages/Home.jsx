@@ -147,26 +147,27 @@ const Home = () => {
             <div className="w-90 sm:w-120 md:hidden -mb-4" data-aos="slide-up">
               <Suspense fallback={<div className="text-sm text-gray-400">Loading animation...</div>}>
                 <div className="flex justify-center items-center">
-                  <Lottie options={softSkillOptions} height={355} width={355} />
+                  <Lottie options={softSkillOptions} height={375} width={375} />
                 </div>
               </Suspense>
             </div>
 
             <div className="flex gap-4 mb-6 flex-wrap justify-center md:justify-start">
               <button
-                onClick={() => navigate("/projects")}
-                className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
-                data-aos="fade-right"
-              >
-                View Work
-              </button>
-              <button
                 onClick={() => navigate("/getawebsite")}
-                className="border border-[#8267E3] text-white hover:bg-[#8267E3] px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
+                className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
                 data-aos="fade-right"
               >
                 Get a Website
               </button>
+              <button
+                onClick={() => navigate("/projects")}
+                className=" border border-[#8267E3] text-white hover:bg-[#8267E3] px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
+                data-aos="fade-right"
+              >
+                View Work
+              </button>
+              
             </div>
 
             <MiniWhatsApp />
