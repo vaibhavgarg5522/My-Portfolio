@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaHtml5, FaCss3Alt, FaReact, FaJsSquare, FaGithub } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaReact, FaJsSquare } from 'react-icons/fa';
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 import backgroundImage from '../../images/bgsunny.jpg';
 
-const filters = ['All', 'UI/UX', 'Web App'];
+const filters = ['All', 'UI/UX', 'Web App', 'Client Work'];
 
 const stackIcons = {
   React: <FaReact />,
@@ -45,7 +45,7 @@ const projects = [
     type: 'Web App',
     live: 'https://e-commerce-app-alpha-rust.vercel.app/',
     github: 'https://github.com/vaibhavgarg5522/E-Commerce-App',
-    stack: ['React', 'JavaScript', 'HTML5', 'CSS3', ]
+    stack: ['React', 'JavaScript', 'HTML5', 'CSS3']
   },
   {
     id: 4,
@@ -65,17 +65,27 @@ const projects = [
     type: 'Web App',
     live: 'https://frontend-ebon-one.vercel.app/',
     github: 'https://github.com/vaibhavgarg5522/Food-Delivery-Website',
-    stack: ['React', 'JavaScript', 'HTML5', 'CSS3',]
+    stack: ['React', 'JavaScript', 'HTML5', 'CSS3']
   },
   {
     id: 6,
     title: 'Pixisphere Assignment - Photography Web App',
     desc: 'A dynamic photography platform built using Next.js, featuring category listings and photographer profiles with filter, sort, and search capabilities.',
     image: '/images1/pixisphereimg.png',
-    type: 'Web App',
+    type: 'Client Work',
     live: 'https://pixisphere-assignment-xi.vercel.app/category',
     github: 'https://github.com/vaibhavgarg5522/pixisphere-assignment',
-    stack: ['NextJS', 'React' ,'JavaScript', 'HTML5', 'CSS3', 'TailwindCSS']
+    stack: ['NextJS', 'React', 'JavaScript', 'HTML5', 'CSS3', 'TailwindCSS']
+  },
+  {
+    id: 7,
+    title: 'Shiv Shakti Enterprises - Business Website',
+    desc: 'A professional business website built for Shiv Shakti Enterprises to showcase their industrial products and services with a clean, modern design.',
+    image: '/images1/shivshaktiimg.png',
+    type: 'Client Work',
+    live: 'https://shiv-shakti-enterprises.vercel.app/',
+    github: 'https://github.com/vaibhavgarg5522/shiv-shakti-enterprises',
+    stack: ['React', 'JavaScript', 'HTML5', 'CSS3', 'TailwindCSS']
   },
 ];
 
@@ -102,10 +112,16 @@ const Projects = () => {
 
       <div className="relative z-10">
         <div className="mb-10 md:mt-10 mt-10">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right xl:text-right px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px]" data-aos="fade-right">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold bg-[linear-gradient(to_right,black_10%,#8267E3_90%)] inline-block text-center md:text-right xl:text-right px-6 sm:px-10 py-4 sm:py-6 rounded-full shadow-xl w-full sm:w-[400px] md:w-[520px]"
+            data-aos="fade-right"
+          >
             My Projects
           </h2>
-          <p className="text-xl sm:text-3xl md:text-[42px] font-bold uppercase tracking-widest text-transparent text-center bg-clip-text bg-gradient-to-r from-[#A259FF] via-[#A78BFA] to-[#C4B5FD] animate-pulse shadow-md mb-10 mt-6" data-aos="zoom-in">
+          <p
+            className="text-xl sm:text-3xl md:text-[42px] font-bold uppercase tracking-widest text-transparent text-center bg-clip-text bg-gradient-to-r from-[#A259FF] via-[#A78BFA] to-[#C4B5FD] animate-pulse shadow-md mb-10 mt-6"
+            data-aos="zoom-in"
+          >
             What I Will Do For You
           </p>
         </div>
@@ -158,14 +174,16 @@ const Projects = () => {
                 >
                   Live Preview
                 </a>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 border border-[#8267E3] text-white rounded-full text-sm font-medium hover:bg-[#8267E3]/20 transition-all"
-                >
-                  Check on GitHub
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border border-[#8267E3] text-white rounded-full text-sm font-medium hover:bg-[#8267E3]/20 transition-all"
+                  >
+                    Check on GitHub
+                  </a>
+                )}
               </div>
             </div>
           ))}

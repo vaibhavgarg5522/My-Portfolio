@@ -10,6 +10,7 @@ import Footer from "./components/pages/Footer"
 import FloatingIcons from "./components/pages/FloatingIcons"
 // import SocialSidebar from "./components/pages/SocialSidebar"
 import Persona from "./components/pages/Persona"
+import GetWebsite from './components/GetWebsite';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/getawebsite" element={<GetWebsite />} />
+        
         <Route path="/about" element={<About />} />
         <Route path="/persona" element={<Persona />} /> 
         <Route path="/skill" element={<Skill />} />

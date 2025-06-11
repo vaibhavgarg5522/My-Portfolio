@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
-import { FaInstagram, FaSkype, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaFacebookF } from 'react-icons/fa'; // ✅ Updated imports
 import confetti from 'canvas-confetti';
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -77,9 +77,9 @@ const MiniWhatsApp = () => {
 
   return (
     <div>
-      {/* WhatsApp Button with AOS */}
+      {/* WhatsApp Button */}
       <div
-        data-aos="fade-up"
+        data-aos="zoom-in-up"
         ref={buttonRef}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
@@ -142,7 +142,7 @@ const MiniWhatsApp = () => {
         </div>
       </div>
 
-      {/* Social Media Icons with AOS */}
+      {/* Social Media Icons */}
       <div
         data-aos="fade-right"
         className="flex gap-6 mt-13 md:mt-17 justify-center md:justify-start"
@@ -155,6 +155,7 @@ const MiniWhatsApp = () => {
         >
           <FaXTwitter className="text-xl sm:text-2xl" style={{ color: "white", fontSize: "27px" }} />
         </a>
+
         <a
           href="https://www.instagram.com/masoom_____bacha_____/"
           target="_blank"
@@ -163,14 +164,16 @@ const MiniWhatsApp = () => {
         >
           <FaInstagram className="text-xl sm:text-2xl" style={{ color: "#E4405F", fontSize: "28px" }} />
         </a>
+
         <a
-          href="skype:+918218390981?call"
+          href="https://www.facebook.com/vaibhavgarg5522" // ✅ Facebook link
           target="_blank"
           rel="noopener noreferrer"
-          className="w-11 h-11 sm:w-12 sm:h-12 rounded-tl-none rounded-tr-xl rounded-br-none rounded-bl-xl border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[white] hover:shadow-[0_0_15px_#0077B5]"
+          className="w-11 h-11 sm:w-12 sm:h-12 rounded-tl-none rounded-tr-xl rounded-br-none rounded-bl-xl border-2 border-[#8267E3] flex justify-center items-center text-white transition-all duration-500 hover:bg-[#1877F2] hover:shadow-[0_0_15px_#1877F2]"
         >
-          <FaSkype className="text-xl sm:text-2xl" style={{ color: "#00AFF0", fontSize: "27px" }} />
+          <FaFacebookF className="text-xl sm:text-2xl" style={{ color: "white", fontSize: "27px" }} />
         </a>
+
         <a
           href="https://github.com/vaibhavgarg5522"
           target="_blank"
