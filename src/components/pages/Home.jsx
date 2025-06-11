@@ -19,8 +19,8 @@ import { FaArrowUp } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { InView } from "react-intersection-observer";
-import Persona from './Persona';
-import { Typewriter } from 'react-simple-typewriter';
+import Persona from "./Persona";
+import { Typewriter } from "react-simple-typewriter";
 
 const Lottie = lazy(() => import("react-lottie"));
 
@@ -76,11 +76,11 @@ const Home = () => {
         className="min-h-screen px-4 sm:px-8 md:px-16 py-12 md:py-20 text-white bg-cover bg-center bg-no-repeat relative"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          fontFamily: `'Poppins', sans-serif`
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          fontFamily: `'Poppins', sans-serif`,
         }}
       >
         <div className="absolute inset-0 bg-black/60 z-0"></div>
@@ -89,31 +89,54 @@ const Home = () => {
             <p className="text-[#A259FF] uppercase tracking-widest font-medium text-sm md:text-base">
               I design & develop websites for clients
             </p>
-            <h1
-              className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6"
-              data-aos="fade-up"
-            >
-              We Deliver{' '}
-              <span className="text-[#00FFD1]">
-                <Typewriter
-                  words={['Web Solutions', 'UI/UX Designs', 'React Projects']}
-                  loop={true}
-                  cursor
-                  cursorStyle="_"
-                  typeSpeed={80}
-                  deleteSpeed={60}
-                  delaySpeed={1500}
-                />
-              </span>
-            </h1>
+
+            {/* 👇 Typewriter wrapped in InView */}
+            <InView triggerOnce={false}>
+              {({ inView, ref }) => (
+                <h1
+                  ref={ref}
+                  className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6"
+                  data-aos="fade-up"
+                >
+                  We Deliver{" "}
+                  <span className="text-[#00FFD1]">
+                    {inView && (
+                      <Typewriter
+                        words={[
+                          "Web Solutions",
+                          "UI/UX Designs",
+                          "React Projects",
+                        ]}
+                        loop={true}
+                        cursor
+                        cursorStyle="_"
+                        typeSpeed={80}
+                        deleteSpeed={60}
+                        delaySpeed={1500}
+                      />
+                    )}
+                  </span>
+                </h1>
+              )}
+            </InView>
 
             <div className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10">
-              <div className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30" data-aos="fade-up">
+              <div
+                className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30"
+                data-aos="fade-up"
+              >
                 <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
                   Hey, I'm <span className="text-[#A259FF]">Vaibhav Garg</span>
                 </h2>
                 <p className="leading-relaxed tracking-wide">
-                  A <span className="text-[#00C896] font-semibold">freelance front-end developer</span> creating custom websites, portfolios, and web apps using <span className="text-[#FFD700] font-semibold">ReactJS</span>. I help businesses and individuals go online with beautiful, fast, and functional designs.
+                  A{" "}
+                  <span className="text-[#00C896] font-semibold">
+                    freelance front-end developer
+                  </span>{" "}
+                  creating custom websites, portfolios, and web apps using{" "}
+                  <span className="text-[#FFD700] font-semibold">ReactJS</span>. I help
+                  businesses and individuals go online with beautiful, fast, and
+                  functional designs.
                 </p>
                 <div className="mt-3 text-sm text-[#aaa] italic">
                   Let’s bring your vision to life.
@@ -163,6 +186,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Mobile Sections */}
       <div className="flex flex-col md:hidden bg-gradient-to-b from-[#1a112b] via-[#2a1d47] to-[#3b2a66] text-white">
         <InView as="section" onChange={(inView) => inView && refreshAOS()}>
           <div id="about">
@@ -191,6 +215,7 @@ const Home = () => {
         </InView>
       </div>
 
+      {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
         className={`fixed bottom-5 right-1/2 translate-x-1/2 bg-black text-white p-3 rounded-full shadow-lg transition-transform duration-300 ${
