@@ -120,29 +120,31 @@ const Home = () => {
               )}
             </InView>
 
-            <div className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10">
-              <div
-                className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30"
-                data-aos="fade-up"
-              >
-                <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
-                  Hey, I'm <span className="text-[#A259FF]">Vaibhav Garg</span>
-                </h2>
-                <p className="leading-relaxed tracking-wide">
-                  A{" "}
-                  <span className="text-[#00C896] font-semibold">
-                    freelance front-end developer
-                  </span>{" "}
-                  creating custom websites, portfolios, and web apps using{" "}
-                  <span className="text-[#FFD700] font-semibold">ReactJS</span>. I help
-                  businesses and individuals go online with beautiful, fast, and
-                  functional designs.
-                </p>
-                <div className="mt-3 text-sm text-[#aaa] italic">
-                  Let’s bring your vision to life.
-                </div>
-              </div>
-            </div>
+           <div className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10">
+  <div
+    className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30"
+    data-aos="fade-up"
+  >
+    <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
+      Hey, I'm <span className="text-[#A259FF]">Vaibhav Garg</span>
+    </h2>
+    <p className="leading-relaxed tracking-wide">
+      💼 I help{" "}
+      <span className="text-[#00C896] font-semibold">
+        startups and businesses
+      </span>{" "}
+      build fast, beautiful, and responsive websites using{" "}
+      <span className="text-[#00C896] font-semibold">ReactJS</span>.
+      <br />
+      From landing pages to full web apps, I turn ideas into digital reality.
+    </p>
+    <div className="mt-3 text-sm text-[#aaa] italic">
+      📩 Available for freelance projects —{" "}
+      <span className="text-[#00C896] underline">let’s connect!</span>
+    </div>
+  </div>
+</div>
+
 
             <div className="w-90 sm:w-120 md:hidden -mb-4" data-aos="slide-up">
               <Suspense fallback={<div className="text-sm text-gray-400">Loading animation...</div>}>
@@ -158,7 +160,7 @@ const Home = () => {
                 className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
                 data-aos="fade-right"
               >
-                Get a Website
+                Hire Me
               </button>
               <button
                 onClick={() => navigate("/projects")}

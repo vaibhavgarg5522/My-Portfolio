@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaWhatsapp, FaCheckCircle, FaBolt } from "react-icons/fa";
+import backgroundImage from "../../src/images/bgsunny.jpg";
 
 const GetWebsite = () => {
   const navigate = useNavigate();
@@ -55,14 +56,20 @@ const GetWebsite = () => {
 
   return (
     <section
-      id="get-website"
-      className="min-h-screen bg-gradient-to-br from-[#1a112b] via-[#2a1d47] to-[#3b2a66] text-white px-6 py-16 font-[Poppins]"
+      className="min-h-screen px-4 sm:px-8 md:px-16 py-12 md:py-20 text-white bg-cover bg-center bg-no-repeat relative"
+            style={{
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundAttachment: 'fixed',
+            }}
     >
-      <div className="max-w-6xl mx-auto text-center space-y-12 mt-8">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#A259FF]" data-aos="zoom-in">
+      <div className="  rounded-3xl py-10 px-6 md:px-12 max-w-7xl mx-auto text-center space-y-12 mt-8 shadow-xl">
+        <h2 className=" backdrop-blur-md text-4xl sm:text-4xl md:text-5xl font-bold text-[#A259FF]" data-aos="zoom-in">
           Want a Stunning Website?
         </h2>
-        <p className="text-gray-300 max-w-3xl mx-auto text-base sm:text-lg" data-aos="fade-up">
+        <p className="backdrop-blur-md text-gray-300 max-w-3xl mx-auto text-base sm:text-lg" data-aos="fade-up">
           Whether you're a business, freelancer, or startup — I help you go
           online with beautiful, fast, and functional websites using{" "}
           <span className="text-[#FFD700] font-semibold">ReactJS</span>.
