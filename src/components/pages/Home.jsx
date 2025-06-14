@@ -22,6 +22,8 @@ import { InView } from "react-intersection-observer";
 import Persona from "./Persona";
 import { Typewriter } from "react-simple-typewriter";
 
+import GetWebsite from "../../components/GetWebsite";
+
 const Lottie = lazy(() => import("react-lottie"));
 
 const Home = () => {
@@ -156,7 +158,7 @@ const Home = () => {
 
             <div className="flex gap-4 mb-6 flex-wrap justify-center md:justify-start">
               <button
-                onClick={() => navigate("/getawebsite")}
+                onClick={() => navigate("/getwebsite")}
                 className="bg-[#8267E3] hover:bg-[#6d56c8] text-white px-5 py-2 rounded-full text-sm font-semibold transition duration-300"
                 data-aos="fade-right"
               >
@@ -206,11 +208,20 @@ const Home = () => {
             <Skills />
           </div>
         </InView>
+        
+
         <InView as="section" onChange={(inView) => inView && refreshAOS()}>
           <div id="projects">
             <Projects />
           </div>
         </InView>
+
+        <InView as="section" onChange={(inView) => inView && refreshAOS()}>
+  <div id="getwebsite">
+    <GetWebsite />
+  </div>
+</InView>
+
         <InView as="section" onChange={(inView) => inView && refreshAOS()}>
           <div id="contact">
             <Contact />

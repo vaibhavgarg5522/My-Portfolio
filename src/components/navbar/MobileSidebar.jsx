@@ -60,6 +60,7 @@ const MobileSidebar = () => {
               { label: "About", href: "#about" },
               { label: "Persona", href: "#persona" },
               { label: "Projects", href: "#projects" },
+              { label: "Services", href: "#getwebsite" },
               { label: "Contact", href: "#contact" },
             ].map((item, index) => (
               <li
