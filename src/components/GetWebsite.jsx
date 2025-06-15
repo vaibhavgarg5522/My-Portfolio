@@ -90,26 +90,26 @@ const GetWebsite = () => {
   ];
 
   const objectiveItems = [
-    { number: 1, text: "Identifying the services", color: "bg-[#2E6F40]" },
-    { number: 2, text: "Prioritizing the services", color: "bg-[#729472]" },
+    { number: 1, text: " Understanding Your Needs", color: "bg-[#2E6F40]" },
+    { number: 2, text: " Designing a Modern UI/UX", color: "bg-[#729472]" },
     {
       number: 3,
-      text: "Determining how to allocate resources across services and processes",
+      text: "Built with React + Tailwind ",
       color: "bg-red-500",
     },
     {
       number: 4,
-      text: "Assessing performance against customer expectations and business needs",
+      text: "Testing and Optimization  ",
       color: "bg-blue-900",
     },
     {
       number: 5,
-      text: "Implementing corrective actions as needed to ensure desired outcomes are achieved",
+      text: "Deployment and Live Hosting  ",
       color: "bg-sky-600",
     },
     {
       number: 6,
-      text: "Evaluate the overall performance of service delivery",
+      text: " Post-Launch Support",
       color: "bg-[#a88030]",
     },
   ];
@@ -137,17 +137,19 @@ const GetWebsite = () => {
         {/* Services Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
           {services.map((service, index) => (
-            <div
-              key={index}
-              data-aos="zoom-in-up"
-              className="bg-[#1a112b] border border-[#A259FF] rounded-2xl p-6 hover:shadow-[0_0_20px_#A259FF] hover:scale-105 transition-transform duration-300"
-            >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-[#A259FF] mb-2">
-                {service.title}
-              </h3>
-              <p className="text-sm text-gray-300">{service.description}</p>
-            </div>
+           <div
+  key={index}
+  data-aos="zoom-in-up"
+  className="bg-white/10 backdrop-blur-md border border-[#A259FF]/40 rounded-3xl p-4 relative shadow-xl transition-all duration-300 hover:shadow-[0_0_25px_#A259FF] hover:scale-[1.05] group overflow-hidden"
+>
+  <div className="absolute inset-0 bg-gradient-to-br from-[#a259ff1a] to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500 pointer-events-none rounded-3xl" />
+  <div className="text-4xl mb-4 relative z-10">{service.icon}</div>
+  <h3 className="text-xl font-bold text-white relative z-10">{service.title}</h3>
+  <p className="text-sm text-gray-300 mt-2 relative z-10">
+    {service.description}
+  </p>
+</div>
+
           ))}
         </div>
 
@@ -169,8 +171,8 @@ const GetWebsite = () => {
               className="w-52 h-52 md:w-60 md:h-60 rounded-full bg-[#8267E3] border-8 border-[#A259FF] text-white flex items-center justify-center text-center text-md font-semibold z-10 shadow-2xl p-4"
               data-aos="zoom-in"
             >
-              <span className="text-[17px]">
-                OBJECTIVES OF <br /> SERVICE PORTFOLIO <br /> MANAGEMENT
+              <span className="text-[27px]">
+                My Process
               </span>
             </div>
 

@@ -27,10 +27,10 @@ const Persona = () => {
   };
 
   const renderMobileAccordion = (title, content, key) => (
-    <div className="md:hidden rounded-lg p-4 shadow-md bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10">
+    <div className="md:hidden rounded-lg p-3 shadow-md bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10" data-aos="fade-right">
       <button
         onClick={() => toggleSection(key)}
-        className="w-full flex justify-between items-center text-left text-[#A259FF] text-base font-semibold"
+        className="w-full flex justify-between items-center text-left text-[white] text-base font-semibold"
       >
          <span className="flex items-start">{sectionIcons[key]} {title}</span>
         
@@ -245,7 +245,6 @@ const Persona = () => {
 
           <div className="md:hidden md:col-span-2 md:mt-53 mt-1 space-y-6" data-aos="fade-up">
            <div className=" md:hidden text-center md:text-left">
-  <h2 className="text-4xl font-bold text-[#A259FF] text-center">Persona</h2>
 </div>
 
 
