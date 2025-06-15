@@ -1,13 +1,46 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState  } from 'react';
 import vaiImg from '../../../src/images/sunny6.jpg';
 import backgroundImage from '../../images/bgsunny.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaBullseye, FaHandsHelping, FaBrain, FaSadTear, FaLightbulb, FaRocket, FaUser } from 'react-icons/fa';
 
 const Persona = () => {
+
+  const sectionIcons = {
+    bio: <FaUser className="mr-2 mt-1 text-[#A259FF]" />,
+    goals: <FaBullseye className=" mt-1 mr-2 text-[#A259FF]" />,
+    needs: <FaHandsHelping className="mr-2 text-[#A259FF] mt-1" />,
+    behavior: <FaBrain className="mr-2 text-[#A259FF] mt-1" />,
+    pain: <FaSadTear className="mr-2 text-[#A259FF] mt-1" />,
+    motivation: <FaLightbulb className="mr-2 text-[#A259FF] mt-1" />,
+    future: <FaRocket className="mr-2 text-[#A259FF] mt-1" />,
+  };
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setOpenSection(openSection === section ? null : section);
+  };
+
+  const renderMobileAccordion = (title, content, key) => (
+    <div className="md:hidden rounded-lg p-4 shadow-md bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10">
+      <button
+        onClick={() => toggleSection(key)}
+        className="w-full flex justify-between items-center text-left text-[#A259FF] text-base font-semibold"
+      >
+         <span className="flex items-start">{sectionIcons[key]} {title}</span>
+        
+        <span>{openSection === key ? '−' : '+'}</span>
+      </button>
+      {openSection === key && (
+        <div className="mt-3 text-sm text-gray-300">{content}</div>
+      )}
+    </div>
+  );
 
   return (
     <div
@@ -105,16 +138,17 @@ const Persona = () => {
           </div>
 
           {/* Right Panel */}
-          <div className=" md:col-span-2 md:mt-53 mt-1 space-y-6" data-aos="fade-up">
-           <div className="hidden md:block text-center md:text-left">
-  <h2 className="text-4xl font-bold text-[#A259FF] text-center">Persona</h2>
+          
+   <div className=" md:col-span-2 md:mt-53 mt-1 space-y-6 hidden sm:hidden md:block" data-aos="fade-up">
+           <div className="hidden sm:hidden  md:block text-center md:text-left">
+  <h2 className="text-4xl font-bold text-[#A259FF] text-center hidden sm:hidden md:block">Persona</h2>
 </div>
 
 
             {/* Bio */}
             <div>
-              <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-1 sm:text-start " >Biography</h4>
-              <p className="text-sm text-gray-300 mt-2">
+              <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-1 sm:text-start hidden sm:hidden md:block" >Biography</h4>
+              <p className="text-sm text-gray-300 mt-2 hidden sm:hidden md:block">
                 Hi, I’m Vaibhav Garg — a frontend developer who believes that every line of code can carry emotion, every design can tell a story, and every interface can make someone’s day a little better.
                 <br /><br />
                 Hailing from Muzaffarnagar, I’ve always found joy in creating. Whether it’s building something from scratch or polishing pixels until they shine, I pour my heart into everything I do.
@@ -131,7 +165,7 @@ const Persona = () => {
 
             {/* Goals & Needs */}
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+              <div className="rounded-lg p-4 shadow-md hidden sm:hidden md:block" data-aos="fade-up">
                 <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start " >Goals</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1 ">
                   <li>Become a frontend developer who communicates design and code fluently</li>
@@ -141,7 +175,7 @@ const Persona = () => {
                   <li>Build a strong personal brand and portfolio that tells a story</li>
                 </ul>
               </div>
-              <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+              <div className="rounded-lg p-4 shadow-md hidden sm:hidden md:block" data-aos="fade-up ">
                 <h4 className="text-center text-xl text-[#A259FF] font-semibold mb-2 sm:text-start " >Needs</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Tools that simplify development process</li>
@@ -155,8 +189,8 @@ const Persona = () => {
             </div>
 
             {/* Behavior & Pain Points */}
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+            <div className="grid md:grid-cols-2 gap-4 ">
+              <div className="rounded-lg p-4 shadow-md hidden sm:hidden md:block" data-aos="fade-up">
                 <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start " >Behavior</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Kind-hearted and empathetic with others</li>
@@ -169,7 +203,7 @@ const Persona = () => {
                 </ul>
               </div>
 
-              <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+              <div className="rounded-lg p-4 shadow-md hidden sm:hidden md:block" data-aos="fade-up">
                 <h4 className="text-[#A259FF] font-semibold mb-2 text-center text-xl sm:text-start " >Pain Points</h4>
                 <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
                   <li>Too many tools and frameworks often create confusion instead of clarity</li>
@@ -180,7 +214,7 @@ const Persona = () => {
                 </ul>
               </div>
               {/* Motivations */}
-<div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+<div className="rounded-lg p-4 shadow-md hidden sm:hidden md:block" data-aos="fade-up">
   <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start" >Motivations</h4>
   <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
     <li>Support from my family and my beloved wife during tough times — they inspire me endlessly</li>
@@ -193,7 +227,7 @@ const Persona = () => {
 </div>
 
 {/* Future Plans */}
-<div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+<div className="rounded-lg p-4 shadow-md hidden sm:hidden md:block" data-aos="fade-up">
   <h4 className="text-[#A259FF] text-center text-xl font-semibold mb-2 sm:text-start" >Future Plans</h4>
   <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
    
@@ -204,6 +238,151 @@ const Persona = () => {
     
   </ul>
 </div>
+
+            </div>
+          </div>
+
+
+          <div className="md:hidden md:col-span-2 md:mt-53 mt-1 space-y-6" data-aos="fade-up">
+           <div className=" md:hidden text-center md:text-left">
+  <h2 className="text-4xl font-bold text-[#A259FF] text-center">Persona</h2>
+</div>
+
+
+            {/* Bio */}
+
+            {renderMobileAccordion(
+                'Biography',
+                 <div>
+              <p className="text-sm text-gray-300 mt-2 " data-aos="fade-up">
+                Hi, I’m Vaibhav Garg — a frontend developer who believes that every line of code can carry emotion, every design can tell a story, and every interface can make someone’s day a little better.
+                <br /><br />
+                Hailing from Muzaffarnagar, I’ve always found joy in creating. Whether it’s building something from scratch or polishing pixels until they shine, I pour my heart into everything I do.
+                <br /><br />
+                For me, frontend development isn’t just a skill — it’s how I express empathy, creativity, and care. I’m passionate about designing experiences that feel warm, intuitive, and human.
+                <br /><br />
+                Behind the code, I’m someone who loves late-night learning, gets excited by small UI animations, and believes that even the tiniest detail can spark joy.
+                <br /><br />
+                I’m not just building websites — I’m building moments, connections, and little pieces of love on the internet.
+                <br /><br />
+                Let’s create something beautiful together. 💫
+              </p>
+            </div>
+,
+                'bio'
+              )}
+           
+           
+
+            <div className="grid md:grid-cols-2 gap-4">
+               {/* Goals & Needs */}
+
+            {renderMobileAccordion(
+                'Goals',
+                <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+               
+                <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1 ">
+                  <li>Become a frontend developer who communicates design and code fluently</li>
+                  <li>Craft real-world frontend projects and grow professionally</li>
+                  <li>Contribute to open-source projects and give back to the dev community</li>
+                  <li>Learn and implement advanced animations and micro-interactions</li>
+                  <li>Build a strong personal brand and portfolio that tells a story</li>
+                </ul>
+              </div>
+                ,
+                'goals'
+              )}
+
+              {renderMobileAccordion(
+                'Needs',
+                <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+                
+                <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
+                  <li>Tools that simplify development process</li>
+                  <li>Constructive feedback and code reviews</li>
+                  <li>Mentorship from experienced developers</li>
+                  <li>A healthy work-life balance to stay creative and motivated</li>
+                  <li>Community support for learning and motivation</li>
+                  <li>Access to inspiring design systems and UI kits</li>
+                </ul>
+              </div>,
+                'needs'
+              )}
+              
+            </div>
+
+            {/* Behavior & Pain Points */}
+            <div className="grid md:grid-cols-2 gap-4">
+              {renderMobileAccordion(
+                'Behavior',
+               <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+               
+                <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
+                  <li>Kind-hearted and empathetic with others</li>
+                  <li>Listens more than speaks — absorbs deeply</li>
+                  <li>Finds joy in little things and thoughtful moments</li>
+                  <li>Loves consistency and calm environments</li>
+                  <li>Always gives his 100% when passionate</li>
+                  <li>Collaborates well, but values independent thinking too</li>
+                  <li>Believes in spreading positive energy through work</li>
+                </ul>
+              </div>,
+                'behavior'
+              )}
+              
+              {renderMobileAccordion(
+                'Pain Points',
+               <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+                
+                <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
+                  <li>Too many tools and frameworks often create confusion instead of clarity</li>
+                  <li>Sometimes, detailed feedback is missing — and that slows personal growth</li>
+                  <li>Explaining creative ideas in a technical language can be challenging</li>
+                  <li>Keeping up with fast-changing frontend trends can feel overwhelming</li>
+                  <li>Time pressure sometimes affects the creativity that good design needs</li>
+                </ul>
+              </div>,
+                'pain'
+              )}
+
+              
+              {/* Motivations */}
+
+               {renderMobileAccordion(
+                'Motivations',
+                <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+ 
+  <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
+    <li>Support from my family and my beloved wife during tough times — they inspire me endlessly</li>
+    <li>I’m deeply motivated to move forward and build a better life for myself and my loved ones</li>
+    <li>Creating interfaces that bring joy to users</li>
+    <li>Turning creative ideas into real-world solutions</li>
+    <li>Learning and improving every day</li>
+    <li>Seeing my progress and knowing how far I’ve come keeps me going</li>
+  </ul>
+</div>
+,
+                'motivation'
+              )}
+
+{/* Future Plans */}
+
+{renderMobileAccordion(
+                'Future Plans',
+                <div className="rounded-lg p-4 shadow-md" data-aos="fade-up">
+  
+  <ul className="list-disc pl-5 text-sm text-gray-300 space-y-1">
+   
+    <li>Use my income not just for myself — but to support others, bring smiles to their faces, and offer peace where it’s needed most</li>
+    <li>Become someone who spreads happiness through kindness, and uses success as a way to uplift others</li>
+    <li>Take my loving mother on a temple journey across India — a heartfelt thank-you for her endless love and sacrifices</li>
+     <li>Work hard, grow as a frontend developer, and earn well to create a stable and fulfilling life</li>
+    
+  </ul>
+</div>,
+                'future'
+              )}
+
 
             </div>
           </div>

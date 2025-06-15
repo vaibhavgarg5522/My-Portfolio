@@ -89,63 +89,58 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
           <div className="text-white w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-start md:mt-20">
             <p className="text-[#A259FF] uppercase tracking-widest font-medium text-sm md:text-base">
-              I design & develop websites for clients
-            </p>
+  Freelance React Developer & UI Specialist
+</p>
 
-            {/* 👇 Typewriter wrapped in InView */}
-            <InView triggerOnce={false}>
-              {({ inView, ref }) => (
-                <h1
-                  ref={ref}
-                  className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6"
-                  data-aos="fade-up"
-                >
-                  We Deliver{" "}
-                  <span className="text-[#00FFD1]">
-                    {inView && (
-                      <Typewriter
-                        words={[
-                          "Web Solutions",
-                          "UI/UX Designs",
-                          "React Projects",
-                        ]}
-                        loop={true}
-                        cursor
-                        cursorStyle="_"
-                        typeSpeed={80}
-                        deleteSpeed={60}
-                        delaySpeed={1500}
-                      />
-                    )}
-                  </span>
-                </h1>
-              )}
-            </InView>
+<InView triggerOnce={false}>
+  {({ inView, ref }) => (
+    <h1
+      ref={ref}
+      className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug mt-4 mb-6"
+      data-aos="fade-up"
+    >
+      I Build{" "}
+      <span className="text-[#00FFD1]">
+        {inView && (
+          <Typewriter
+            words={[
+              "Business Websites",
+              "Modern UI Designs",
+              "React Applications",
+              "Landing Pages",
+            ]}
+            loop={true}
+            cursor
+            cursorStyle="_"
+            typeSpeed={80}
+            deleteSpeed={60}
+            delaySpeed={1500}
+          />
+        )}
+      </span>
+    </h1>
+  )}
+</InView>
+
 
            <div className="text-sm sm:text-base md:text-lg mb-6 max-w-[550px] text-gray-200 relative z-10">
-  <div
-    className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30"
-    data-aos="fade-up"
-  >
-    <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
-      Hey, I'm <span className="text-[#A259FF]">Vaibhav Garg</span>
-    </h2>
-    <p className="leading-relaxed tracking-wide">
-      💼 I help{" "}
-      <span className="text-[#00C896] font-semibold">
-        startups and businesses
-      </span>{" "}
-      build fast, beautiful, and responsive websites using{" "}
-      <span className="text-[#00C896] font-semibold">ReactJS</span>.
-      <br />
-      From landing pages to full web apps, I turn ideas into digital reality.
-    </p>
-    <div className="mt-3 text-sm text-[#aaa] italic">
-      📩 Available for freelance projects —{" "}
-      <span className="text-[#00C896] underline">let’s connect!</span>
-    </div>
-  </div>
-</div>
+              <div
+                className="relative p-4 rounded-4xl bg-[#1c1533]/60 backdrop-blur-md shadow-[0_0_20px_#8267E3] border border-[#8267E3]/30"
+                data-aos="fade-up"
+              >
+                <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#00FFD1] drop-shadow-lg">
+                  Hi, I’m <span className="text-[#A259FF]">Vaibhav Garg</span>
+                </h2>
+                <p className="leading-relaxed tracking-wide">
+                  💼 I help <span className="text-[#00C896] font-semibold">startups, entrepreneurs, and businesses</span> build stunning, high-performance websites using <span className="text-[#FFD700] font-semibold">React.js & Tailwind CSS</span>.
+                  <br />
+                  Whether you need a landing page, portfolio, or complete web app — I can deliver quality results, on time.
+                </p>
+                <div className="mt-3 text-sm text-[#aaa] italic">
+                  📬 Available for freelance projects — <span className="text-[#00C896] underline cursor-pointer">let’s work together!</span>
+                </div>
+              </div>
+            </div>
 
 
             <div className="w-90 sm:w-120 md:hidden -mb-4" data-aos="slide-up">
